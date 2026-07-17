@@ -1,0 +1,17 @@
+# downloaded raw inputs (ADR 0005) — data/raw/manual/ is committed
+data/raw/*
+!data/raw/manual/
+
+# expensive but regenerable from the cache; back up data/cache/ out-of-band
+data/cache/
+data/responses/
+
+# deterministic derivations
+data/annotation_tasks/
+data/template_sets/
+data/signatures/
+out/
+
+.venv/
+__pycache__/
+.env

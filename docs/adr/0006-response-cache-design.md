@@ -1,0 +1,3 @@
+# Response cache: litellm slug + temperature + prompt hash, reads capped at n
+
+The run cache is keyed by (litellm model slug, temperature, sha256 of the realised prompt string), stored as one JSON file per key under `data/cache/`, with append-only top-up of samples. The full litellm slug (provider included) was chosen over a bare model id even though a provider switch busts the cache — deemed an unlikely scenario, and the slug is the one true name of what was called. Reads are capped at exactly n (the first n samples) so every reported distribution uses the same per-template sample count and the thesis's "n = 3" holds literally; excess cached samples are ignored, not pooled.

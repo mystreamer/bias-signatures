@@ -1,0 +1,3 @@
+# Raw inputs are downloaded, not committed — except manual artifacts
+
+`bias_signatures/data/raw/` is populated by a downloader script that fetches IssueBench (HF `datasets`) and the Social Chemistry 101 release, then cuts the slices the pipeline consumes. Downloaded files are gitignored. Artifacts that are products of manual work and cannot be re-derived are committed instead: the MFQ-30/MFQ-2 item lists (manual transformations of the questionnaires) and the author's political-issue moral-relevance/MF annotation export. This keeps the repo self-contained (one script from fresh clone to full raw inputs) without vendoring redistributable third-party data.

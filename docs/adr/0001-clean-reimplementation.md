@@ -1,0 +1,3 @@
+# Clean re-implementation, not a reproduction artifact
+
+The legacy codebase (src/, prompts.db, essay_responses_*.csv) collected the responses behind the current THESIS.md numbers. We decided that bias_signatures is a clean re-implementation defined forward from the raw datasets (IssueBench, Social Chemistry 101, MFQ-30, MFQ-2): its own semantics are authoritative, and thesis numbers are re-derived by running it end-to-end. We deliberately do not import legacy responses to reproduce the existing numbers bit-for-bit; if re-running shifts reported values, the thesis is updated from the new pipeline's output.

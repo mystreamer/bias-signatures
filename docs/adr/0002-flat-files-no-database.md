@@ -1,0 +1,3 @@
+# Flat files instead of a database
+
+The legacy codebase persists everything through SQLModel + SQLite + Alembic. For bias_signatures we decided that every artifact is a flat file: components as feature JSON, prompt template sets and responses as tabular files, and the run cache as files keyed by hash. Scripts are pure file-in/file-out transformations. At this scale (~5 models, a few thousand templates) the ORM + migration layer bought no capability worth its size; flat files keep every intermediate diffable, inspectable, and trivially idempotent. The response cache's "return existing seeds, top up to n" lookup is handled by hash-keyed files, not a DB.
