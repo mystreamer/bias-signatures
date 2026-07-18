@@ -63,7 +63,7 @@ if __name__ == "__main__":
     parser.add_argument("--n", type=int, default=llm.N_SAMPLES)
     parser.add_argument("--workers", type=int, default=8)
     parser.add_argument("--limit", type=int, help="only the first K templates (smoke tests)")
-    parser.add_argument("--max-tokens", type=int, default=1024)
+    parser.add_argument("--max-tokens", type=int, default=llm.MAX_TOKENS)
     args = parser.parse_args()
     run(args.template_set, args.model, args.temperature, args.n,
         args.workers, args.limit, args.max_tokens)

@@ -1,6 +1,8 @@
 """Render thesis figures and LaTeX table fragments from the analysis outputs.
 
 Reads only data/signatures/*.csv; writes to out/figures/ and out/tables/.
+--only restricts to a comma-separated subset of {e1, e2, e3, correlations};
+note the mvb heatmaps pool e1+e3 and are rendered when either is selected.
 
   mvb_{channel}.pdf          per-model MF x MF JSD heatmaps (Figs 5.3, 5.6, 5.7)
   perturbation_boxplot.pdf   per-topic perturbation biases (Fig 5.4)
@@ -32,8 +34,7 @@ def stars(p: float) -> str:
 
 # -------------------------------------------------------------------- figures
 
-def mvb_heatmaps(e1: pd.DataFrame, e3: pd.DataFrame) -> None:
-    mvb = pd.concat([e1, e3])
+def mvb_heatmaps(mvb: pd.DataFrame) -> None:
     mvb = mvb[(mvb["family"] == "mvb") & (mvb["scheme"] == "raw")]
     for channel, group in mvb.groupby("channel"):
         models = sorted(group["model"].unique())
@@ -157,12 +158,24 @@ def correlation_tables(corr: pd.DataFrame) -> None:
 
 
 if __name__ == "__main__":
+    import argparse
+
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--only", help="comma-separated experiment names (e1, e2, e3, correlations)")
+    args = parser.parse_args()
+    only = set(args.only.split(",")) if args.only else {"e1", "e2", "e3", "correlations"}
+
     FIGURES_DIR.mkdir(parents=True, exist_ok=True)
     TABLES_DIR.mkdir(parents=True, exist_ok=True)
-    e1 = pd.read_csv(SIGNATURES_DIR / "e1.csv")
-    e2 = pd.read_csv(SIGNATURES_DIR / "e2.csv")
-    e3 = pd.read_csv(SIGNATURES_DIR / "e3.csv")
-    mvb_heatmaps(e1, e3)
-    perturbation_boxplot(e2)
-    moral_bias_table(e1)
-    correlation_tables(pd.read_csv(SIGNATURES_DIR / "correlations.csv"))
+    if only & {"e1", "e3"}:
+        # each channel is a separate heatmap, so pooling whatever exists is safe
+        mvb_heatmaps(pd.concat(
+            pd.read_csv(SIGNATURES_DIR / f"{e}.csv")
+            for e in ("e1", "e3") if (SIGNATURES_DIR / f"{e}.csv").exists()
+        ))
+    if "e1" in only:
+        moral_bias_table(pd.read_csv(SIGNATURES_DIR / "e1.csv"))
+    if "e2" in only:
+        perturbation_boxplot(pd.read_csv(SIGNATURES_DIR / "e2.csv"))
+    if "correlations" in only:
+        correlation_tables(pd.read_csv(SIGNATURES_DIR / "correlations.csv"))

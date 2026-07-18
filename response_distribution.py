@@ -72,14 +72,17 @@ REFUSAL_MARKERS = re.compile(
 )
 
 
-def stance_label(row) -> str:
-    prompt = STANCE_PROMPT.format(
+def stance_prompt(row) -> str:
+    return STANCE_PROMPT.format(
         response_text=row.response,
         topic_prompt=row.topic_prompt,
         topic_neutral=row.topic_neutral,
         topic_pro=row.topic_pro,
         topic_con=row.topic_con,
     )
+
+
+def stance_label(prompt: str) -> str:
     answer = llm.cached_completions(llm.WORKER_MODEL, prompt, 0.0, 1, max_tokens=8)[0]
     answer = answer.strip().strip('"').lower()
     return answer if answer in STANCE_LABELS else INVALID
@@ -127,9 +130,11 @@ def elicit(path: Path, elicitor: str, workers: int) -> None:
     if elicitor == "likert":
         df.loc[todo.index, "label"] = [likert_label(r) for r in todo.itertuples()]
     else:
+        prompts = [stance_prompt(r) for r in todo.itertuples()]
+        unique = list(dict.fromkeys(prompts))  # cache is not concurrency-safe per prompt
         with ThreadPoolExecutor(max_workers=workers) as pool:
-            labels = list(pool.map(stance_label, todo.itertuples()))
-        df.loc[todo.index, "label"] = labels
+            label_by_prompt = dict(zip(unique, pool.map(stance_label, unique)))
+        df.loc[todo.index, "label"] = [label_by_prompt[p] for p in prompts]
 
     df.to_csv(path, index=False)
     print(df["label"].value_counts().to_dict())

@@ -105,6 +105,7 @@ def stage_framings(issues: list[dict], deontic_ops: list[dict]) -> None:
         if c["features"]["domain"] == "personal" and "framing_pro" not in c["variants"]
     ]
     print(f"framings: {len(todo)} personal issues")
+    # Two-Step Process, why?
     infer = dspy.Predict(llm.InferDeonticOperator)
     to_ib = dspy.Predict(llm.DeonticToIBStyle)
     ops_by_text = {op["text"]: op for op in deontic_ops}
