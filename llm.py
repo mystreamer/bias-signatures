@@ -40,16 +40,16 @@ _OPENROUTER = dict(
 #: cache key (ADR 0006); the "openai/" prefix routes litellm to the
 #: OpenAI-compatible endpoint given by api_base.
 MODELS = {
-    # "llama-3.1-8b": ("openai/meta-llama/Llama-3.1-8B-Instruct", _HF),
+    "llama-3.1-8b": ("openai/meta-llama/Llama-3.1-8B-Instruct", _HF),
     "llama-3.3-70b": ("openai/meta-llama/Llama-3.3-70B-Instruct:novita", _HF),
-    # "qwen-2.5-72b": ("openai/Qwen/Qwen2.5-72B-Instruct", _HF),
-    # "deepseek-r1": ("openai/deepseek-ai/DeepSeek-R1", _HF),
-    # "kimi-k2.5": ("openai/moonshotai/Kimi-K2.5", _HF),
-    "gpt-oss-120b": ("openai/openai/gpt-oss-120b:cerebras", _HF),
-    "llama-4-scout-17b": ("openai/meta-llama/Llama-4-Scout-17B-16E-Instruct:deepinfra", _HF),
-    "gemma-4-31b": ("openai/google/gemma-4-31B-it:cerebras", _HF),
-    "qwen-3-32b": ("openai/Qwen/Qwen3-32B:deepinfra", _HF),
-    "phi-4": ("openai/microsoft/phi-4:deepinfra", _HF),
+    "qwen-2.5-72b": ("openai/Qwen/Qwen2.5-72B-Instruct", _HF),
+    "deepseek-r1": ("openai/deepseek-ai/DeepSeek-R1", _HF),
+    "kimi-k2.5": ("openai/moonshotai/Kimi-K2.5", _HF),
+    # "gpt-oss-120b": ("openai/openai/gpt-oss-120b:cerebras", _HF),
+    # "llama-4-scout-17b": ("openai/meta-llama/Llama-4-Scout-17B-16E-Instruct:deepinfra", _HF),
+    # "gemma-4-31b": ("openai/google/gemma-4-31B-it:cerebras", _HF),
+    # "qwen-3-32b": ("openai/Qwen/Qwen3-32B:deepinfra", _HF),
+    # "phi-4": ("openai/microsoft/phi-4:deepinfra", _HF),
 }
 
 #: model used for synthetic augmentation and stance classification (§3.2.3, §4.2.1)
