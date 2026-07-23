@@ -34,6 +34,7 @@ _OPENROUTER = dict(
     api_key_env="OR_OPENROUTER_API_KEY",
     api_base_env="OR_OPENROUTER_BASE_URL",
     extra_headers=None,
+    #  extra_body={"provider": {"only": ["novita"], "allow_fallbacks": False}},
 )
 
 #: alias -> (litellm slug, provider credentials). The slug is part of the
@@ -44,12 +45,13 @@ MODELS = {
     "llama-3.3-70b": ("openai/meta-llama/Llama-3.3-70B-Instruct:novita", _HF),
     "qwen-2.5-72b": ("openai/Qwen/Qwen2.5-72B-Instruct", _HF),
     "deepseek-r1": ("openai/deepseek-ai/DeepSeek-R1", _HF),
-    "kimi-k2.5": ("openai/moonshotai/Kimi-K2.5", _HF),
+    # "kimi-k2.5": ("openai/moonshotai/Kimi-K2.5", _HF),
     # "gpt-oss-120b": ("openai/openai/gpt-oss-120b:cerebras", _HF),
     # "llama-4-scout-17b": ("openai/meta-llama/Llama-4-Scout-17B-16E-Instruct:deepinfra", _HF),
     # "gemma-4-31b": ("openai/google/gemma-4-31B-it:cerebras", _HF),
     # "qwen-3-32b": ("openai/Qwen/Qwen3-32B:deepinfra", _HF),
     # "phi-4": ("openai/microsoft/phi-4:deepinfra", _HF),
+    "kimi-k2.5": ("openrouter/moonshotai/kimi-k2.5", _OPENROUTER),
 }
 
 #: model used for synthetic augmentation and stance classification (§3.2.3, §4.2.1)
@@ -69,6 +71,7 @@ def lm_for(alias: str, temperature: float, max_tokens: int = MAX_TOKENS) -> dspy
         api_key=os.getenv(provider["api_key_env"]),
         api_base=os.getenv(provider["api_base_env"]),
         extra_headers=provider["extra_headers"],
+        extra_body=provider.get("extra_body"),
         temperature=temperature,
         max_tokens=max_tokens,
         cache=False,
