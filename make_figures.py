@@ -1,18 +1,21 @@
 """Render thesis figures and LaTeX table fragments from the analysis outputs.
 
 Reads only data/signatures/*.csv; writes to out/figures/ and out/tables/.
---only restricts to a comma-separated subset of {e1, e2, e3, correlations};
-note the mvb heatmaps pool e1+e3 and are rendered when either is selected.
+--only restricts to a comma-separated subset of {e1, e2, e3, correlations}.
+--export copies everything in out/ into thesis/figures/bias_signatures/.
 
-  mvb_{channel}.pdf          per-model MF x MF JSD heatmaps (Figs 5.3, 5.6, 5.7)
+  mvb_{experiment}.pdf       MF x MF JSD heatmaps, models x channels (Figs 5.3, 5.6, 5.7)
   perturbation_boxplot.pdf   per-topic perturbation biases (Fig 5.4)
   moral_bias.tex             moral vs non-moral by domain (Table 5.1)
+  perturbation_biases.tex    per-(topic, model) perturbation JSDs (appendix)
   cross_model_rho.tex        Table 5.2
   cross_domain_rho.tex       Table 5.3
   cross_channel_rho.tex      Table 5.4
 """
 
 from __future__ import annotations
+
+import shutil
 
 import matplotlib
 
@@ -26,6 +29,16 @@ from llm import BASE_DIR, DATA_DIR
 SIGNATURES_DIR = DATA_DIR / "signatures"
 FIGURES_DIR = BASE_DIR / "out" / "figures"
 TABLES_DIR = BASE_DIR / "out" / "tables"
+EXPORT_DIR = BASE_DIR.parent / "thesis" / "figures" / "bias_signatures"
+
+# Figures are included at width=\textwidth (448.13pt, scrreprt at 12pt).
+# Rendering at true print width makes figure points equal points on the page.
+TEXTWIDTH_IN = 448.13095 / 72.27
+plt.rcParams.update({
+    "font.family": "serif",
+    "mathtext.fontset": "cm",
+    "font.size": 12,
+})
 
 
 def stars(p: float) -> str:
@@ -34,32 +47,48 @@ def stars(p: float) -> str:
 
 # -------------------------------------------------------------------- figures
 
-def mvb_heatmaps(mvb: pd.DataFrame) -> None:
+def mvb_heatmaps(mvb: pd.DataFrame, experiment: str) -> None:
     mvb = mvb[(mvb["family"] == "mvb") & (mvb["scheme"] == "raw")]
-    for channel, group in mvb.groupby("channel"):
-        models = sorted(group["model"].unique())
+    channels = sorted(mvb["channel"].unique(), key=lambda c: (c != "political", c))
+    models = sorted(mvb["model"].unique())
+    vmax = mvb["jsd"].max()
+    fig, axes = plt.subplots(len(models), len(channels),
+                             figsize=(TEXTWIDTH_IN, 1.6 * len(models) + 0.5),
+                             squeeze=False, layout="constrained")
+    im = None
+    for ci, channel in enumerate(channels):
+        group = mvb[mvb["channel"] == channel]
         foundations = sorted(set(group["partition_a"]) | set(group["partition_b"]))
         n = len(foundations)
-        fig, axes = plt.subplots(1, len(models), figsize=(3.2 * len(models), 3.4))
-        vmax = group["jsd"].max()
-        for ax, model in zip(np.atleast_1d(axes), models):
-            matrix = np.full((n, n), np.nan)
-            for r in group[group["model"] == model].itertuples():
+        for mi, model in enumerate(models):
+            ax = axes[mi, ci]
+            cells = group[group["model"] == model]
+            # lower triangle only: drop the empty first row / last column
+            matrix = np.full((n - 1, n - 1), np.nan)
+            for r in cells.itertuples():
                 i, j = foundations.index(r.partition_a), foundations.index(r.partition_b)
-                matrix[max(i, j), min(i, j)] = r.jsd
-            ax.imshow(matrix, cmap="viridis", vmin=0, vmax=vmax)
-            for r in group[group["model"] == model].itertuples():
+                matrix[max(i, j) - 1, min(i, j)] = r.jsd
+            im = ax.imshow(matrix, cmap="YlOrRd", vmin=0, vmax=vmax)
+            for r in cells.itertuples():
                 i, j = foundations.index(r.partition_a), foundations.index(r.partition_b)
-                ax.text(min(i, j), max(i, j), f"{r.jsd:.2f}{stars(r.p_bonferroni)}",
-                        ha="center", va="center", fontsize=6, color="white")
-            ax.set_xticks(range(n), foundations, rotation=45, ha="right", fontsize=6)
-            ax.set_yticks(range(n), foundations, fontsize=6)
-            ax.set_title(model, fontsize=8)
-        fig.suptitle(f"Moral value bias signatures — {channel}")
-        fig.tight_layout()
-        fig.savefig(FIGURES_DIR / f"mvb_{channel}.pdf")
-        plt.close(fig)
-        print(f"mvb_{channel}.pdf")
+                ax.text(min(i, j), max(i, j) - 1,
+                        f"{r.jsd:.3f}"[1:] + "\n" + stars(r.p_bonferroni),
+                        ha="center", va="center", fontsize=7,
+                        color="white" if r.jsd > 0.65 * vmax else "black")
+            ax.set_yticks(range(n - 1), foundations[1:], fontsize=8)
+            if mi == len(models) - 1:
+                ax.set_xticks(range(n - 1), foundations[:-1],
+                              rotation=45, ha="right", fontsize=8)
+            else:
+                ax.set_xticks([])
+            if mi == 0:
+                ax.set_title(channel.capitalize(), fontsize=11)
+            if ci == 0:
+                ax.set_ylabel(model, fontsize=10)
+    fig.colorbar(im, ax=axes, shrink=0.35, label="Jensen–Shannon divergence")
+    fig.savefig(FIGURES_DIR / f"mvb_{experiment}.pdf")
+    plt.close(fig)
+    print(f"mvb_{experiment}.pdf")
 
 
 def perturbation_boxplot(e2: pd.DataFrame) -> None:
@@ -67,7 +96,7 @@ def perturbation_boxplot(e2: pd.DataFrame) -> None:
     narrow = e2[e2["scope"] == "8sa"]
     comparisons = list(dict.fromkeys(wide["partition_b"]))
     models = sorted(wide["model"].unique())
-    fig, ax = plt.subplots(figsize=(1.9 * len(comparisons) + 1, 4.5))
+    fig, ax = plt.subplots(figsize=(TEXTWIDTH_IN, 4.2))
     colors = plt.cm.tab10(np.linspace(0, 1, len(models)))
     width = 0.8 / len(models)
     for ci, comparison in enumerate(comparisons):
@@ -80,10 +109,10 @@ def perturbation_boxplot(e2: pd.DataFrame) -> None:
             ax.scatter(np.full(len(values), x), values, s=8, color=colors[mi], zorder=3)
         median_8sa = narrow[narrow["partition_b"] == comparison]["jsd"].median()
         ax.hlines(median_8sa, ci - 0.42, ci + 0.42, colors="red", linestyles="dashed")
-    ax.set_xticks(range(len(comparisons)), comparisons)
+    ax.set_xticks(range(len(comparisons)), comparisons, fontsize=10)
     ax.set_ylabel("JSD vs. baseline")
     ax.legend(handles=[plt.Line2D([], [], color=colors[i], lw=4, label=m)
-                       for i, m in enumerate(models)], fontsize=7)
+                       for i, m in enumerate(models)], fontsize=10)
     fig.tight_layout()
     fig.savefig(FIGURES_DIR / "perturbation_boxplot.pdf")
     plt.close(fig)
@@ -111,6 +140,36 @@ def moral_bias_table(e1: pd.DataFrame) -> None:
     lines += [r"\bottomrule", r"\end{tabular}"]
     (TABLES_DIR / "moral_bias.tex").write_text("\n".join(lines) + "\n")
     print("moral_bias.tex")
+
+
+def perturbation_table(e2: pd.DataFrame) -> None:
+    """Tabular companion to the perturbation boxplot: same wide-scope cells,
+    footer row = the pooled 8sa medians drawn as its dashed red lines."""
+    wide = e2[e2["scope"] == "wide"]
+    narrow = e2[e2["scope"] == "8sa"]
+    comparisons = list(dict.fromkeys(wide["partition_b"]))
+    models = sorted(wide["model"].unique())
+    cells = wide.set_index(["topic", "model", "partition_b"])["jsd"]
+
+    def fmt(jsd: float) -> str:
+        return "--" if pd.isna(jsd) else f"{jsd:.3f}"
+
+    lines = [
+        r"\begin{tabular}{ll" + "r" * len(comparisons) + "}", r"\toprule",
+        "Topic & Model & " + " & ".join(comparisons) + r" \\", r"\midrule",
+    ]
+    for ti, topic in enumerate(sorted(wide["topic"].unique())):
+        if ti:
+            lines.append(r"\addlinespace")
+        for mi, model in enumerate(models):
+            row = " & ".join(fmt(cells.get((topic, model, c), np.nan)) for c in comparisons)
+            lines.append(f"{topic if mi == 0 else ''} & {model} & {row} \\\\")
+    medians = " & ".join(fmt(narrow[narrow["partition_b"] == c]["jsd"].median())
+                         for c in comparisons)
+    lines += [r"\midrule", r"\multicolumn{2}{l}{8SA-only median} & " + medians + r" \\",
+              r"\bottomrule", r"\end{tabular}"]
+    (TABLES_DIR / "perturbation_biases.tex").write_text("\n".join(lines) + "\n")
+    print("perturbation_biases.tex")
 
 
 def rho_cell(r) -> str:
@@ -157,25 +216,37 @@ def correlation_tables(corr: pd.DataFrame) -> None:
     print("cross_model_rho.tex, cross_domain_rho.tex, cross_channel_rho.tex")
 
 
+def export_data() -> None:
+    """Copy everything in out/ into thesis/figures/bias_signatures/, where the
+    thesis sources it alongside the other figure directories."""
+    EXPORT_DIR.mkdir(parents=True, exist_ok=True)
+    for src in sorted([*FIGURES_DIR.glob("*"), *TABLES_DIR.glob("*")]):
+        shutil.copy2(src, EXPORT_DIR / src.name)
+        print(f"exported {src.name}")
+
+
 if __name__ == "__main__":
     import argparse
 
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--only", help="comma-separated experiment names (e1, e2, e3, correlations)")
+    parser.add_argument("--export", action="store_true",
+                        help="copy out/ artefacts into thesis/figures/bias_signatures/")
     args = parser.parse_args()
     only = set(args.only.split(",")) if args.only else {"e1", "e2", "e3", "correlations"}
 
     FIGURES_DIR.mkdir(parents=True, exist_ok=True)
     TABLES_DIR.mkdir(parents=True, exist_ok=True)
-    if only & {"e1", "e3"}:
-        # each channel is a separate heatmap, so pooling whatever exists is safe
-        mvb_heatmaps(pd.concat(
-            pd.read_csv(SIGNATURES_DIR / f"{e}.csv")
-            for e in ("e1", "e3") if (SIGNATURES_DIR / f"{e}.csv").exists()
-        ))
+    for experiment in ("e1", "e3"):
+        if experiment in only and (SIGNATURES_DIR / f"{experiment}.csv").exists():
+            mvb_heatmaps(pd.read_csv(SIGNATURES_DIR / f"{experiment}.csv"), experiment)
     if "e1" in only:
         moral_bias_table(pd.read_csv(SIGNATURES_DIR / "e1.csv"))
     if "e2" in only:
-        perturbation_boxplot(pd.read_csv(SIGNATURES_DIR / "e2.csv"))
+        e2 = pd.read_csv(SIGNATURES_DIR / "e2.csv")
+        perturbation_boxplot(e2)
+        perturbation_table(e2)
     if "correlations" in only:
         correlation_tables(pd.read_csv(SIGNATURES_DIR / "correlations.csv"))
+    if args.export:
+        export_data()
