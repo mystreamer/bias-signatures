@@ -11,6 +11,7 @@ data/annotation_tasks/
 data/template_sets/
 data/signatures/
 out/
+dump/
 
 .venv/
 __pycache__/

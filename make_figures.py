@@ -1,11 +1,13 @@
 """Render thesis figures and LaTeX table fragments from the analysis outputs.
 
-Reads only data/signatures/*.csv; writes to out/figures/ and out/tables/.
---only restricts to a comma-separated subset of {e1, e2, e3, correlations}.
+Reads data/signatures/*.csv (the cleveland stage additionally reads
+data/responses/e1/); writes to out/figures/ and out/tables/.
+--only restricts to a comma-separated subset of {e1, e2, e3, correlations, cleveland}.
 --export copies everything in out/ into thesis/figures/bias_signatures/.
 
   mvb_{experiment}.pdf       MF x MF JSD heatmaps, models x channels (Figs 5.3, 5.6, 5.7)
   perturbation_boxplot.pdf   per-topic perturbation biases (Fig 5.4)
+  stance_cleveland.pdf       per-model mean 8SA stance on the curated E2 topics
   moral_bias.tex             moral vs non-moral by domain (Table 5.1)
   perturbation_biases.tex    per-(topic, model) perturbation JSDs (appendix)
   cross_model_rho.tex        Table 5.2
@@ -20,11 +22,14 @@ import shutil
 import matplotlib
 
 matplotlib.use("Agg")
+import matplotlib.patches as mpatches
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
+from constructs import INVALID, REFUSAL
 from llm import BASE_DIR, DATA_DIR
+from make_signatures import load_responses
 
 SIGNATURES_DIR = DATA_DIR / "signatures"
 FIGURES_DIR = BASE_DIR / "out" / "figures"
@@ -216,6 +221,63 @@ def correlation_tables(corr: pd.DataFrame) -> None:
     print("cross_model_rho.tex, cross_domain_rho.tex, cross_channel_rho.tex")
 
 
+# legacy cleveland-dot style (src/analysis/render_viz.py), fonts/PDF adjusted
+STANCE_COLORS = {"1": "#2ecc71", "2": "#a8e6a3", "3": "#f5c518",
+                 "4": "#f0a070", "5": "#e74c3c", REFUSAL: "#95a5a6"}
+STANCE_NAMES = {"1": "Fully pro", "2": "Overwhelmingly pro", "3": "Neutral",
+                "4": "Overwhelmingly con", "5": "Fully con", REFUSAL: "Refusal"}
+MARKERS = ["o", "s", "D", "^", "v", "P", "X"]
+
+
+def cleveland_chart() -> None:
+    """Per-model mean stance on the curated E2 topics, from E1's 8SA responses
+    (E1 is 8SA-only). Dot colour = modal label; refusals excluded from means."""
+    curated = sorted(pd.read_csv(SIGNATURES_DIR / "e2.csv")["topic"].unique())
+    cells = {}  # (topic, model) -> (mean stance, modal label)
+    for model, df in load_responses("e1").items():
+        df = df[df["topic"].isin(curated) & (df["label"] != INVALID)]
+        for topic, g in df.groupby("topic"):
+            mean = pd.to_numeric(g["label"], errors="coerce").mean()
+            if not np.isnan(mean):
+                cells[(topic, model)] = (mean, g["label"].mode()[0])
+    models = sorted({m for _, m in cells})
+    order = sorted(curated, key=lambda t: np.mean(
+        [v[0] for (tt, _), v in cells.items() if tt == t]))
+    step = len(models) + 1  # one row per model plus a gap between topic blocks
+    fig, ax = plt.subplots(figsize=(TEXTWIDTH_IN, max(4, len(order) * len(models) * 0.25 + 2)),
+                           layout="constrained")
+    for ti, topic in enumerate(order):
+        for mi, model in enumerate(models):
+            if (topic, model) in cells:
+                mean, modal = cells[(topic, model)]
+                ax.scatter(mean, ti * step + mi, color=STANCE_COLORS.get(modal, "#cccccc"),
+                           marker=MARKERS[mi % len(MARKERS)], s=55, zorder=3,
+                           edgecolors="white", linewidths=0.4)
+        ax.annotate(topic, xy=(1, ti * step + (len(models) - 1) / 2),
+                    xycoords=("axes fraction", "data"), xytext=(10, 0),
+                    textcoords="offset points", ha="left", va="center",
+                    fontsize=8, fontweight="bold", annotation_clip=False)
+        if ti:
+            ax.axhline(ti * step - 1, color="grey", lw=0.4, alpha=0.3)
+    ax.set_yticks([ti * step + mi for ti in range(len(order)) for mi in range(len(models))],
+                  models * len(order), fontsize=8)
+    ax.set_xlim(0.5, 5.5)
+    ax.set_xticks([1, 2, 3, 4, 5], ["pro", "", "neutral", "", "con"], fontsize=8)
+    ax.axvline(3, color="grey", lw=0.5, ls="--", alpha=0.6)
+    ax.grid(axis="x", lw=0.3, alpha=0.4)
+    ax.set_ylim(-0.5, len(order) * step - 1.5)
+    ax.invert_yaxis()
+    handles = [mpatches.Patch(color=STANCE_COLORS[k], label=STANCE_NAMES[k]) for k in STANCE_COLORS]
+    handles += [plt.Line2D([], [], marker=MARKERS[i % len(MARKERS)], color="grey", lw=0,
+                           markersize=6, label=m) for i, m in enumerate(models)]
+    # below the axes: the right margin belongs to the topic labels
+    ax.legend(handles=handles, bbox_to_anchor=(0.5, -0.02), loc="upper center",
+              ncols=3, fontsize=8, title="Stance / Model", title_fontsize=9)
+    fig.savefig(FIGURES_DIR / "stance_cleveland.pdf", bbox_inches="tight")
+    plt.close(fig)
+    print("stance_cleveland.pdf")
+
+
 def export_data() -> None:
     """Copy everything in out/ into thesis/figures/bias_signatures/, where the
     thesis sources it alongside the other figure directories."""
@@ -229,11 +291,11 @@ if __name__ == "__main__":
     import argparse
 
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--only", help="comma-separated experiment names (e1, e2, e3, correlations)")
+    parser.add_argument("--only", help="comma-separated experiment names (e1, e2, e3, correlations, cleveland)")
     parser.add_argument("--export", action="store_true",
                         help="copy out/ artefacts into thesis/figures/bias_signatures/")
     args = parser.parse_args()
-    only = set(args.only.split(",")) if args.only else {"e1", "e2", "e3", "correlations"}
+    only = set(args.only.split(",")) if args.only else {"e1", "e2", "e3", "correlations", "cleveland"}
 
     FIGURES_DIR.mkdir(parents=True, exist_ok=True)
     TABLES_DIR.mkdir(parents=True, exist_ok=True)
@@ -248,5 +310,7 @@ if __name__ == "__main__":
         perturbation_table(e2)
     if "correlations" in only:
         correlation_tables(pd.read_csv(SIGNATURES_DIR / "correlations.csv"))
+    if "cleveland" in only:
+        cleveland_chart()
     if args.export:
         export_data()

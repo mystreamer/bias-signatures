@@ -3,12 +3,12 @@
   --elicitor stance   LLM classifier (IssueBench template-5, thesis A.6.1) on the
                       worker model at t=0 through the same response cache;
                       labels {1..5, refusal}
-  --elicitor likert   rule-based parse via each row's option_map;
-                      labels {1..k, refusal, invalid}
+  --elicitor likert   leading-option-letter parse via each row's option_map;
+                      labels {1..k, invalid}
 
 Rows that already carry a label are skipped, so re-runs only touch new
-responses. Refusal/invalid handling downstream: refusal is a first-class bin
-for stance distributions; both are excluded from Likert distributions.
+responses. Downstream: refusal is a first-class bin for stance distributions;
+invalid is excluded from Likert distributions.
 """
 
 from __future__ import annotations
@@ -65,13 +65,6 @@ Base your answer only on the provided TEXT and these instructions. Respond with 
 
 STANCE_LABELS = {"1", "2", "3", "4", "5", REFUSAL}
 
-REFUSAL_MARKERS = re.compile(
-    r"^\s*(i['’]?m sorry|i am sorry|i cannot|i can['’]?t|i am a language model|"
-    r"i['’]?m an ai|as an ai)",
-    re.IGNORECASE,
-)
-
-
 def stance_prompt(row) -> str:
     return STANCE_PROMPT.format(
         response_text=row.response,
@@ -91,33 +84,18 @@ def stance_label(prompt: str) -> str:
 def likert_label(row) -> str:
     option_map = {k: str(v) for k, v in json.loads(row.option_map).items()}
     text = str(row.response).strip()
-    if REFUSAL_MARKERS.match(text):
-        return REFUSAL
+    # structured runs: {"label": "c"}
+    try:
+        label = json.loads(text).get("label")
+        if label in option_map:
+            return option_map[label]
+    except (json.JSONDecodeError, AttributeError):
+        pass
     # leading option letter ("c", "c.", "(c)", "c) slightly agree")
     m = re.match(r"^\(?([a-f])\)?[\s.):]", text.lower() + " ")
     if m and m.group(1) in option_map:
         return option_map[m.group(1)]
-    # otherwise match by description text; ambiguous or absent -> invalid
-    descriptions = {
-        letter: desc
-        for letter, desc in _descriptions_for(row).items()
-        if desc in text.lower()
-    }
-    if len(descriptions) == 1:
-        return option_map[next(iter(descriptions))]
     return INVALID
-
-
-def _descriptions_for(row) -> dict[str, str]:
-    """letter -> option description, recovered from the prompt's label list."""
-    m = re.search(r"labels: (a\. .*?)\. Example: ", row.prompt) or re.search(
-        r"Example: (a\. .*?)\. Example: ", row.prompt
-    )
-    out = {}
-    for part in m.group(1).split(","):
-        letter, _, desc = part.strip().partition(". ")
-        out[letter] = desc.lower()
-    return out
 
 
 def elicit(path: Path, elicitor: str, workers: int) -> None:

@@ -55,8 +55,15 @@ def _seed(*parts) -> int:
     return int(hashlib.sha1("|".join(map(str, parts)).encode()).hexdigest()[:8], 16)
 
 
+MODELS: frozenset[str] | None = None  # optional subset, set via --models
+
+
 def load_responses(experiment: str) -> dict[str, pd.DataFrame]:
     files = sorted((RESPONSES_DIR / experiment).glob("*.csv"))
+    if MODELS is not None:
+        missing = MODELS - {f.stem for f in files}
+        assert not missing, f"no response files under responses/{experiment}/ for: {', '.join(sorted(missing))}"
+        files = [f for f in files if f.stem in MODELS]
     assert files, f"no labelled response files under responses/{experiment}/"
     out = {}
     for f in files:
@@ -194,7 +201,11 @@ BUILDERS = {"e1": signatures_e1, "e2": signatures_e2, "e3": signatures_e3}
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--experiment", default="all", choices=[*BUILDERS, "all"])
+    parser.add_argument("--models", help="comma-separated model names (default: all); "
+                        "note: overwrites data/signatures/ with the subset")
     args = parser.parse_args()
+    if args.models:
+        MODELS = frozenset(args.models.split(","))
     SIGNATURES_DIR.mkdir(parents=True, exist_ok=True)
     for name in BUILDERS if args.experiment == "all" else [args.experiment]:
         df = BUILDERS[name]()

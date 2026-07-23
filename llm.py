@@ -2,8 +2,9 @@
 
 Two call paths, both through dspy.LM:
 - `cached_completions()` sends the prompt as a single bare user message and
-  returns verbatim completions (the legacy MinimalistAdapter behaviour,
-  inlined) — used for experiment runs and the stance classifier.
+  returns completions passed through the purity layer (`_pure_text`) — the
+  legacy MinimalistAdapter behaviour, inlined — used for experiment runs and
+  the stance classifier.
 - `structured_lm()` + dspy.Predict with the default ChatAdapter — used for
   augmentation/annotation signatures defined by their scripts.
 """
@@ -13,6 +14,7 @@ from __future__ import annotations
 import hashlib
 import json
 import os
+import re
 from pathlib import Path
 
 import dspy
@@ -34,7 +36,7 @@ _OPENROUTER = dict(
     api_key_env="OR_OPENROUTER_API_KEY",
     api_base_env="OR_OPENROUTER_BASE_URL",
     extra_headers=None,
-    #  extra_body={"provider": {"only": ["novita"], "allow_fallbacks": False}},
+    # extra_body={"provider": {"only": ["novita"], "allow_fallbacks": False}},
 )
 
 #: alias -> (litellm slug, provider credentials). The slug is part of the
@@ -42,16 +44,25 @@ _OPENROUTER = dict(
 #: OpenAI-compatible endpoint given by api_base.
 MODELS = {
     "llama-3.1-8b": ("openai/meta-llama/Llama-3.1-8B-Instruct", _HF),
-    "llama-3.3-70b": ("openai/meta-llama/Llama-3.3-70B-Instruct:novita", _HF),
+    "llama-3.3-70b": ("openai/meta-llama/Llama-3.3-70B-Instruct", _HF),
     "qwen-2.5-72b": ("openai/Qwen/Qwen2.5-72B-Instruct", _HF),
-    "deepseek-r1": ("openai/deepseek-ai/DeepSeek-R1", _HF),
+    # NOTE: e1/e2 caches for deepseek-r1 were collected via the HF router under
+    # the slug below; the OpenRouter slug keys a DIFFERENT cache. Switched for
+    # e3 structured outputs (HF's provider rejects json_schema) — switching
+    # back re-collects (paid).
+    # "deepseek-r1": ("openai/deepseek-ai/DeepSeek-R1", _HF),
+    "deepseek-r1": ("openrouter/deepseek/deepseek-r1", _OPENROUTER),
     # "kimi-k2.5": ("openai/moonshotai/Kimi-K2.5", _HF),
     # "gpt-oss-120b": ("openai/openai/gpt-oss-120b:cerebras", _HF),
     # "llama-4-scout-17b": ("openai/meta-llama/Llama-4-Scout-17B-16E-Instruct:deepinfra", _HF),
     # "gemma-4-31b": ("openai/google/gemma-4-31B-it:cerebras", _HF),
     # "qwen-3-32b": ("openai/Qwen/Qwen3-32B:deepinfra", _HF),
     # "phi-4": ("openai/microsoft/phi-4:deepinfra", _HF),
-    "kimi-k2.5": ("openrouter/moonshotai/kimi-k2.5", _OPENROUTER),
+    # NOTE: the committed e1 cache for kimi was collected via the HF router
+    # under this slug; the OpenRouter slug below keys a DIFFERENT cache — do
+    # not switch without deciding to re-collect (paid) and provider-pin first.
+    "kimi-k2.5": ("openai/moonshotai/Kimi-K2.5", _HF),
+    # "kimi-k2.5": ("openrouter/moonshotai/kimi-k2.5", _OPENROUTER),
 }
 
 #: model used for synthetic augmentation and stance classification (§3.2.3, §4.2.1)
@@ -62,11 +73,13 @@ N_SAMPLES = 3
 MAX_TOKENS = 4096
 
 
-def lm_for(alias: str, temperature: float, max_tokens: int = MAX_TOKENS) -> dspy.LM:
+def lm_for(alias: str, temperature: float, max_tokens: int = MAX_TOKENS,
+           response_format: dict | None = None) -> dspy.LM:
     """A dspy.LM with explicit credentials and internal caching disabled —
     the response cache below is the only cache."""
     slug, provider = MODELS[alias]
     return dspy.LM(
+        **({"response_format": response_format} if response_format else {}),
         model=slug,
         api_key=os.getenv(provider["api_key_env"]),
         api_base=os.getenv(provider["api_base_env"]),
@@ -288,9 +301,21 @@ class PersonalParaphrase(dspy.Signature):
 
 # ----------------------------------------------------------------------- cache
 
-def cache_path(alias: str, prompt: str, temperature: float) -> Path:
+def _pure_text(sample) -> str:
+    """Post-cache purity layer: a response is the answer artefact only.
+    Unwraps dspy's {'text', 'reasoning_content'} dicts (reasoning models)
+    and strips a leading <think>...</think> block (inline-style reasoners)."""
+    text = sample["text"] if isinstance(sample, dict) else sample
+    return re.sub(r"^\s*<think>.*?</think>\s*", "", text, flags=re.DOTALL)
+
+
+def cache_path(alias: str, prompt: str, temperature: float,
+               response_format: dict | None = None) -> Path:
     slug, _ = MODELS[alias]
-    key = hashlib.sha256(f"{slug}\x1f{temperature}\x1f{prompt}".encode()).hexdigest()
+    key_str = f"{slug}\x1f{temperature}\x1f{prompt}"
+    if response_format:  # part of "what was called" (ADR 0006); unset keys stay stable
+        key_str += "\x1f" + json.dumps(response_format, sort_keys=True)
+    key = hashlib.sha256(key_str.encode()).hexdigest()
     return CACHE_DIR / alias / f"{key}.json"
 
 
@@ -300,22 +325,25 @@ def cached_completions(
     temperature: float,
     n: int,
     max_tokens: int = MAX_TOKENS,
+    response_format: dict | None = None,
 ) -> list[str]:
     """The response cache (ADR 0006): top up to n samples, return exactly n.
 
     Not safe for concurrent calls on the *same* (model, temperature, prompt);
     callers parallelise across distinct prompts only.
     """
-    path = cache_path(alias, prompt, temperature)
+    path = cache_path(alias, prompt, temperature, response_format)
     if path.exists():
         entry = json.loads(path.read_text())
     else:
         slug, _ = MODELS[alias]
         entry = {"model": slug, "temperature": temperature, "prompt": prompt, "samples": []}
+        if response_format:
+            entry["response_format"] = response_format
 
     missing = n - len(entry["samples"])
     if missing > 0:
-        lm = lm_for(alias, temperature, max_tokens)
+        lm = lm_for(alias, temperature, max_tokens, response_format)
         for _ in range(missing):
             completion = lm(messages=[{"role": "user", "content": prompt}])[0]
             entry["samples"].append(completion)
@@ -324,4 +352,4 @@ def cached_completions(
         tmp.write_text(json.dumps(entry, ensure_ascii=False, indent=1))
         tmp.replace(path)
 
-    return entry["samples"][:n]
+    return [_pure_text(s) for s in entry["samples"][:n]]

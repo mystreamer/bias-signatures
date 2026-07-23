@@ -9,6 +9,7 @@ data/responses/{experiment}/{model}.csv — one row per (template, sample).
 from __future__ import annotations
 
 import argparse
+import json
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
@@ -19,11 +20,37 @@ import llm
 RESPONSES_DIR = llm.DATA_DIR / "responses"
 
 
+def response_format_for(row) -> dict | None:
+    """Likert rows (option_map present, i.e. e3) are provider-constrained to
+    {"label": <option letter>}; all other rows call unconstrained."""
+    option_map = getattr(row, "option_map", None)
+    if not isinstance(option_map, str) or not option_map:
+        return None
+    letters = list(json.loads(option_map))
+    return {"type": "json_schema", "json_schema": {
+        "name": "likert_label", "strict": True,
+        "schema": {"type": "object",
+                   "properties": {"label": {"type": "string", "enum": letters}},
+                   "required": ["label"], "additionalProperties": False}}}
+
+
+def bust_cache(df: pd.DataFrame, model: str, temperature: float) -> None:
+    """Delete this model's cached entries for the template set's prompts."""
+    paths = [llm.cache_path(model, row.prompt, temperature, response_format_for(row))
+             for row in df.itertuples()]
+    busted = sum(p.exists() for p in paths)
+    for p in paths:
+        p.unlink(missing_ok=True)
+    print(f"busted {busted} cached entries for {model}")
+
+
 def run(template_set: Path, model: str, temperature: float, n: int,
-        workers: int, limit: int | None, max_tokens: int) -> None:
+        workers: int, limit: int | None, max_tokens: int, bust: bool = False) -> None:
     df = pd.read_csv(template_set)
     if limit:
         df = df.head(limit)
+    if bust:
+        bust_cache(df, model, temperature)
     experiment = template_set.stem
     out = RESPONSES_DIR / experiment / f"{model}.csv"
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -33,7 +60,8 @@ def run(template_set: Path, model: str, temperature: float, n: int,
     def sample(row) -> list[dict]:
         try:
             completions = llm.cached_completions(
-                model, row.prompt, temperature, n, max_tokens=max_tokens
+                model, row.prompt, temperature, n, max_tokens=max_tokens,
+                response_format=response_format_for(row),
             )
         except Exception as exc:  # leave the row to the next run
             failures.append((row.template_id, repr(exc)))
@@ -64,6 +92,8 @@ if __name__ == "__main__":
     parser.add_argument("--workers", type=int, default=8)
     parser.add_argument("--limit", type=int, help="only the first K templates (smoke tests)")
     parser.add_argument("--max-tokens", type=int, default=llm.MAX_TOKENS)
+    parser.add_argument("--bust-cache", action="store_true",
+                        help="delete this model's cached responses for these prompts before sampling")
     args = parser.parse_args()
     run(args.template_set, args.model, args.temperature, args.n,
-        args.workers, args.limit, args.max_tokens)
+        args.workers, args.limit, args.max_tokens, args.bust_cache)
