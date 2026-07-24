@@ -73,13 +73,11 @@ N_SAMPLES = 3
 MAX_TOKENS = 4096
 
 
-def lm_for(alias: str, temperature: float, max_tokens: int = MAX_TOKENS,
-           response_format: dict | None = None) -> dspy.LM:
+def lm_for(alias: str, temperature: float, max_tokens: int = MAX_TOKENS) -> dspy.LM:
     """A dspy.LM with explicit credentials and internal caching disabled —
     the response cache below is the only cache."""
     slug, provider = MODELS[alias]
     return dspy.LM(
-        **({"response_format": response_format} if response_format else {}),
         model=slug,
         api_key=os.getenv(provider["api_key_env"]),
         api_base=os.getenv(provider["api_base_env"]),
@@ -309,13 +307,9 @@ def _pure_text(sample) -> str:
     return re.sub(r"^\s*<think>.*?</think>\s*", "", text, flags=re.DOTALL)
 
 
-def cache_path(alias: str, prompt: str, temperature: float,
-               response_format: dict | None = None) -> Path:
+def cache_path(alias: str, prompt: str, temperature: float) -> Path:
     slug, _ = MODELS[alias]
-    key_str = f"{slug}\x1f{temperature}\x1f{prompt}"
-    if response_format:  # part of "what was called" (ADR 0006); unset keys stay stable
-        key_str += "\x1f" + json.dumps(response_format, sort_keys=True)
-    key = hashlib.sha256(key_str.encode()).hexdigest()
+    key = hashlib.sha256(f"{slug}\x1f{temperature}\x1f{prompt}".encode()).hexdigest()
     return CACHE_DIR / alias / f"{key}.json"
 
 
@@ -325,25 +319,22 @@ def cached_completions(
     temperature: float,
     n: int,
     max_tokens: int = MAX_TOKENS,
-    response_format: dict | None = None,
 ) -> list[str]:
     """The response cache (ADR 0006): top up to n samples, return exactly n.
 
     Not safe for concurrent calls on the *same* (model, temperature, prompt);
     callers parallelise across distinct prompts only.
     """
-    path = cache_path(alias, prompt, temperature, response_format)
+    path = cache_path(alias, prompt, temperature)
     if path.exists():
         entry = json.loads(path.read_text())
     else:
         slug, _ = MODELS[alias]
         entry = {"model": slug, "temperature": temperature, "prompt": prompt, "samples": []}
-        if response_format:
-            entry["response_format"] = response_format
 
     missing = n - len(entry["samples"])
     if missing > 0:
-        lm = lm_for(alias, temperature, max_tokens, response_format)
+        lm = lm_for(alias, temperature, max_tokens)
         for _ in range(missing):
             completion = lm(messages=[{"role": "user", "content": prompt}])[0]
             entry["samples"].append(completion)
