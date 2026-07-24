@@ -139,6 +139,13 @@ def likert_job(row) -> tuple[str, frozenset[str]]:
 def likert_label(row) -> str:
     option_map = {k: str(v) for k, v in json.loads(row.option_map).items()}
     text = str(row.response).strip()
+    # structured runs: {"label": "c"}
+    try:
+        label = json.loads(text).get("label")
+        if label in option_map:
+            return option_map[label]
+    except (json.JSONDecodeError, AttributeError):
+        pass
     # leading option letter ("c", "c.", "(c)", "c) slightly agree")
     m = re.match(r"^\(?([a-f])\)?[\s.):]", text.lower() + " ")
     if m and m.group(1) in option_map:
