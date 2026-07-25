@@ -1,7 +1,8 @@
 """Render thesis figures and LaTeX table fragments from the analysis outputs.
 
-Reads data/signatures/*.csv (the cleveland stage additionally reads
-data/responses/e1/); writes to out/figures/ and out/tables/.
+Reads data/signatures/*.csv (the cleveland stage instead reads
+data/responses/e1/ and data/components/issues.json); writes to out/figures/
+and out/tables/.
 --only restricts to a comma-separated subset of {e1, e2, e3, correlations, cleveland}.
 --export copies everything in out/ into thesis/figures/bias_signatures/.
 
@@ -17,6 +18,7 @@ data/responses/e1/); writes to out/figures/ and out/tables/.
 
 from __future__ import annotations
 
+import json
 import shutil
 
 import matplotlib
@@ -232,7 +234,8 @@ MARKERS = ["o", "s", "D", "^", "v", "P", "X"]
 def cleveland_chart() -> None:
     """Per-model mean stance on the curated E2 topics, from E1's 8SA responses
     (E1 is 8SA-only). Dot colour = modal label; refusals excluded from means."""
-    curated = sorted(pd.read_csv(SIGNATURES_DIR / "e2.csv")["topic"].unique())
+    components = json.loads((DATA_DIR / "components" / "issues.json").read_text())
+    curated = sorted(c["text"] for c in components if c["features"].get("controversial"))
     cells = {}  # (topic, model) -> (mean stance, modal label)
     for model, df in load_responses("e1").items():
         df = df[df["topic"].isin(curated) & (df["label"] != INVALID)]
