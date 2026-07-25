@@ -89,7 +89,14 @@ def tested_pair(labels_a, labels_b, support, seed) -> dict:
     jsd, p = stats.permutation_test(
         list(labels_a), list(labels_b), support, N_PERMUTATIONS, seed=seed
     )
-    return {"n_a": len(labels_a), "n_b": len(labels_b), "jsd": jsd, "p": p}
+    lo, hi = stats.jsd_bootstrap(list(labels_a), list(labels_b), support, seed=seed)
+    return {"n_a": len(labels_a), "n_b": len(labels_b),
+            "jsd": jsd, "jsd_lo": lo, "jsd_hi": hi, "p": p}
+
+
+#: (channel, model) -> canonical partition label counts, for the response-level
+#: bootstrap in make_correlation.py (persisted as label_counts.json)
+LABEL_COUNTS: dict[tuple[str, str], dict] = {}
 
 
 def mvb_rows(df: pd.DataFrame, support, scheme: str, **context) -> list[dict]:
@@ -102,11 +109,19 @@ def mvb_rows(df: pd.DataFrame, support, scheme: str, **context) -> list[dict]:
         if scheme == "canonical"
         else sorted({f for row in lists for f in row})
     )
+    parts = {
+        f: moral[lists.map(lambda l, f=f: f in l)]["label"] for f in foundations
+    }
+    if scheme == "canonical" and "channel" in context and "model" in context:
+        LABEL_COUNTS[(context["channel"], context["model"])] = {
+            "support": list(support),
+            "counts": {f: [int((labels == s).sum()) for s in support]
+                       for f, labels in parts.items() if not labels.empty},
+        }
     rows = []
     for i, f1 in enumerate(foundations):
         for f2 in foundations[i + 1 :]:
-            a = moral[lists.map(lambda l: f1 in l)]["label"]
-            b = moral[lists.map(lambda l: f2 in l)]["label"]
+            a, b = parts[f1], parts[f2]
             if a.empty or b.empty:
                 continue
             rows.append({
@@ -212,3 +227,9 @@ if __name__ == "__main__":
         out = SIGNATURES_DIR / f"{name}.csv"
         df.to_csv(out, index=False)
         print(f"{out.name}: {len(df)} signature rows")
+
+    counts_file = SIGNATURES_DIR / "label_counts.json"
+    merged = json.loads(counts_file.read_text()) if counts_file.exists() else {}
+    merged.update({f"{channel}|{model}": v for (channel, model), v in LABEL_COUNTS.items()})
+    counts_file.write_text(json.dumps(merged, indent=1))
+    print(f"{counts_file.name}: {len(merged)} channel|model partition-count entries")

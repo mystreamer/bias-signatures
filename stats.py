@@ -83,10 +83,86 @@ def bonferroni(p: float, n_tests: int) -> float:
     return min(1.0, p * n_tests)
 
 
+def jsd_bootstrap(
+    labels_a: Sequence[str],
+    labels_b: Sequence[str],
+    support: Sequence[str],
+    n_resamples: int = 10_000,
+    confidence: float = 0.95,
+    alpha: float = 1.0,
+    seed: int | None = None,
+) -> tuple[float, float]:
+    """Percentile bootstrap interval (lo, hi) for the smoothed JSD, redrawing
+    each partition's counts ~ Multinomial(n, p_hat) — i.i.d. label resampling
+    (prompt clustering deferred). Magnitude precision only: JSD is boundary-
+    biased, so the interval never reaches 0 and must not be read as a
+    significance device — that remains the permutation test's job.
+    """
+    rng = np.random.default_rng(seed)
+    index = {s: i for i, s in enumerate(support)}
+    k = len(support)
+    ca = np.bincount([index[l] for l in labels_a], minlength=k)
+    cb = np.bincount([index[l] for l in labels_b], minlength=k)
+    resamples = []
+    for _ in range(n_resamples):
+        ra = rng.multinomial(ca.sum(), ca / ca.sum()) + alpha
+        rb = rng.multinomial(cb.sum(), cb / cb.sum()) + alpha
+        resamples.append(jsd(ra / ra.sum(), rb / rb.sum()))
+    tail = (1 - confidence) / 2
+    lo, hi = np.quantile(resamples, [tail, 1 - tail])
+    return float(lo), float(hi)
+
+
+def spearman_count_bootstrap(
+    parts: dict,
+    elements: Sequence[tuple],
+    n_resamples: int = 10_000,
+    confidence: float = 0.95,
+    alpha: float = 1.0,
+    seed: int | None = None,
+) -> tuple[float, float, float]:
+    """Response-level bootstrap CI for the Spearman rho of two JSD vectors.
+
+    parts: partition key -> label counts over that partition's support.
+    elements: one ((ka, kb), (kc, kd)) per vector element — x[i] is the
+    smoothed JSD between partitions ka and kb, y[i] between kc and kd.
+
+    Each replicate redraws every partition's counts ~ Multinomial(n, p_hat) —
+    distributionally identical to i.i.d. label resampling (prompt clustering
+    deliberately deferred: samples within a prompt are treated as independent,
+    and partitions sharing multi-label rows are resampled independently) —
+    then recomputes both JSD vectors and re-derives rho. Returns (rho, lo, hi)
+    with rho computed from the original counts.
+    """
+    rng = np.random.default_rng(seed)
+    counts = {k: np.asarray(v, float) for k, v in parts.items()}
+
+    def rho_from(c: dict) -> float:
+        def d(k):
+            smoothed = c[k] + alpha
+            return smoothed / smoothed.sum()
+        x = [jsd(d(ka), d(kb)) for (ka, kb), _ in elements]
+        y = [jsd(d(kc), d(kd)) for _, (kc, kd) in elements]
+        return float(spearmanr(x, y).statistic)
+
+    rho = rho_from(counts)
+    involved = sorted({k for xy in elements for pair in xy for k in pair})
+    resamples = []
+    for _ in range(n_resamples):
+        redrawn = {k: rng.multinomial(int(counts[k].sum()), counts[k] / counts[k].sum())
+                   for k in involved}
+        r = rho_from(redrawn)
+        if not np.isnan(r):
+            resamples.append(r)
+    tail = (1 - confidence) / 2
+    lo, hi = np.quantile(resamples, [tail, 1 - tail])
+    return rho, float(lo), float(hi)
+
+
 def spearman_bootstrap(
     x: Sequence[float],
     y: Sequence[float],
-    n_resamples: int = 5_000,
+    n_resamples: int = 10_000,
     confidence: float = 0.95,
     seed: int | None = None,
 ) -> tuple[float, float, float]:

@@ -14,16 +14,24 @@ them); cross_domain and cross_channel stack the per-model vectors into one
 
 from __future__ import annotations
 
+import json
 from itertools import combinations
 
 import numpy as np
 import pandas as pd
 
 from llm import DATA_DIR
-from stats import spearman_bootstrap
+from stats import spearman_count_bootstrap
 
 SIGNATURES_DIR = DATA_DIR / "signatures"
-N_RESAMPLES = 5_000
+N_RESAMPLES = 10_000
+
+
+def partition_counts() -> dict:
+    """(channel, model, foundation) -> label counts, from make_signatures."""
+    data = json.loads((SIGNATURES_DIR / "label_counts.json").read_text())
+    return {(*key.split("|"), f): counts
+            for key, v in data.items() for f, counts in v["counts"].items()}
 
 
 def channel_vectors() -> dict[str, dict[str, pd.Series]]:
@@ -38,22 +46,29 @@ def channel_vectors() -> dict[str, dict[str, pd.Series]]:
     return out
 
 
-def aligned(a: pd.Series, b: pd.Series) -> tuple[np.ndarray, np.ndarray]:
-    shared = a.index.intersection(b.index)
-    return a[shared].to_numpy(), b[shared].to_numpy()
+def elements(a: pd.Series, b: pd.Series, side_a, side_b) -> list[tuple]:
+    """One ((ka, kb), (kc, kd)) partition-key element per shared MF pair;
+    side = (channel, model)."""
+    out = []
+    for pair in a.index.intersection(b.index):
+        f1, f2 = pair.split("|")
+        out.append((((*side_a, f1), (*side_a, f2)), ((*side_b, f1), (*side_b, f2))))
+    return out
 
 
-def row(comparison, unit_a, unit_b, x, y, channel="") -> dict:
-    rho, lo, hi = spearman_bootstrap(x, y, N_RESAMPLES, seed=0)
+def row(comparison, unit_a, unit_b, cell_elements, channel="") -> dict:
+    rho, lo, hi = spearman_count_bootstrap(PARTS, cell_elements, N_RESAMPLES, seed=0)
     return {
         "comparison": comparison, "channel": channel,
         "unit_a": unit_a, "unit_b": unit_b,
-        "rho": round(rho, 3), "ci_lo": round(lo, 3), "ci_hi": round(hi, 3), "n": len(x),
+        "rho": round(rho, 3), "ci_lo": round(lo, 3), "ci_hi": round(hi, 3),
+        "n": len(cell_elements),
     }
 
 
 if __name__ == "__main__":
     vectors = channel_vectors()
+    PARTS = partition_counts()
     models = sorted(next(iter(vectors.values())))
     rows = []
 
@@ -61,8 +76,9 @@ if __name__ == "__main__":
     coefficients = []
     for channel in ("political", "personal"):
         for m1, m2 in combinations(models, 2):
-            x, y = aligned(vectors[channel][m1], vectors[channel][m2])
-            r = row("cross_model", m1, m2, x, y, channel)
+            e = elements(vectors[channel][m1], vectors[channel][m2],
+                         (channel, m1), (channel, m2))
+            r = row("cross_model", m1, m2, e, channel)
             rows.append(r)
             coefficients.append(r["rho"])
     rng = np.random.default_rng(0)
@@ -78,22 +94,21 @@ if __name__ == "__main__":
     })
 
     # cross-domain within model (+ stacked pooled row)
-    stacked_x, stacked_y = [], []
+    stacked = []
     for model in models:
-        x, y = aligned(vectors["political"][model], vectors["personal"][model])
-        rows.append(row("cross_domain", model, model, x, y))
-        stacked_x.extend(x)
-        stacked_y.extend(y)
-    rows.append(row("cross_domain_pooled", "political", "personal", stacked_x, stacked_y))
+        e = elements(vectors["political"][model], vectors["personal"][model],
+                     ("political", model), ("personal", model))
+        rows.append(row("cross_domain", model, model, e))
+        stacked.extend(e)
+    rows.append(row("cross_domain_pooled", "political", "personal", stacked))
 
     # cross-channel, stacked across models
     for c1, c2 in combinations(sorted(vectors), 2):
-        xs, ys = [], []
+        stacked = []
         for model in models:
-            x, y = aligned(vectors[c1][model], vectors[c2][model])
-            xs.extend(x)
-            ys.extend(y)
-        rows.append(row("cross_channel", c1, c2, xs, ys))
+            stacked.extend(elements(vectors[c1][model], vectors[c2][model],
+                                    (c1, model), (c2, model)))
+        rows.append(row("cross_channel", c1, c2, stacked))
 
     out = SIGNATURES_DIR / "correlations.csv"
     pd.DataFrame(rows).to_csv(out, index=False)
