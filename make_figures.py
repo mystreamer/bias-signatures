@@ -197,7 +197,8 @@ def correlation_tables(corr: pd.DataFrame) -> None:
                 cells.append(f"{hit.iloc[0].rho:+.3f}" if len(hit) else "")
             lines.append(f"{m2} & " + " & ".join(cells) + r" \\")
     pooled = corr[corr["comparison"] == "cross_model_pooled"].iloc[0]
-    lines += [r"\midrule", rf"\multicolumn{{5}}{{l}}{{Pooled mean $\rho$ = {rho_cell(pooled)}}} \\",
+    lines += [r"\midrule",
+              rf"\multicolumn{{5}}{{l}}{{Pooled mean $\rho$ = {pooled.rho:+.3f}}} \\",
               r"\bottomrule", r"\end{tabular}"]
     (TABLES_DIR / "cross_model_rho.tex").write_text("\n".join(lines) + "\n")
 
