@@ -18,7 +18,7 @@ import llm
 from constructs import parse_foundation
 
 MANUAL_DIR = llm.DATA_DIR / "raw" / "manual"
-EXPORT = MANUAL_DIR / "project-24-at-2026-07-23-09-42-5c30a803.csv"
+EXPORT = MANUAL_DIR / "project-24-at-2026-07-25-18-07-ac66a69e-3.csv"
 
 
 def parse_labels(cell) -> frozenset[str]:
@@ -35,7 +35,7 @@ def parse_labels(cell) -> frozenset[str]:
 mine = pd.read_csv(MANUAL_DIR / "political_topic_annotations.csv")
 mine = mine.set_index("term")["annotator_1"].map(parse_labels)
 
-theirs = pd.read_csv(EXPORT, sep="\t")
+theirs = pd.read_csv(EXPORT)
 theirs = theirs[theirs["id"].str.startswith("pol-")]  # drop the SC blinds
 theirs = theirs.assign(mf=theirs["mf"].map(parse_labels))
 

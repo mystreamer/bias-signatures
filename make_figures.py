@@ -9,7 +9,9 @@ and out/tables/.
   mvb_{experiment}.pdf       MF x MF JSD heatmaps, models x channels (Figs 5.3, 5.6, 5.7)
   perturbation_boxplot.pdf   per-topic perturbation biases (Fig 5.4)
   stance_cleveland.pdf       per-model mean 8SA stance on the curated E2 topics
+  {mfq30,mfq2}_per_foundation_model_likert.pdf  E3 Likert counts (appendix)
   moral_bias.tex             moral vs non-moral by domain (Table 5.1)
+  stance_bin_counts.tex      E1 stance bin counts by domain and issue type (Table A.1)
   perturbation_biases.tex    per-(topic, model) perturbation JSDs (appendix)
   cross_model_rho.tex        Table 5.2
   cross_domain_rho.tex       Table 5.3
@@ -29,7 +31,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-from constructs import INVALID, REFUSAL
+from constructs import INVALID, MFQ2_SUPPORT, MFQ30_SUPPORT, REFUSAL
 from llm import BASE_DIR, DATA_DIR
 from make_signatures import load_responses
 
@@ -117,13 +119,60 @@ def perturbation_boxplot(e2: pd.DataFrame) -> None:
         median_8sa = narrow[narrow["partition_b"] == comparison]["jsd"].median()
         ax.hlines(median_8sa, ci - 0.42, ci + 0.42, colors="red", linestyles="dashed")
     ax.set_xticks(range(len(comparisons)), comparisons, fontsize=10)
-    ax.set_ylabel("JSD vs. baseline")
+    ax.set_ylabel("Perturbed vs. baseline (JSD)")
     ax.legend(handles=[plt.Line2D([], [], color=colors[i], lw=4, label=m)
                        for i, m in enumerate(models)], fontsize=10)
     fig.tight_layout()
     fig.savefig(FIGURES_DIR / "perturbation_boxplot.pdf")
     plt.close(fig)
     print("perturbation_boxplot.pdf")
+
+
+def likert_facets() -> None:
+    """Per-(foundation, model) Likert response counts for the E3 appendix
+    figures: one panel per foundation, grouped bars per model, viridis-coded
+    bins. Same row filter as signatures_e3 (no refusal/invalid, no control
+    items), so these counts underlie the mvb_e3 JSDs."""
+    responses = load_responses("e3")
+    models = sorted(responses)
+    for questionnaire, support in (("mfq30", MFQ30_SUPPORT), ("mfq2", MFQ2_SUPPORT)):
+        counts = {}  # (foundation, model) -> per-bin count Series
+        for model, df in responses.items():
+            kept = df[~df["label"].isin([REFUSAL, INVALID])
+                      & (df["control"] == False)  # noqa: E712
+                      & (df["questionnaire"] == questionnaire)]
+            foundation = kept["mf"].map(lambda raw: (json.loads(raw) or [None])[0])
+            for f, g in kept.groupby(foundation):
+                counts[(f, model)] = g["label"].value_counts().reindex(support, fill_value=0)
+        foundations = sorted({f for f, _ in counts})
+        n_cols, n_rows = 2, (len(foundations) + 1) // 2
+        colors = plt.cm.viridis(np.linspace(0, 1, len(support)))
+        width = 0.8 / len(support)
+        fig, axes = plt.subplots(n_rows, n_cols,
+                                 figsize=(TEXTWIDTH_IN, 2.5 * n_rows + 0.8),
+                                 squeeze=False, layout="constrained")
+        x = np.arange(len(models))
+        for ax, f in zip(axes.flat, foundations):
+            for i, bin_ in enumerate(support):
+                heights = [counts[(f, m)][bin_] if (f, m) in counts else 0 for m in models]
+                ax.bar(x + (i - (len(support) - 1) / 2) * width, heights,
+                       width, color=colors[i])
+            ax.set_xticks(x, models, rotation=30, ha="right", fontsize=9)
+            ax.set_title(f, fontsize=11)
+            ax.tick_params(axis="y", labelsize=9)
+            ax.grid(axis="y", lw=0.3, alpha=0.4)
+            ax.set_axisbelow(True)
+        for row in axes:
+            row[0].set_ylabel("Responses", fontsize=10)
+        for ax in axes.flat[len(foundations):]:
+            ax.set_visible(False)
+        handles = [mpatches.Patch(color=colors[i], label=s) for i, s in enumerate(support)]
+        fig.legend(handles=handles, loc="outside lower center", ncols=len(support),
+                   fontsize=9, title_fontsize=10,
+                   title=f"Likert (1 = lowest, {len(support)} = highest)")
+        fig.savefig(FIGURES_DIR / f"{questionnaire}_per_foundation_model_likert.pdf")
+        plt.close(fig)
+        print(f"{questionnaire}_per_foundation_model_likert.pdf")
 
 
 # --------------------------------------------------------------------- tables
@@ -147,6 +196,31 @@ def moral_bias_table(e1: pd.DataFrame) -> None:
     lines += [r"\bottomrule", r"\end{tabular}"]
     (TABLES_DIR / "moral_bias.tex").write_text("\n".join(lines) + "\n")
     print("moral_bias.tex")
+
+
+def stance_bin_counts_table() -> None:
+    """Table A.1: absolute E1 stance bin counts per (domain, issue type,
+    model). The refusal column folds in every non-numeric label."""
+    responses = load_responses("e1")
+    bins = [str(b) for b in range(1, 6)]
+    blocks = [("political", True, "Political Essays --- moral"),
+              ("political", False, "Political Essays --- nonmoral"),
+              ("personal", True, "Personal-Situational Essays --- moral"),
+              ("personal", False, "Personal-Situational Essays --- nonmoral")]
+    lines = [r"\begin{tabular}{l r r r r r r r}", r"\toprule",
+             r"Model & 1 & 2 & 3 & 4 & 5 & refusal & $n$ \\", r"\midrule"]
+    for bi, (domain, moral, title) in enumerate(blocks):
+        if bi:
+            lines.append(r"\addlinespace")
+        lines.append(rf"\multicolumn{{8}}{{l}}{{\textit{{{title}}}}} \\")
+        for model, df in responses.items():
+            sub = df[(df["domain"] == domain) & (df["morally_relevant"] == moral)]
+            numeric = [int((sub["label"] == b).sum()) for b in bins]
+            cells = numeric + [len(sub) - sum(numeric), len(sub)]
+            lines.append(f"{model} & " + " & ".join(map(str, cells)) + r" \\")
+    lines += [r"\bottomrule", r"\end{tabular}"]
+    (TABLES_DIR / "stance_bin_counts.tex").write_text("\n".join(lines) + "\n")
+    print("stance_bin_counts.tex")
 
 
 def perturbation_table(e2: pd.DataFrame) -> None:
@@ -308,6 +382,9 @@ if __name__ == "__main__":
             mvb_heatmaps(pd.read_csv(SIGNATURES_DIR / f"{experiment}.csv"), experiment)
     if "e1" in only:
         moral_bias_table(pd.read_csv(SIGNATURES_DIR / "e1.csv"))
+        stance_bin_counts_table()
+    if "e3" in only:
+        likert_facets()
     if "e2" in only:
         e2 = pd.read_csv(SIGNATURES_DIR / "e2.csv")
         perturbation_boxplot(e2)
