@@ -315,21 +315,22 @@ MARKERS = ["o", "s", "D", "^", "v", "P", "X"]
 
 
 def cleveland_chart(curated: dict[str, str] | None = None, save: bool = True,
-                    responses: bool = False) -> list:
+                    responses: bool = False, data: dict | None = None) -> list:
     """Per-model mean stance on the curated E2 topics, from E1's 8SA responses
     (E1 is 8SA-only). One figure per domain, one panel per topic (same grid
     layout as the Likert facets); dot colour = modal label; refusals excluded
     from means. Pass curated={topic: domain} to chart an arbitrary selection.
     responses=True superimposes every individual numeric response as a small
     jittered marker coloured by its own stance label, behind the mean.
-    Returns the figures; save=False skips the PDF write (and leaves them open,
-    so they render inline when called from an interactive window)."""
+    data={model: labelled df} overrides the E1 source (e.g. an E2 perturbation
+    slice). Returns the figures; save=False skips the PDF write (and leaves them
+    open, so they render inline when called from an interactive window)."""
     if curated is None:
         components = json.loads((DATA_DIR / "components" / "issues.json").read_text())
         curated = {c["text"]: c["features"]["domain"] for c in components
                    if c["features"].get("controversial")}
     cells = {}  # (topic, model) -> (mean stance, modal label, numeric labels)
-    for model, df in load_responses("e1").items():
+    for model, df in (load_responses("e1") if data is None else data).items():
         df = df[df["topic"].isin(curated) & (df["label"] != INVALID)]
         for topic, g in df.groupby("topic"):
             values = pd.to_numeric(g["label"], errors="coerce").dropna()
