@@ -25,8 +25,6 @@ import shutil
 import textwrap
 
 import matplotlib
-
-matplotlib.use("Agg")
 import matplotlib.patches as mpatches
 import matplotlib.pyplot as plt
 import numpy as np
@@ -316,29 +314,38 @@ STANCE_NAMES = {"1": "Fully pro", "2": "Overwhelmingly pro", "3": "Neutral",
 MARKERS = ["o", "s", "D", "^", "v", "P", "X"]
 
 
-def cleveland_chart() -> None:
+def cleveland_chart(curated: dict[str, str] | None = None, save: bool = True,
+                    responses: bool = False) -> list:
     """Per-model mean stance on the curated E2 topics, from E1's 8SA responses
-    (E1 is 8SA-only). One PDF per domain, one panel per topic (same grid
+    (E1 is 8SA-only). One figure per domain, one panel per topic (same grid
     layout as the Likert facets); dot colour = modal label; refusals excluded
-    from means."""
-    components = json.loads((DATA_DIR / "components" / "issues.json").read_text())
-    curated = {c["text"]: c["features"]["domain"] for c in components
-               if c["features"].get("controversial")}
-    cells = {}  # (topic, model) -> (mean stance, modal label)
+    from means. Pass curated={topic: domain} to chart an arbitrary selection.
+    responses=True superimposes every individual numeric response as a small
+    jittered marker coloured by its own stance label, behind the mean.
+    Returns the figures; save=False skips the PDF write (and leaves them open,
+    so they render inline when called from an interactive window)."""
+    if curated is None:
+        components = json.loads((DATA_DIR / "components" / "issues.json").read_text())
+        curated = {c["text"]: c["features"]["domain"] for c in components
+                   if c["features"].get("controversial")}
+    cells = {}  # (topic, model) -> (mean stance, modal label, numeric labels)
     for model, df in load_responses("e1").items():
         df = df[df["topic"].isin(curated) & (df["label"] != INVALID)]
         for topic, g in df.groupby("topic"):
-            mean = pd.to_numeric(g["label"], errors="coerce").mean()
-            if not np.isnan(mean):
-                cells[(topic, model)] = (mean, g["label"].mode()[0])
+            values = pd.to_numeric(g["label"], errors="coerce").dropna()
+            if len(values):
+                cells[(topic, model)] = (values.mean(), g["label"].mode()[0], values)
     models = sorted({m for _, m in cells})
     handles = [mpatches.Patch(color=STANCE_COLORS[k], label=STANCE_NAMES[k]) for k in STANCE_COLORS]
     handles += [plt.Line2D([], [], marker=MARKERS[i % len(MARKERS)], color="grey", lw=0,
                            markersize=6, label=m) for i, m in enumerate(models)]
+    figs = []
     for domain in ("political", "personal"):
         topics = sorted((t for t, d in curated.items() if d == domain),
                         key=lambda t: np.mean(
                             [v[0] for (tt, _), v in cells.items() if tt == t]))
+        if not topics:
+            continue
         n_cols, n_rows = 2, (len(topics) + 1) // 2
         fig, axes = plt.subplots(n_rows, n_cols,
                                  figsize=(TEXTWIDTH_IN, 1.7 * n_rows + 1.2),
@@ -346,7 +353,12 @@ def cleveland_chart() -> None:
         for pi, (ax, topic) in enumerate(zip(axes.flat, topics)):
             for mi, model in enumerate(models):
                 if (topic, model) in cells:
-                    mean, modal = cells[(topic, model)]
+                    mean, modal, values = cells[(topic, model)]
+                    if responses:
+                        jitter = (np.arange(len(values)) - (len(values) - 1) / 2) * 0.18
+                        ax.scatter(values, mi + jitter, s=14, alpha=0.8, zorder=2,
+                                   marker=MARKERS[mi % len(MARKERS)],
+                                   color=[STANCE_COLORS[str(int(v))] for v in values])
                     ax.scatter(mean, mi, color=STANCE_COLORS.get(modal, "#cccccc"),
                                marker=MARKERS[mi % len(MARKERS)], s=55, zorder=3,
                                edgecolors="white", linewidths=0.4)
@@ -364,9 +376,12 @@ def cleveland_chart() -> None:
             ax.set_visible(False)
         fig.legend(handles=handles, loc="outside lower center", ncols=3,
                    fontsize=9, title="Stance / Model", title_fontsize=10)
-        fig.savefig(FIGURES_DIR / f"stance_cleveland_{domain}.pdf")
-        plt.close(fig)
-        print(f"stance_cleveland_{domain}.pdf")
+        if save:
+            fig.savefig(FIGURES_DIR / f"stance_cleveland_{domain}.pdf")
+            plt.close(fig)
+            print(f"stance_cleveland_{domain}.pdf")
+        figs.append(fig)
+    return figs
 
 
 def export_data() -> None:
@@ -380,6 +395,8 @@ def export_data() -> None:
 
 if __name__ == "__main__":
     import argparse
+
+    matplotlib.use("Agg")  # headless rendering for the CLI; notebooks keep their inline backend
 
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--only", help="comma-separated experiment names (e1, e2, e3, correlations, cleveland)")
