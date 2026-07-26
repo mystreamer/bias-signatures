@@ -36,7 +36,6 @@ _OPENROUTER = dict(
     api_key_env="OR_OPENROUTER_API_KEY",
     api_base_env="OR_OPENROUTER_BASE_URL",
     extra_headers=None,
-    # extra_body={"provider": {"only": ["novita"], "allow_fallbacks": False}},
 )
 
 #: alias -> (litellm slug, provider credentials). The slug is part of the
@@ -46,11 +45,9 @@ MODELS = {
     "llama-3.1-8b": ("openai/meta-llama/Llama-3.1-8B-Instruct", _HF),
     "llama-3.3-70b": ("openai/meta-llama/Llama-3.3-70B-Instruct", _HF),
     "qwen-2.5-72b": ("openai/Qwen/Qwen2.5-72B-Instruct", _HF),
-    # NOTE: e1/e2 caches for deepseek-r1 were collected via the HF router under
-    # the slug below; the OpenRouter slug keys a DIFFERENT cache. Switched for
-    # e3 structured outputs (HF's provider rejects json_schema) — switching
-    # back re-collects (paid).
-    # "deepseek-r1": ("openai/deepseek-ai/DeepSeek-R1", _HF),
+    # NOTE: deepseek-r1 calls go through OpenRouter (HF stopped serving R1
+    # mid-e2), but CACHE_SLUGS below keys its cache under the original HF
+    # slug so the e1/e2 collections stay in one namespace.
     "deepseek-r1": ("openrouter/deepseek/deepseek-r1", _OPENROUTER),
     # "kimi-k2.5": ("openai/moonshotai/Kimi-K2.5", _HF),
     # "gpt-oss-120b": ("openai/openai/gpt-oss-120b:cerebras", _HF),
@@ -60,10 +57,14 @@ MODELS = {
     # "phi-4": ("openai/microsoft/phi-4:deepinfra", _HF),
     # NOTE: the committed e1 cache for kimi was collected via the HF router
     # under this slug; the OpenRouter slug below keys a DIFFERENT cache — do
-    # not switch without deciding to re-collect (paid) and provider-pin first.
+    # not switch without deciding to re-collect (paid) first.
     "kimi-k2.5": ("openai/moonshotai/Kimi-K2.5", _HF),
     # "kimi-k2.5": ("openrouter/moonshotai/kimi-k2.5", _OPENROUTER),
 }
+
+#: alias -> slug used for cache KEYS where it differs from the live slug in
+#: MODELS — lets a fallback provider top up an existing cache namespace.
+CACHE_SLUGS = {"deepseek-r1": "openai/deepseek-ai/DeepSeek-R1"}
 
 #: model used for synthetic augmentation and stance classification (§3.2.3, §4.2.1)
 WORKER_MODEL = "llama-3.3-70b"
@@ -311,7 +312,7 @@ def _pure_text(sample) -> str:
 
 def cache_path(alias: str, prompt: str, temperature: float,
                response_format: dict | None = None) -> Path:
-    slug, _ = MODELS[alias]
+    slug = CACHE_SLUGS.get(alias) or MODELS[alias][0]
     key_str = f"{slug}\x1f{temperature}\x1f{prompt}"
     if response_format:  # part of "what was called" (ADR 0006); unset keys stay stable
         key_str += "\x1f" + json.dumps(response_format, sort_keys=True)
