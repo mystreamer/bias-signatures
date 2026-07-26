@@ -10,6 +10,11 @@ rater violates. The multi-label MF sets are binarised: moral relevance
 """
 
 # %%
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))  # bias_signatures/ on path
+
 import json
 
 import pandas as pd

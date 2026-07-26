@@ -11,6 +11,11 @@ between the two conditions.
 """
 
 # %%
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))  # bias_signatures/ on path
+
 import pandas as pd
 
 import llm

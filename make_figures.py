@@ -8,7 +8,7 @@ and out/tables/.
 
   mvb_{experiment}.pdf       MF x MF JSD heatmaps, models x channels (Figs 5.3, 5.6, 5.7)
   perturbation_boxplot.pdf   per-topic perturbation biases (Fig 5.4)
-  stance_cleveland.pdf       per-model mean 8SA stance on the curated E2 topics
+  stance_cleveland_{political,personal}.pdf  per-model mean 8SA stance on the curated E2 topics
   {mfq30,mfq2}_per_foundation_model_likert.pdf  E3 Likert counts (appendix)
   moral_bias.tex             moral vs non-moral by domain (Table 5.1)
   stance_bin_counts.tex      E1 stance bin counts by domain and issue type (Table A.1)
@@ -22,6 +22,7 @@ from __future__ import annotations
 
 import json
 import shutil
+import textwrap
 
 import matplotlib
 
@@ -100,29 +101,38 @@ def mvb_heatmaps(mvb: pd.DataFrame, experiment: str) -> None:
     print(f"mvb_{experiment}.pdf")
 
 
+DOMAIN_MARKERS = {"political": "o", "personal": "^"}
+
+
 def perturbation_boxplot(e2: pd.DataFrame) -> None:
     wide = e2[e2["scope"] == "wide"]
     narrow = e2[e2["scope"] == "8sa"]
     comparisons = list(dict.fromkeys(wide["partition_b"]))
     models = sorted(wide["model"].unique())
-    fig, ax = plt.subplots(figsize=(TEXTWIDTH_IN, 4.2))
+    fig, ax = plt.subplots(figsize=(TEXTWIDTH_IN, 4.6), layout="constrained")
     colors = plt.cm.tab10(np.linspace(0, 1, len(models)))
     width = 0.8 / len(models)
     for ci, comparison in enumerate(comparisons):
         for mi, model in enumerate(models):
-            values = wide[(wide["partition_b"] == comparison) & (wide["model"] == model)]["jsd"]
+            cell = wide[(wide["partition_b"] == comparison) & (wide["model"] == model)]
+            values = cell["jsd"]
             x = ci + (mi - len(models) / 2 + 0.5) * width
             ax.boxplot(values, positions=[x], widths=width * 0.85,
                        patch_artist=True,
                        boxprops=dict(facecolor=colors[mi], alpha=0.5), showfliers=False)
-            ax.scatter(np.full(len(values), x), values, s=8, color=colors[mi], zorder=3)
+            for domain, marker in DOMAIN_MARKERS.items():
+                v = cell[cell["channel"] == domain]["jsd"]
+                ax.scatter(np.full(len(v), x), v, s=8, color=colors[mi],
+                           marker=marker, zorder=3)
         median_8sa = narrow[narrow["partition_b"] == comparison]["jsd"].median()
         ax.hlines(median_8sa, ci - 0.42, ci + 0.42, colors="red", linestyles="dashed")
     ax.set_xticks(range(len(comparisons)), comparisons, fontsize=10)
     ax.set_ylabel("Perturbed vs. baseline (JSD)")
-    ax.legend(handles=[plt.Line2D([], [], color=colors[i], lw=4, label=m)
-                       for i, m in enumerate(models)], fontsize=10)
-    fig.tight_layout()
+    handles = [plt.Line2D([], [], color=colors[i], lw=4, label=m)
+               for i, m in enumerate(models)]
+    handles += [plt.Line2D([], [], marker=m, color="grey", lw=0, markersize=5, label=lbl)
+                for lbl, m in (("political", "o"), ("personal-situational", "^"))]
+    fig.legend(handles=handles, fontsize=10, ncols=3, loc="outside lower center")
     fig.savefig(FIGURES_DIR / "perturbation_boxplot.pdf")
     plt.close(fig)
     print("perturbation_boxplot.pdf")
@@ -308,9 +318,12 @@ MARKERS = ["o", "s", "D", "^", "v", "P", "X"]
 
 def cleveland_chart() -> None:
     """Per-model mean stance on the curated E2 topics, from E1's 8SA responses
-    (E1 is 8SA-only). Dot colour = modal label; refusals excluded from means."""
+    (E1 is 8SA-only). One PDF per domain, one panel per topic (same grid
+    layout as the Likert facets); dot colour = modal label; refusals excluded
+    from means."""
     components = json.loads((DATA_DIR / "components" / "issues.json").read_text())
-    curated = sorted(c["text"] for c in components if c["features"].get("controversial"))
+    curated = {c["text"]: c["features"]["domain"] for c in components
+               if c["features"].get("controversial")}
     cells = {}  # (topic, model) -> (mean stance, modal label)
     for model, df in load_responses("e1").items():
         df = df[df["topic"].isin(curated) & (df["label"] != INVALID)]
@@ -319,41 +332,41 @@ def cleveland_chart() -> None:
             if not np.isnan(mean):
                 cells[(topic, model)] = (mean, g["label"].mode()[0])
     models = sorted({m for _, m in cells})
-    order = sorted(curated, key=lambda t: np.mean(
-        [v[0] for (tt, _), v in cells.items() if tt == t]))
-    step = len(models) + 1  # one row per model plus a gap between topic blocks
-    fig, ax = plt.subplots(figsize=(TEXTWIDTH_IN, max(4, len(order) * len(models) * 0.25 + 2)),
-                           layout="constrained")
-    for ti, topic in enumerate(order):
-        for mi, model in enumerate(models):
-            if (topic, model) in cells:
-                mean, modal = cells[(topic, model)]
-                ax.scatter(mean, ti * step + mi, color=STANCE_COLORS.get(modal, "#cccccc"),
-                           marker=MARKERS[mi % len(MARKERS)], s=55, zorder=3,
-                           edgecolors="white", linewidths=0.4)
-        ax.annotate(topic, xy=(1, ti * step + (len(models) - 1) / 2),
-                    xycoords=("axes fraction", "data"), xytext=(10, 0),
-                    textcoords="offset points", ha="left", va="center",
-                    fontsize=8, fontweight="bold", annotation_clip=False)
-        if ti:
-            ax.axhline(ti * step - 1, color="grey", lw=0.4, alpha=0.3)
-    ax.set_yticks([ti * step + mi for ti in range(len(order)) for mi in range(len(models))],
-                  models * len(order), fontsize=8)
-    ax.set_xlim(0.5, 5.5)
-    ax.set_xticks([1, 2, 3, 4, 5], ["pro", "", "neutral", "", "con"], fontsize=8)
-    ax.axvline(3, color="grey", lw=0.5, ls="--", alpha=0.6)
-    ax.grid(axis="x", lw=0.3, alpha=0.4)
-    ax.set_ylim(-0.5, len(order) * step - 1.5)
-    ax.invert_yaxis()
     handles = [mpatches.Patch(color=STANCE_COLORS[k], label=STANCE_NAMES[k]) for k in STANCE_COLORS]
     handles += [plt.Line2D([], [], marker=MARKERS[i % len(MARKERS)], color="grey", lw=0,
                            markersize=6, label=m) for i, m in enumerate(models)]
-    # below the axes: the right margin belongs to the topic labels
-    ax.legend(handles=handles, bbox_to_anchor=(0.5, -0.02), loc="upper center",
-              ncols=3, fontsize=8, title="Stance / Model", title_fontsize=9)
-    fig.savefig(FIGURES_DIR / "stance_cleveland.pdf", bbox_inches="tight")
-    plt.close(fig)
-    print("stance_cleveland.pdf")
+    for domain in ("political", "personal"):
+        topics = sorted((t for t, d in curated.items() if d == domain),
+                        key=lambda t: np.mean(
+                            [v[0] for (tt, _), v in cells.items() if tt == t]))
+        n_cols, n_rows = 2, (len(topics) + 1) // 2
+        fig, axes = plt.subplots(n_rows, n_cols,
+                                 figsize=(TEXTWIDTH_IN, 1.7 * n_rows + 1.2),
+                                 squeeze=False, layout="constrained")
+        for pi, (ax, topic) in enumerate(zip(axes.flat, topics)):
+            for mi, model in enumerate(models):
+                if (topic, model) in cells:
+                    mean, modal = cells[(topic, model)]
+                    ax.scatter(mean, mi, color=STANCE_COLORS.get(modal, "#cccccc"),
+                               marker=MARKERS[mi % len(MARKERS)], s=55, zorder=3,
+                               edgecolors="white", linewidths=0.4)
+            ax.set_title(textwrap.fill(topic, 38), fontsize=10)
+            ax.set_yticks(range(len(models)),
+                          models if pi % n_cols == 0 else [""] * len(models), fontsize=9)
+            ax.set_ylim(-0.5, len(models) - 0.5)
+            ax.invert_yaxis()
+            ax.set_xlim(0.5, 5.5)
+            ax.set_xticks([1, 2, 3, 4, 5], ["pro", "", "neutral", "", "con"], fontsize=9)
+            ax.axvline(3, color="grey", lw=0.5, ls="--", alpha=0.6)
+            ax.grid(axis="x", lw=0.3, alpha=0.4)
+            ax.set_axisbelow(True)
+        for ax in axes.flat[len(topics):]:
+            ax.set_visible(False)
+        fig.legend(handles=handles, loc="outside lower center", ncols=3,
+                   fontsize=9, title="Stance / Model", title_fontsize=10)
+        fig.savefig(FIGURES_DIR / f"stance_cleveland_{domain}.pdf")
+        plt.close(fig)
+        print(f"stance_cleveland_{domain}.pdf")
 
 
 def export_data() -> None:
