@@ -1,0 +1,7196 @@
+[
+ {
+  "component_id": "instr-sharegpt-18242",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-915617",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-451092",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-370588",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-292302",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-153384",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-49494",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-92624",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-310991",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-74670",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-35654",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-120087",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-81875",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-433560",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-37027",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-163384",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-68610",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-210161",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-678972",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-94305",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-538991",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-219418",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-559922",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-44304",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-51265",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-558385",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-452075",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-464065",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-177920",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-69043",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-655407",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-63407",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-62348",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-169607",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-49307",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-424057",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-562629",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-33300",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-634159",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-186551",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-100250",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-93966",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-62359",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-400692",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-488637",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-26596",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-35467",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-604409",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-617591",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-49786",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-314307",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-79809",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-169696",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-148567",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-858713",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-641710",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-78033",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-372221",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-498193",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-26410",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-46763",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-312243",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-251934",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-13760",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-499559",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-32357",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-60738",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-87045",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-295956",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-742631",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-508594",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-362447",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-942647",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-72166",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-223603",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-130676",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-554022",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-56773",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-377182",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-867237",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-702328",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-3054",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-388122",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-369404",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-68558",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-89288",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-33889",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-428715",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-10796",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-868558",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-9910",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-169267",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-592180",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-191887",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-998196",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-913195",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-3914",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-474751",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-48066",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-542311",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-563039",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-69210",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-510867",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-292271",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-125522",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-530045",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-40653",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-498291",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-966487",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-402116",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-7349",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-416346",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-73122",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-96818",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-64004",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-307152",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-779127",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-135793",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-397931",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-22536",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-300393",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-384959",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-240658",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-11975",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-95746",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-439010",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-48109",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-466144",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-498925",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-546672",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-415730",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-547986",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-106275",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-509925",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-34495",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-251523",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-117803",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-341093",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-85359",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-372648",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-578148",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-72826",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-32147",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-620753",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-504",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-556779",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-760521",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-270376",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-536246",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-140316",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-406677",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-36232",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-1561",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-10847",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-609891",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-514551",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-74262",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-191734",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-239184",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-554710",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-229160",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-1212",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-61533",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-454366",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-24389",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-632385",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-325545",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-8623",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-57485",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-330497",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-206103",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-323114",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-473165",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-738810",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-179220",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-194062",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-187767",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-482826",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-189321",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-135089",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-5901",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-174689",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-24923",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-499329",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-26462",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-104389",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-222508",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-475910",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-981365",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-54539",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-213939",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-298604",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-68622",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-116294",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-prism-1530",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-23180",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-421738",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-492430",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-556229",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-640569",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-13420",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-155321",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-239486",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-608856",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-112227",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-63324",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-48457",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-421815",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-288949",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-4129",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-80234",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-177818",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-210017",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-156553",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-153533",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-919974",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-209907",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-250841",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-195722",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-hhonline-16590",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-139187",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-80467",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-842048",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-600185",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-995716",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-2195",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-449237",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-753885",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-296024",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-328392",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-845305",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-78340",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-188977",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-82493",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-367809",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-7033",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-593789",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-51549",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-83321",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-381201",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-144585",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-432918",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-15558",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-346538",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-55373",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-538773",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-527733",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-505081",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-344543",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-38006",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-138716",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-208422",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-506296",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-608831",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-17089",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-88967",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-263949",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-543544",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-641000",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-296863",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-61293",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-18383",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-257195",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-632462",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-632309",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-386107",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-254806",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-554634",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-922687",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-9184",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-625088",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-192204",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-165562",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-533837",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-573139",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-322079",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-755445",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-237976",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-810261",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-11337",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-59026",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-199006",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-222962",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-87286",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-353413",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-2528",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-962674",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-410260",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-125630",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-556453",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-224780",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-132629",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-264571",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-624419",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-76115",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-475415",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-19766",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-593526",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-576186",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-173869",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-650132",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-12571",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-910877",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-166373",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-949665",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-86106",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-323706",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-154206",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-560082",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-455640",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-198502",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-146039",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-377161",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-70477",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-343824",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-55806",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-55546",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-574291",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-434823",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-45226",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-155758",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-564659",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-509839",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-818462",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-524052",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-268121",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-62215",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-143557",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-618714",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-203244",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-379963",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-873279",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-13647",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-476990",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-112315",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-672642",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-436518",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-351650",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-6062",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-73315",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-508185",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-37086",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-84710",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-382200",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-14090",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-25678",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-65394",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-60859",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-348269",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-990435",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-592129",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-539771",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-37496",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-419434",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-170380",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-374286",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-224932",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-111607",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-194728",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-118899",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-474019",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-14980",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-20819",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-14105",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-410752",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-hhonline-3750",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-940065",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-223188",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-539802",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-561202",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-482787",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-597933",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-532884",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-64578",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-94177",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-414982",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-141291",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-17840",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-316255",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-272108",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-58857",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-343529",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-97808",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-337841",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-460064",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-81786",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-57042",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-423207",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-524533",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-273970",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-910963",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-33088",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-139354",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-246618",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-493929",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-77177",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-228970",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-123597",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-255131",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-607857",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-593418",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-38858",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-108201",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-522627",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-69913",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-410638",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-10541",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-33194",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-541475",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-85257",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-482175",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-215537",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-324027",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-465320",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-hhonline-311",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-197254",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-24228",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-53488",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-210364",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-458174",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-323804",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-10817",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-85532",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-161428",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-185082",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-613254",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-661910",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-377849",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-76039",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-616420",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-613633",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-888497",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-67539",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-61506",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-280259",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-128017",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-710",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-49207",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-64676",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-606577",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-396804",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-21971",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-37389",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-821124",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-384289",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-257201",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-465863",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-961681",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-20922",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-3482",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-435500",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-583227",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-257211",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-465",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-60260",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-529578",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-18412",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-353173",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-566783",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-33868",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-3739",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-791562",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-202967",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-113130",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-387478",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-210034",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-34238",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-868277",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-179993",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-42685",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-665780",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-489509",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-17120",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-22375",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-644086",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-22197",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-173434",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-153070",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-455016",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-445536",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-665840",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-406621",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-24382",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-267305",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-353127",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-226233",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-126666",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-36344",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-505953",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-78217",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-17868",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-930247",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-160686",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-308002",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-11677",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-30954",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-197636",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-321268",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-96630",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-978835",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-14206",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-492107",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-75250",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-84755",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-845381",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-149801",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-242966",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-483433",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-209047",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-84559",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-40872",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-472211",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-376377",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-13948",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-216527",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-259886",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-602869",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-425086",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-548104",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-62961",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-618807",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-101825",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-210672",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-369418",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-368854",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-570921",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-422507",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-961746",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-328358",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-844863",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-776858",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-545489",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-826500",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-94408",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-979834",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-219841",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-861811",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-208263",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-217262",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-81563",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-323962",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-987655",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-233780",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-772006",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-174224",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-178685",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-264065",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-546087",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-86517",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-84501",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-483233",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-623900",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-394800",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-277162",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-212929",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-384967",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-87152",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-606217",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-156397",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-314263",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-17767",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-237590",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-74137",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-48843",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-87016",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-296487",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-43686",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-540936",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-570131",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-573057",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-509447",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-50783",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-172473",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-20129",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-75248",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-774125",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-395198",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-77465",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-57539",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-643041",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-11984",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-164286",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-180855",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-806621",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-527020",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-70127",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-74229",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-360460",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-627338",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-445393",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-118234",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-637349",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-78029",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-47796",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-244693",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-10805",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-480245",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-303416",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-336201",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-361734",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-982808",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-312516",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-625595",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-272693",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-81443",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-251981",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-222326",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-224377",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-63162",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-500080",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-183857",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-893856",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-90544",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-494857",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-138379",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-423106",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-492402",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-168186",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-90280",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-769110",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-422649",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-120646",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-221142",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-43555",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-155432",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-256955",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-81748",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-334209",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-184788",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-169962",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-959",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-698236",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-616979",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-65781",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-428218",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-607813",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-314713",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-350007",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-59293",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-54117",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-553622",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-44345",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-277331",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-3750",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-646984",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-272859",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-468199",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-316250",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-580797",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-36075",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-376823",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-984",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-589433",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-517826",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-947683",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-360254",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-185346",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-841935",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-187670",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-16424",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-474403",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-37716",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-20614",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-378208",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-25657",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-285430",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-249714",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-29128",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-756953",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-31263",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-328510",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-143559",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-161994",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-80975",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-562532",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-427047",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-2563",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-144021",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-626611",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-79385",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-553493",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-85510",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-187297",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-222364",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-814451",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-635282",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-397601",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-49951",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-68991",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-968085",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-320124",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-105863",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-44532",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-158370",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-34952",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-562306",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-102415",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-197839",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-53380",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-293683",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-23922",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-587552",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-231741",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-238116",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-532318",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-161079",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-321313",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-32240",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-124079",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-17655",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-174577",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-19230",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-570094",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-254431",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-565990",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-267988",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-471048",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-63416",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-145259",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-11961",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-141250",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-217635",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-515781",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-98946",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-340100",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-497840",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-872373",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-71707",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-612013",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-746254",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-515709",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-119354",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-3603",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-464977",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-82696",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-72290",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-405850",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-43732",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-423825",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-441017",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-533388",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-498823",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-31126",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-40545",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-444612",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-401778",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-59610",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-558130",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-325331",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-25934",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-65215",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-80030",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-21744",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-237539",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-762168",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-951078",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-3523",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-205833",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-54954",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-571395",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-69487",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-54201",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-396491",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-72802",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-543282",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-277385",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-90006",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-576246",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-42769",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-418474",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-21194",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-382208",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-13219",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-3206",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-221559",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-946094",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-108977",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-452101",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-207499",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-749698",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-385496",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-587657",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-472751",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-124601",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-61251",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-3400",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-63152",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-84009",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-8954",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-31790",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-27569",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-95772",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-571115",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-537242",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-939533",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-174749",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-384746",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-223469",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-140681",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-156475",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-113221",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-820218",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-314291",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-29232",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-472013",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-576561",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-499225",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-436948",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-246849",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-725589",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-17228",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-244730",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-76945",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-21704",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-643393",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-325974",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-503857",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-272759",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-548723",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-917938",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-510779",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-46303",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-1182",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-265805",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-35901",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-537443",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-2768",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-408792",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-871160",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-699428",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-68603",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-84692",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-388502",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-239442",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-493899",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-86280",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-89216",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-501164",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-21906",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-641529",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-553830",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-253822",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-595062",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-808302",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-184594",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-576196",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-23601",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-24273",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-362744",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-19804",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-668487",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-889604",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-298464",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-479495",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-4286",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-783648",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-270436",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-448184",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-185074",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-325209",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-777825",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-179333",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-193500",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-167090",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-941625",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-34746",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-127620",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-39522",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-47955",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-518979",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-605023",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-599794",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-70546",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-318260",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-781737",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-137441",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-186682",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-650950",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-9843",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-65470",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-637237",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-498805",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-571422",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-68685",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-166600",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-472266",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-33220",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-prism-5633",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-224702",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-565062",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-669351",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-19707",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-111229",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-479004",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-319087",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-31364",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-138151",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-523068",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-77518",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-625435",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-316026",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-206030",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-276786",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-27588",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-883313",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-276752",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-502742",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-87788",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-2045",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-105791",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-prism-522",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-550354",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-558802",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-761651",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-412816",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-85988",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-63897",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-630592",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-302094",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-19520",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-117119",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-249430",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-442089",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-138400",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-63964",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-350330",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-128441",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-616647",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-507954",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-33982",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-536973",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-48562",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-45040",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-84562",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-183909",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-508531",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-972413",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-781429",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-166846",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-158141",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-70487",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-28913",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-375686",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-603486",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-19701",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-43828",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-595992",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-17342",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-593590",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-6372",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-844915",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-308731",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-568503",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-549657",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-12126",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-70842",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-360636",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-528643",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-23064",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-260957",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-602838",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-109778",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-997805",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-319885",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-357133",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-357755",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-64755",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-41422",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-9389",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-440282",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-28137",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-572828",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-155144",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-69927",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-40707",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-590822",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-735793",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-47648",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-246483",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-377861",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-378232",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-69185",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-267789",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-964138",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-55019",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-522070",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-545471",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-599976",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-673395",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-95256",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-433952",
+  "feature": "argumentative",
+  "value": true,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-190912",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-367971",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-sharegpt-64833",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-609680",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-488899",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-lmsys-485939",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-626949",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-372873",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "instr-wildchat-239472",
+  "feature": "argumentative",
+  "value": false,
+  "source": "llm:llama-3.3-70b"
+ },
+ {
+  "component_id": "pol-7af94ac7",
+  "feature": "mf",
+  "value": [
+   "equality",
+   "liberty"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-7af94ac7",
+  "feature": "mf",
+  "value": [
+   "authority",
+   "care",
+   "sanctity"
+  ],
+  "source": "human:annotator_15"
+ },
+ {
+  "component_id": "pol-92b13478",
+  "feature": "mf",
+  "value": [
+   "equality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-cf62866b",
+  "feature": "mf",
+  "value": [
+   "care",
+   "liberty"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-c862b5b3",
+  "feature": "mf",
+  "value": [
+   "authority",
+   "care"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-6e189f4f",
+  "feature": "mf",
+  "value": [
+   "care",
+   "sanctity"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-3334a0f5",
+  "feature": "mf",
+  "value": [
+   "care",
+   "equality",
+   "proportionality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-7a86c7c2",
+  "feature": "mf",
+  "value": [
+   "care"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-5b7688dc",
+  "feature": "mf",
+  "value": [
+   "equality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-7c68e120",
+  "feature": "mf",
+  "value": [
+   "care",
+   "equality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-297ea588",
+  "feature": "mf",
+  "value": [
+   "equality",
+   "liberty",
+   "proportionality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-fb4b7946",
+  "feature": "mf",
+  "value": [
+   "authority",
+   "liberty"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-2991dd8f",
+  "feature": "mf",
+  "value": [
+   "care",
+   "equality",
+   "proportionality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-d897414c",
+  "feature": "mf",
+  "value": [
+   "liberty"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-01c2a0d3",
+  "feature": "mf",
+  "value": [
+   "equality",
+   "proportionality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-8a95569d",
+  "feature": "mf",
+  "value": [
+   "authority",
+   "care",
+   "liberty"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-22a1b944",
+  "feature": "mf",
+  "value": [
+   "care",
+   "equality",
+   "liberty"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-630233ee",
+  "feature": "mf",
+  "value": [
+   "liberty",
+   "sanctity"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-17eaa425",
+  "feature": "mf",
+  "value": [
+   "authority",
+   "liberty",
+   "loyalty"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-1754fd24",
+  "feature": "mf",
+  "value": [
+   "care",
+   "equality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-05a72c63",
+  "feature": "mf",
+  "value": [
+   "care"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-857db6e1",
+  "feature": "mf",
+  "value": [
+   "care"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-ec2fb4d8",
+  "feature": "mf",
+  "value": [
+   "care",
+   "equality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-4f910da1",
+  "feature": "mf",
+  "value": [
+   "liberty",
+   "sanctity"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-d2d5c7f5",
+  "feature": "mf",
+  "value": [
+   "care",
+   "equality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-17bffa29",
+  "feature": "mf",
+  "value": [
+   "care"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-e4574e1b",
+  "feature": "mf",
+  "value": [
+   "care",
+   "liberty"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-dbaabfe4",
+  "feature": "mf",
+  "value": [
+   "equality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-9acc7c45",
+  "feature": "mf",
+  "value": [
+   "care",
+   "proportionality",
+   "sanctity"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-e08b2aae",
+  "feature": "mf",
+  "value": [
+   "equality",
+   "liberty",
+   "sanctity"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-e292edb1",
+  "feature": "mf",
+  "value": [
+   "loyalty",
+   "proportionality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-d962b051",
+  "feature": "mf",
+  "value": [
+   "equality",
+   "liberty",
+   "proportionality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-07b55877",
+  "feature": "mf",
+  "value": [
+   "authority",
+   "liberty"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-3cd97c59",
+  "feature": "mf",
+  "value": [
+   "equality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-c314b84f",
+  "feature": "mf",
+  "value": [
+   "care",
+   "equality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-120b486a",
+  "feature": "mf",
+  "value": [
+   "equality",
+   "proportionality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-8ad9a06f",
+  "feature": "mf",
+  "value": [
+   "authority"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-a5b42d1c",
+  "feature": "mf",
+  "value": [
+   "care",
+   "equality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-39645dfe",
+  "feature": "mf",
+  "value": [
+   "care",
+   "sanctity"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-f573f577",
+  "feature": "mf",
+  "value": [
+   "liberty"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-41ab9f72",
+  "feature": "mf",
+  "value": [
+   "liberty",
+   "proportionality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-74d2e34d",
+  "feature": "mf",
+  "value": [
+   "equality",
+   "proportionality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-211470c5",
+  "feature": "mf",
+  "value": [
+   "liberty"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-24fa8390",
+  "feature": "mf",
+  "value": [
+   "care",
+   "liberty"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-bbaa1abb",
+  "feature": "mf",
+  "value": [
+   "care",
+   "sanctity"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-2ed6285c",
+  "feature": "mf",
+  "value": [
+   "liberty"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-328486e8",
+  "feature": "mf",
+  "value": [
+   "liberty"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-8a34ec43",
+  "feature": "mf",
+  "value": [
+   "authority",
+   "liberty"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-5c9f1e58",
+  "feature": "mf",
+  "value": [
+   "care",
+   "equality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-844ebfa5",
+  "feature": "mf",
+  "value": [
+   "equality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-3d7b1554",
+  "feature": "mf",
+  "value": [
+   "authority",
+   "equality",
+   "liberty"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-be83273e",
+  "feature": "mf",
+  "value": [
+   "care"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-493c2a7d",
+  "feature": "mf",
+  "value": [
+   "equality",
+   "sanctity"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-4e2371f0",
+  "feature": "mf",
+  "value": [
+   "equality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-349abd30",
+  "feature": "mf",
+  "value": [
+   "authority",
+   "liberty"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-96ab95f2",
+  "feature": "mf",
+  "value": [
+   "proportionality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-a352f7a2",
+  "feature": "mf",
+  "value": [
+   "authority",
+   "liberty"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-24a878ae",
+  "feature": "mf",
+  "value": [
+   "authority",
+   "care",
+   "liberty",
+   "loyalty"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-493c2fcd",
+  "feature": "mf",
+  "value": [
+   "care",
+   "equality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-a823bb6c",
+  "feature": "mf",
+  "value": [
+   "authority",
+   "care",
+   "proportionality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-ad3edcfc",
+  "feature": "mf",
+  "value": [
+   "equality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-36dc465b",
+  "feature": "mf",
+  "value": [
+   "care"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-af352e76",
+  "feature": "mf",
+  "value": [
+   "care",
+   "sanctity"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-468d9933",
+  "feature": "mf",
+  "value": [
+   "equality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-ce550ed3",
+  "feature": "mf",
+  "value": [
+   "care"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-00ac85ec",
+  "feature": "mf",
+  "value": [
+   "equality",
+   "proportionality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-3fb11d60",
+  "feature": "mf",
+  "value": [
+   "care",
+   "equality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-b05900b7",
+  "feature": "mf",
+  "value": [
+   "care"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-7ce66857",
+  "feature": "mf",
+  "value": [
+   "equality",
+   "proportionality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-eab82f56",
+  "feature": "mf",
+  "value": [
+   "equality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-64eab117",
+  "feature": "mf",
+  "value": [
+   "authority",
+   "loyalty"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-a74e58b9",
+  "feature": "mf",
+  "value": [
+   "equality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-9375e36b",
+  "feature": "mf",
+  "value": [
+   "liberty"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-1d193a11",
+  "feature": "mf",
+  "value": [
+   "proportionality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-25f20c5a",
+  "feature": "mf",
+  "value": [
+   "care"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-8eaca8b8",
+  "feature": "mf",
+  "value": [
+   "liberty"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-b92574ef",
+  "feature": "mf",
+  "value": [
+   "proportionality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-f6dcaf10",
+  "feature": "mf",
+  "value": [
+   "liberty"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-5316426c",
+  "feature": "mf",
+  "value": [
+   "care",
+   "equality",
+   "loyalty",
+   "sanctity"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-389ad654",
+  "feature": "mf",
+  "value": [
+   "authority",
+   "sanctity"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-5784f394",
+  "feature": "mf",
+  "value": [
+   "equality",
+   "sanctity"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-669098e8",
+  "feature": "mf",
+  "value": [
+   "care",
+   "equality",
+   "proportionality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-1cf113a6",
+  "feature": "mf",
+  "value": [
+   "equality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-4d970724",
+  "feature": "mf",
+  "value": [
+   "care",
+   "equality",
+   "sanctity"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-a2350098",
+  "feature": "mf",
+  "value": [
+   "authority",
+   "loyalty"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-92610bef",
+  "feature": "mf",
+  "value": [
+   "liberty",
+   "loyalty"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-52d3d415",
+  "feature": "mf",
+  "value": [
+   "authority",
+   "care",
+   "loyalty",
+   "sanctity"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-ecdff4cf",
+  "feature": "mf",
+  "value": [
+   "authority",
+   "loyalty"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-07f1ef01",
+  "feature": "mf",
+  "value": [
+   "care",
+   "liberty"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-1335b298",
+  "feature": "mf",
+  "value": [
+   "care",
+   "equality",
+   "proportionality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-02c4e5b8",
+  "feature": "mf",
+  "value": [
+   "authority",
+   "proportionality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-6e593bb7",
+  "feature": "mf",
+  "value": [
+   "care"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-c6c251a1",
+  "feature": "mf",
+  "value": [
+   "authority",
+   "liberty"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-11a98c46",
+  "feature": "mf",
+  "value": [
+   "authority",
+   "liberty",
+   "loyalty"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-afefca70",
+  "feature": "mf",
+  "value": [
+   "care",
+   "equality",
+   "sanctity"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-46a9b06d",
+  "feature": "mf",
+  "value": [
+   "care"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-29cc61eb",
+  "feature": "mf",
+  "value": [
+   "liberty"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-5aba5a85",
+  "feature": "mf",
+  "value": [
+   "care",
+   "liberty"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-484a44d0",
+  "feature": "mf",
+  "value": [
+   "authority",
+   "care",
+   "sanctity"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-df3408a4",
+  "feature": "mf",
+  "value": [
+   "authority",
+   "liberty"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-4f31b412",
+  "feature": "mf",
+  "value": [
+   "care"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-3d8b7baf",
+  "feature": "mf",
+  "value": [
+   "care",
+   "equality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-f6182219",
+  "feature": "mf",
+  "value": [
+   "authority",
+   "care",
+   "proportionality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-e50aecf5",
+  "feature": "mf",
+  "value": [
+   "authority"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-9437775c",
+  "feature": "mf",
+  "value": [
+   "care",
+   "liberty"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-20b948c4",
+  "feature": "mf",
+  "value": [
+   "authority",
+   "care",
+   "proportionality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-574fe696",
+  "feature": "mf",
+  "value": [
+   "equality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-9e21588e",
+  "feature": "mf",
+  "value": [
+   "care",
+   "liberty",
+   "proportionality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-cb90f373",
+  "feature": "mf",
+  "value": [
+   "equality",
+   "sanctity"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-47c4f347",
+  "feature": "mf",
+  "value": [
+   "care",
+   "equality",
+   "proportionality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-e6040db1",
+  "feature": "mf",
+  "value": [
+   "sanctity"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-9c639ce6",
+  "feature": "mf",
+  "value": [
+   "authority",
+   "liberty"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-3e5190e8",
+  "feature": "mf",
+  "value": [
+   "care",
+   "equality",
+   "liberty",
+   "sanctity"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-f3f819f4",
+  "feature": "mf",
+  "value": [
+   "liberty"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-db8dd409",
+  "feature": "mf",
+  "value": [
+   "care"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-a4bd21da",
+  "feature": "mf",
+  "value": [
+   "care"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-d8af9ff9",
+  "feature": "mf",
+  "value": [
+   "sanctity"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-798aa697",
+  "feature": "mf",
+  "value": [
+   "care",
+   "proportionality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-0b0338fa",
+  "feature": "mf",
+  "value": [
+   "care"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-c102a566",
+  "feature": "mf",
+  "value": [
+   "care",
+   "equality",
+   "proportionality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-73809144",
+  "feature": "mf",
+  "value": [
+   "proportionality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-463068d1",
+  "feature": "mf",
+  "value": [
+   "care",
+   "equality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-6e804df8",
+  "feature": "mf",
+  "value": [
+   "care",
+   "equality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-cbc6096e",
+  "feature": "mf",
+  "value": [
+   "care",
+   "equality",
+   "sanctity"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-54c27044",
+  "feature": "mf",
+  "value": [
+   "care",
+   "proportionality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-077e4af8",
+  "feature": "mf",
+  "value": [
+   "care",
+   "liberty",
+   "proportionality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-444efa81",
+  "feature": "mf",
+  "value": [
+   "care"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-d25c5a3c",
+  "feature": "mf",
+  "value": [
+   "care",
+   "liberty"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-ed560ff7",
+  "feature": "mf",
+  "value": [
+   "care",
+   "proportionality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-92636c65",
+  "feature": "mf",
+  "value": [
+   "care",
+   "equality",
+   "liberty"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-b1ba68f5",
+  "feature": "mf",
+  "value": [
+   "care",
+   "equality",
+   "proportionality"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-f8d45d62",
+  "feature": "mf",
+  "value": [
+   "care",
+   "liberty"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-bc73966b",
+  "feature": "mf",
+  "value": [
+   "loyalty"
+  ],
+  "source": "human:annotator_1"
+ },
+ {
+  "component_id": "pol-944f5199",
+  "feature": "mf",
+  "value": [
+   "care",
+   "proportionality"
+  ],
+  "source": "human:annotator_1"
+ }
+]

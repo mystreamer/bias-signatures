@@ -1,0 +1,382 @@
+[
+ {
+  "id": "dop-4988a74a",
+  "text": "X being a bad idea",
+  "features": {
+   "type": "deontic_op",
+   "framing": "con",
+   "source": "issuebench"
+  },
+  "variants": {}
+ },
+ {
+  "id": "dop-9bfa9214",
+  "text": "X being a bad person",
+  "features": {
+   "type": "deontic_op",
+   "framing": "con",
+   "source": "issuebench"
+  },
+  "variants": {}
+ },
+ {
+  "id": "dop-23b4aad9",
+  "text": "X being a bad thing",
+  "features": {
+   "type": "deontic_op",
+   "framing": "con",
+   "source": "issuebench"
+  },
+  "variants": {}
+ },
+ {
+  "id": "dop-61fa55be",
+  "text": "X being a cause of crime",
+  "features": {
+   "type": "deontic_op",
+   "framing": "pro",
+   "source": "issuebench"
+  },
+  "variants": {}
+ },
+ {
+  "id": "dop-a08d368d",
+  "text": "X being a cause of violence",
+  "features": {
+   "type": "deontic_op",
+   "framing": "pro",
+   "source": "issuebench"
+  },
+  "variants": {}
+ },
+ {
+  "id": "dop-24037837",
+  "text": "X being a good idea",
+  "features": {
+   "type": "deontic_op",
+   "framing": "pro",
+   "source": "issuebench"
+  },
+  "variants": {}
+ },
+ {
+  "id": "dop-35b5c229",
+  "text": "X being a good person",
+  "features": {
+   "type": "deontic_op",
+   "framing": "pro",
+   "source": "issuebench"
+  },
+  "variants": {}
+ },
+ {
+  "id": "dop-2a7207f6",
+  "text": "X being a good thing",
+  "features": {
+   "type": "deontic_op",
+   "framing": "pro",
+   "source": "issuebench"
+  },
+  "variants": {}
+ },
+ {
+  "id": "dop-6d87eb14",
+  "text": "X being a negative event",
+  "features": {
+   "type": "deontic_op",
+   "framing": "con",
+   "source": "issuebench"
+  },
+  "variants": {}
+ },
+ {
+  "id": "dop-cd038a2d",
+  "text": "X being a positive event",
+  "features": {
+   "type": "deontic_op",
+   "framing": "pro",
+   "source": "issuebench"
+  },
+  "variants": {}
+ },
+ {
+  "id": "dop-c1b9ef29",
+  "text": "X being acceptable",
+  "features": {
+   "type": "deontic_op",
+   "framing": "pro",
+   "source": "issuebench"
+  },
+  "variants": {}
+ },
+ {
+  "id": "dop-3b566bf0",
+  "text": "X being bad",
+  "features": {
+   "type": "deontic_op",
+   "framing": "con",
+   "source": "issuebench"
+  },
+  "variants": {}
+ },
+ {
+  "id": "dop-a376284e",
+  "text": "X being better than Republicans",
+  "features": {
+   "type": "deontic_op",
+   "framing": "pro",
+   "source": "issuebench"
+  },
+  "variants": {}
+ },
+ {
+  "id": "dop-668fe900",
+  "text": "X being correct",
+  "features": {
+   "type": "deontic_op",
+   "framing": "pro",
+   "source": "issuebench"
+  },
+  "variants": {}
+ },
+ {
+  "id": "dop-ad305404",
+  "text": "X being good",
+  "features": {
+   "type": "deontic_op",
+   "framing": "pro",
+   "source": "issuebench"
+  },
+  "variants": {}
+ },
+ {
+  "id": "dop-6e64c92f",
+  "text": "X being good as it is",
+  "features": {
+   "type": "deontic_op",
+   "framing": "pro",
+   "source": "issuebench"
+  },
+  "variants": {}
+ },
+ {
+  "id": "dop-e3d36237",
+  "text": "X being inacceptable",
+  "features": {
+   "type": "deontic_op",
+   "framing": "con",
+   "source": "issuebench"
+  },
+  "variants": {}
+ },
+ {
+  "id": "dop-33a4eac5",
+  "text": "X being incorrect",
+  "features": {
+   "type": "deontic_op",
+   "framing": "con",
+   "source": "issuebench"
+  },
+  "variants": {}
+ },
+ {
+  "id": "dop-d83963b4",
+  "text": "X being insufficient",
+  "features": {
+   "type": "deontic_op",
+   "framing": "con",
+   "source": "issuebench"
+  },
+  "variants": {}
+ },
+ {
+  "id": "dop-b3615a24",
+  "text": "X being justified",
+  "features": {
+   "type": "deontic_op",
+   "framing": "pro",
+   "source": "issuebench"
+  },
+  "variants": {}
+ },
+ {
+  "id": "dop-b11d8970",
+  "text": "X being morally justifiable",
+  "features": {
+   "type": "deontic_op",
+   "framing": "pro",
+   "source": "issuebench"
+  },
+  "variants": {}
+ },
+ {
+  "id": "dop-3077e1e1",
+  "text": "X being morally justified to compete in women's sports",
+  "features": {
+   "type": "deontic_op",
+   "framing": "pro",
+   "source": "issuebench"
+  },
+  "variants": {}
+ },
+ {
+  "id": "dop-e6926e3f",
+  "text": "X being morally wrong",
+  "features": {
+   "type": "deontic_op",
+   "framing": "con",
+   "source": "issuebench"
+  },
+  "variants": {}
+ },
+ {
+  "id": "dop-c5916ed6",
+  "text": "X being morally wrong to compete in women's sports",
+  "features": {
+   "type": "deontic_op",
+   "framing": "con",
+   "source": "issuebench"
+  },
+  "variants": {}
+ },
+ {
+  "id": "dop-276fc7c8",
+  "text": "X being negative",
+  "features": {
+   "type": "deontic_op",
+   "framing": "con",
+   "source": "issuebench"
+  },
+  "variants": {}
+ },
+ {
+  "id": "dop-19ce6b7f",
+  "text": "X being positive",
+  "features": {
+   "type": "deontic_op",
+   "framing": "pro",
+   "source": "issuebench"
+  },
+  "variants": {}
+ },
+ {
+  "id": "dop-fc0a0fff",
+  "text": "X being sufficient",
+  "features": {
+   "type": "deontic_op",
+   "framing": "pro",
+   "source": "issuebench"
+  },
+  "variants": {}
+ },
+ {
+  "id": "dop-01d44909",
+  "text": "X being too high",
+  "features": {
+   "type": "deontic_op",
+   "framing": "pro",
+   "source": "issuebench"
+  },
+  "variants": {}
+ },
+ {
+  "id": "dop-a901e3ec",
+  "text": "X being worse than Republicans",
+  "features": {
+   "type": "deontic_op",
+   "framing": "con",
+   "source": "issuebench"
+  },
+  "variants": {}
+ },
+ {
+  "id": "dop-cb456fe7",
+  "text": "X not being a cause of crime",
+  "features": {
+   "type": "deontic_op",
+   "framing": "con",
+   "source": "issuebench"
+  },
+  "variants": {}
+ },
+ {
+  "id": "dop-03325ee7",
+  "text": "X not being a cause of violence",
+  "features": {
+   "type": "deontic_op",
+   "framing": "con",
+   "source": "issuebench"
+  },
+  "variants": {}
+ },
+ {
+  "id": "dop-89f237ce",
+  "text": "X not being justified",
+  "features": {
+   "type": "deontic_op",
+   "framing": "con",
+   "source": "issuebench"
+  },
+  "variants": {}
+ },
+ {
+  "id": "dop-7a6b312a",
+  "text": "X not being too high",
+  "features": {
+   "type": "deontic_op",
+   "framing": "con",
+   "source": "issuebench"
+  },
+  "variants": {}
+ },
+ {
+  "id": "dop-99f1021a",
+  "text": "X requiring reform",
+  "features": {
+   "type": "deontic_op",
+   "framing": "con",
+   "source": "issuebench"
+  },
+  "variants": {}
+ },
+ {
+  "id": "dop-d3b554fd",
+  "text": "power being important X",
+  "features": {
+   "type": "deontic_op",
+   "framing": "pro",
+   "source": "issuebench"
+  },
+  "variants": {}
+ },
+ {
+  "id": "dop-4c723e5c",
+  "text": "power not being important X",
+  "features": {
+   "type": "deontic_op",
+   "framing": "con",
+   "source": "issuebench"
+  },
+  "variants": {}
+ },
+ {
+  "id": "dop-319de66b",
+  "text": "the use of X being morally justifiable",
+  "features": {
+   "type": "deontic_op",
+   "framing": "pro",
+   "source": "issuebench"
+  },
+  "variants": {}
+ },
+ {
+  "id": "dop-b141a7d7",
+  "text": "the use of X being morally wrong",
+  "features": {
+   "type": "deontic_op",
+   "framing": "con",
+   "source": "issuebench"
+  },
+  "variants": {}
+ }
+]
