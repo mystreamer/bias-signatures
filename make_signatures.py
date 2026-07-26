@@ -5,7 +5,7 @@ long-format file per experiment to data/signatures/:
 
   e1  family moral_bias (moral vs non-moral, with mean stances) and mvb
       (MF x MF), per model x domain, permutation-tested, Bonferroni within
-      each (model, channel, family, scheme) signature
+      each (model, em, family, scheme) signature
   e2  per-topic perturbation biases (baseline vs each perturbed cell),
       descriptive only, at wide (all instructions) and 8sa scope
   e3  mvb per model x questionnaire, permutation-tested
@@ -94,7 +94,7 @@ def tested_pair(labels_a, labels_b, support, seed) -> dict:
             "jsd": jsd, "jsd_lo": lo, "jsd_hi": hi, "p": p}
 
 
-#: (channel, model) -> canonical partition label counts, for the response-level
+#: (em, model) -> canonical partition label counts, for the response-level
 #: bootstrap in make_correlation.py (persisted as label_counts.json)
 LABEL_COUNTS: dict[tuple[str, str], dict] = {}
 
@@ -112,8 +112,8 @@ def mvb_rows(df: pd.DataFrame, support, scheme: str, **context) -> list[dict]:
     parts = {
         f: moral[lists.map(lambda l, f=f: f in l)]["label"] for f in foundations
     }
-    if scheme == "canonical" and "channel" in context and "model" in context:
-        LABEL_COUNTS[(context["channel"], context["model"])] = {
+    if scheme == "canonical" and "em" in context and "model" in context:
+        LABEL_COUNTS[(context["em"], context["model"])] = {
             "support": list(support),
             "counts": {f: [int((labels == s).sum()) for s in support]
                        for f, labels in parts.items() if not labels.empty},
@@ -133,7 +133,7 @@ def mvb_rows(df: pd.DataFrame, support, scheme: str, **context) -> list[dict]:
 
 
 def bonferroni_within(df: pd.DataFrame) -> pd.DataFrame:
-    keys = [k for k in ("model", "channel", "family", "scheme") if k in df.columns]
+    keys = [k for k in ("model", "em", "family", "scheme") if k in df.columns]
     df["p_bonferroni"] = df.groupby(keys)["p"].transform(
         lambda p: (p * len(p)).clip(upper=1.0)
     )
@@ -155,7 +155,7 @@ def signatures_e1() -> pd.DataFrame:
             print(f"{model}: dropping {dropped} invalid stance labels")
         df = df[df["label"] != INVALID]
         for domain, d in df.groupby("domain"):
-            context = {"model": model, "channel": domain}
+            context = {"model": model, "em": domain}
             moral = d[d["morally_relevant"] == True]["label"]  # noqa: E712
             nonmoral = d[d["morally_relevant"] == False]["label"]  # noqa: E712
             rows.append({
@@ -186,7 +186,7 @@ def signatures_e2() -> pd.DataFrame:
                     if base.empty or perturbed.empty:
                         continue
                     rows.append({
-                        "model": model, "channel": d["domain"].iloc[0], "topic": topic,
+                        "model": model, "em": d["domain"].iloc[0], "topic": topic,
                         "family": "perturbation", "scope": scope,
                         "partition_a": "baseline", "partition_b": name,
                         "n_a": len(base), "n_b": len(perturbed),
@@ -206,7 +206,7 @@ def signatures_e3() -> pd.DataFrame:
             for scheme in ("raw", "canonical"):
                 rows.extend(mvb_rows(
                     d, supports[questionnaire], scheme,
-                    model=model, channel=questionnaire,
+                    model=model, em=questionnaire,
                 ))
     return bonferroni_within(pd.DataFrame(rows))
 
@@ -230,6 +230,6 @@ if __name__ == "__main__":
 
     counts_file = SIGNATURES_DIR / "label_counts.json"
     merged = json.loads(counts_file.read_text()) if counts_file.exists() else {}
-    merged.update({f"{channel}|{model}": v for (channel, model), v in LABEL_COUNTS.items()})
+    merged.update({f"{em}|{model}": v for (em, model), v in LABEL_COUNTS.items()})
     counts_file.write_text(json.dumps(merged, indent=1))
-    print(f"{counts_file.name}: {len(merged)} channel|model partition-count entries")
+    print(f"{counts_file.name}: {len(merged)} em|model partition-count entries")

@@ -36,7 +36,7 @@ terms = (resp.dropna(subset=["partition_b"])
              .reset_index(name="perturbed"))
 
 out = out.merge(terms, on=["topic", "partition_b"], how="left").rename(columns={"topic": "issue"})
-print(out[["partition_b", "model", "channel", "issue", "perturbed", "jsd"]].to_string(index=False))
+print(out[["partition_b", "model", "em", "issue", "perturbed", "jsd"]].to_string(index=False))
 
 # %%
 import textwrap
@@ -45,7 +45,7 @@ import make_figures
 
 ESA = "Write an 8-sentence argument about "
 e2r = {p.stem: pd.read_csv(p) for p in (llm.DATA_DIR / "responses" / "e2").glob("*.csv")}
-domains = dict(zip(out["issue"], out["channel"]))
+domains = dict(zip(out["issue"], out["em"]))
 
 
 def slice_(d, issue, partition_b, eight_sa=False):  # partition_b=None -> baseline

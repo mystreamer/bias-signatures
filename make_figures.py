@@ -6,7 +6,7 @@ and out/tables/.
 --only restricts to a comma-separated subset of {e1, e2, e3, correlations, cleveland}.
 --export copies everything in out/ into thesis/figures/bias_signatures/.
 
-  mvb_{experiment}.pdf       MF x MF JSD heatmaps, models x channels (Figs 5.3, 5.6, 5.7)
+  mvb_{experiment}.pdf       MF x MF JSD heatmaps, models x EMs (Figs 5.3, 5.6, 5.7)
   perturbation_boxplot.pdf   per-topic perturbation biases (Fig 5.4)
   stance_cleveland_{political,personal}.pdf  per-model mean 8SA stance on the curated E2 topics
   {mfq30,mfq2}_per_foundation_model_likert.pdf  E3 Likert counts (appendix)
@@ -15,7 +15,7 @@ and out/tables/.
   perturbation_biases.tex    per-(topic, model) perturbation JSDs (appendix)
   cross_model_rho.tex        Table 5.2
   cross_domain_rho.tex       Table 5.3
-  cross_channel_rho.tex      Table 5.4
+  cross_em_rho.tex           Table 5.4
 """
 
 from __future__ import annotations
@@ -57,15 +57,15 @@ def stars(p: float) -> str:
 
 def mvb_heatmaps(mvb: pd.DataFrame, experiment: str) -> None:
     mvb = mvb[(mvb["family"] == "mvb") & (mvb["scheme"] == "raw")]
-    channels = sorted(mvb["channel"].unique(), key=lambda c: (c != "political", c))
+    ems = sorted(mvb["em"].unique(), key=lambda c: (c != "political", c))
     models = sorted(mvb["model"].unique())
     vmax = mvb["jsd"].max()
-    fig, axes = plt.subplots(len(models), len(channels),
+    fig, axes = plt.subplots(len(models), len(ems),
                              figsize=(TEXTWIDTH_IN, 1.6 * len(models) + 0.5),
                              squeeze=False, layout="constrained")
     im = None
-    for ci, channel in enumerate(channels):
-        group = mvb[mvb["channel"] == channel]
+    for ci, em in enumerate(ems):
+        group = mvb[mvb["em"] == em]
         foundations = sorted(set(group["partition_a"]) | set(group["partition_b"]))
         n = len(foundations)
         for mi, model in enumerate(models):
@@ -90,7 +90,7 @@ def mvb_heatmaps(mvb: pd.DataFrame, experiment: str) -> None:
             else:
                 ax.set_xticks([])
             if mi == 0:
-                ax.set_title(channel.capitalize(), fontsize=11)
+                ax.set_title(em.capitalize(), fontsize=11)
             if ci == 0:
                 ax.set_ylabel(model, fontsize=10)
     fig.colorbar(im, ax=axes, shrink=0.35, label="Jensen–Shannon divergence")
@@ -119,7 +119,7 @@ def perturbation_boxplot(e2: pd.DataFrame) -> None:
                        patch_artist=True,
                        boxprops=dict(facecolor=colors[mi], alpha=0.5), showfliers=False)
             for domain, marker in DOMAIN_MARKERS.items():
-                v = cell[cell["channel"] == domain]["jsd"]
+                v = cell[cell["em"] == domain]["jsd"]
                 ax.scatter(np.full(len(v), x), v, s=8, color=colors[mi],
                            marker=marker, zorder=3)
         median_8sa = narrow[narrow["partition_b"] == comparison]["jsd"].median()
@@ -196,8 +196,8 @@ def moral_bias_table(e1: pd.DataFrame) -> None:
     ]
     for model, group in mb.groupby("model"):
         cells = []
-        for channel in ("political", "personal"):
-            r = group[group["channel"] == channel].iloc[0]
+        for em in ("political", "personal"):
+            r = group[group["em"] == em].iloc[0]
             cells += [f"{r.mean_a:.2f}", f"{r.mean_b:.2f}",
                       f"{r.mean_a - r.mean_b:+.2f}", f".{f'{r.jsd:.3f}'[2:]}{stars(r.p_bonferroni)}"]
         lines.append(f"{model} & " + " & ".join(cells) + r" \\")
@@ -266,11 +266,11 @@ def rho_cell(r) -> str:
 
 
 def correlation_tables(corr: pd.DataFrame) -> None:
-    # Table 5.2: cross-model matrix per channel
+    # Table 5.2: cross-model matrix per EM
     lines = [r"\begin{tabular}{l" + "r" * 4 + "}", r"\toprule"]
-    for channel, group in corr[corr["comparison"] == "cross_model"].groupby("channel"):
+    for em, group in corr[corr["comparison"] == "cross_model"].groupby("em"):
         models = sorted(set(group["unit_a"]) | set(group["unit_b"]))
-        lines += [r"\midrule", rf"\multicolumn{{5}}{{l}}{{\textit{{{channel}}}}} \\",
+        lines += [r"\midrule", rf"\multicolumn{{5}}{{l}}{{\textit{{{em}}}}} \\",
                   " & " + " & ".join(models[:-1]) + r" \\"]
         for m2 in models[1:]:
             cells = []
@@ -292,18 +292,18 @@ def correlation_tables(corr: pd.DataFrame) -> None:
     lines += [r"\midrule", rf"Pooled & {rho_cell(pooled)} \\\\", r"\bottomrule", r"\end{tabular}"]
     (TABLES_DIR / "cross_domain_rho.tex").write_text("\n".join(lines) + "\n")
 
-    # Table 5.4: cross-channel pairs
+    # Table 5.4: cross-EM pairs
     lines = [r"\begin{tabular}{lrl}", r"\toprule",
-             r"Channel pair & $\rho$ & 95\% CI \\", r"\midrule"]
-    for r in corr[corr["comparison"] == "cross_channel"].itertuples():
+             r"Elicitation Method pair & $\rho$ & 95\% CI \\", r"\midrule"]
+    for r in corr[corr["comparison"] == "cross_em"].itertuples():
         dagger = r"$^\dagger$" if r.ci_lo * r.ci_hi > 0 else ""
         lines.append(
             rf"{r.unit_a} $\leftrightarrow$ {r.unit_b}{dagger} & {r.rho:+.3f}"
             rf" & [{r.ci_lo:+.3f}, {r.ci_hi:+.3f}] \\"
         )
     lines += [r"\bottomrule", r"\end{tabular}"]
-    (TABLES_DIR / "cross_channel_rho.tex").write_text("\n".join(lines) + "\n")
-    print("cross_model_rho.tex, cross_domain_rho.tex, cross_channel_rho.tex")
+    (TABLES_DIR / "cross_em_rho.tex").write_text("\n".join(lines) + "\n")
+    print("cross_model_rho.tex, cross_domain_rho.tex, cross_em_rho.tex")
 
 
 # legacy cleveland-dot style (src/analysis/render_viz.py), fonts/PDF adjusted
