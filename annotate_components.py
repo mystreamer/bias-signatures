@@ -1,10 +1,10 @@
-"""Judgment-based features via the annotation sidecar (ADR 0007).
+"""Judgment-based features via the annotation store (ADR 0007).
 
   --generate        LLM proposals (argumentativeness of instructions)
-  --import FILE     Label Studio export -> sidecar rows (human annotations)
-  --evaluate        agreement stats + reify sidecar onto component features
+  --import FILE     Label Studio export -> store rows (human annotations)
+  --evaluate        agreement stats + reify store onto component features
 
-Sidecar rows: {component_id, feature, value, source} with source
+Store rows: {component_id, feature, value, source} with source
 "llm:<alias>" or "human:<annotator>". Reification: human annotations win
 where present (per-label majority among humans for multi-label features),
 otherwise the LLM proposal stands.
@@ -24,15 +24,15 @@ from constructs import parse_foundation
 from llm import DATA_DIR
 
 COMPONENTS_DIR = DATA_DIR / "components"
-SIDECAR = COMPONENTS_DIR / "annotations.json"
+STORE = COMPONENTS_DIR / "annotations.json"
 
 
-def load_sidecar() -> list[dict]:
-    return json.loads(SIDECAR.read_text()) if SIDECAR.exists() else []
+def load_store() -> list[dict]:
+    return json.loads(STORE.read_text()) if STORE.exists() else []
 
 
-def save_sidecar(rows: list[dict]) -> None:
-    SIDECAR.write_text(json.dumps(rows, indent=1, ensure_ascii=False))
+def save_store(rows: list[dict]) -> None:
+    STORE.write_text(json.dumps(rows, indent=1, ensure_ascii=False))
 
 
 def load_components(name: str) -> list[dict]:
@@ -51,7 +51,7 @@ def generate() -> None:
     """LLM proposals for instruction argumentativeness (thesis A.6.2)."""
     from concurrent.futures import ThreadPoolExecutor
 
-    rows = load_sidecar()
+    rows = load_store()
     done = {r["component_id"] for r in rows if r["feature"] == "argumentative"}
     instructions = [c for c in load_components("instructions") if c["id"] not in done]
     print(f"generate: {len(instructions)} instructions to classify")
@@ -74,13 +74,13 @@ def generate() -> None:
             rows.append(row)
             if i % 50 == 0 or i == len(instructions):
                 print(f"  {i}/{len(instructions)}")
-    save_sidecar(rows)
+    save_store(rows)
 
 
 # -------------------------------------------------------------------- import
 
 def import_export(path: str) -> None:
-    """Label Studio topic export -> one sidecar row per (topic, annotator).
+    """Label Studio topic export -> one store row per (topic, annotator).
 
     Expected columns: term, plus one column per annotator (annotator_*) holding
     comma-separated moral foundation labels; empty = morally irrelevant.
@@ -91,7 +91,7 @@ def import_export(path: str) -> None:
     if not annotator_cols:
         raise SystemExit(f"no annotator_* columns in {path}")
 
-    rows = [r for r in load_sidecar() if not (
+    rows = [r for r in load_store() if not (
         r["feature"] == "mf" and r["source"].startswith("human:")
     )]  # re-import replaces previous human MF rows
     missing = []
@@ -114,7 +114,7 @@ def import_export(path: str) -> None:
             })
     if missing:
         print(f"WARNING: {len(missing)} terms not matched to components: {missing[:5]} ...")
-    save_sidecar(rows)
+    save_store(rows)
     print(f"imported {len(annotator_cols)} annotators x {len(df) - len(missing)} topics")
 
 
@@ -131,7 +131,7 @@ def _consolidate(values: list) -> object:
 
 
 def evaluate() -> None:
-    rows = load_sidecar()
+    rows = load_store()
     grouped: dict[tuple[str, str], list[dict]] = defaultdict(list)
     for r in rows:
         grouped[(r["component_id"], r["feature"])].append(r)

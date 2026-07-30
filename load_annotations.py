@@ -1,6 +1,6 @@
 """Generate the outbound human-annotation workload (task files).
 
-Reads data/components/ (+ the annotation sidecar) and writes one CSV per
+Reads data/components/ (+ the annotation store) and writes one CSV per
 task to data/annotation_tasks/ — Label Studio imports these directly (one
 row = one task, columns addressable as $column). Completed annotations
 return through annotate_components.py --import.
@@ -83,10 +83,10 @@ def issues_task(issues: list[dict]) -> pd.DataFrame:
     return combined.sample(frac=1, random_state=SEED).reset_index(drop=True)
 
 
-def argumentative_task(sidecar: list[dict], instructions: list[dict]) -> pd.DataFrame:
+def argumentative_task(store: list[dict], instructions: list[dict]) -> pd.DataFrame:
     proposals = pd.DataFrame([
         {"id": r["component_id"], "proposal": r["value"]}
-        for r in sidecar if r["feature"] == "argumentative"
+        for r in store if r["feature"] == "argumentative"
     ])
     assert not proposals.empty, "no proposals — run annotate_components.py --generate first"
     text = {c["id"]: c["text"] for c in instructions}
@@ -127,11 +127,11 @@ def aita_task(issues: list[dict]) -> pd.DataFrame:
 if __name__ == "__main__":
     TASKS_DIR.mkdir(parents=True, exist_ok=True)
     issues = components("issues")
-    sidecar = json.loads((COMPONENTS_DIR / "annotations.json").read_text())
+    store = json.loads((COMPONENTS_DIR / "annotations.json").read_text())
     write("issues", issues_task(issues))
     (TASKS_DIR / "issues.xml").write_text(ISSUES_SCHEMA)
     print("issues.xml: labeling config")
-    write("argumentative", argumentative_task(sidecar, components("instructions")))
+    write("argumentative", argumentative_task(store, components("instructions")))
     write("framings", framings_task(issues))
     write("rewrites", rewrites_task(issues))
     write("aita", aita_task(issues))

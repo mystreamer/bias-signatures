@@ -65,8 +65,8 @@ make_figures.cleveland_chart({issue: domains[issue]}, save=False, responses=True
 # Randomly sample one response for a given model, issue, and perturbation.
 # stance=None samples from the whole pool, an int (1-5) restricts to that label.
 # eight_sa=True restricts to the 8-sentence-argument prompts.
-model, issue, partition_b = "llama-3.1-8b", "internet restrictions in China", None
-stance, eight_sa = None, False 
+model, issue, partition_b = "deepseek-r1", "internet restrictions in China", None
+stance, eight_sa = None, True 
 pool = slice_(e2r[model], issue, partition_b, eight_sa=eight_sa)
 if stance is not None:
     pool = pool[pd.to_numeric(pool["label"], errors="coerce") == stance]

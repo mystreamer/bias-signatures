@@ -12,6 +12,7 @@ and out/tables/.
   {mfq30,mfq2}_per_foundation_model_likert.pdf  E3 Likert counts (appendix)
   moral_bias.tex             moral vs non-moral by domain (Table 5.1)
   stance_bin_counts.tex      E1 stance bin counts by domain and issue type (Table A.1)
+  sanctity_stance_distribution.tex  E1 personal sanctity stance bin counts (appendix)
   perturbation_biases.tex    per-(topic, model) perturbation JSDs (appendix)
   cross_model_rho.tex        Table 5.2
   cross_domain_rho.tex       Table 5.3
@@ -51,6 +52,16 @@ plt.rcParams.update({
 
 def stars(p: float) -> str:
     return "***" if p < 0.001 else "**" if p < 0.01 else "*" if p < 0.05 else ""
+
+
+# thesis display conventions: row order and names as hand-set in chapter 5
+MODEL_DISPLAY = {"llama-3.3-70b": "Llama-3.3-70B", "kimi-k2.5": "Kimi-K2.5",
+                 "llama-3.1-8b": "Llama-3.1-8B", "qwen-2.5-72b": "Qwen-72B",
+                 "deepseek-r1": "DeepSeek-R1"}
+MODEL_ORDER = list(MODEL_DISPLAY)
+EM_DISPLAY = {"political": "E1 political", "personal": "E1 personal",
+              "mfq30": "MFQ-30", "mfq2": "MFQ-2"}
+STARS_NOTE = r"$*\,p<0.05$, $**\,p<0.01$, $***\,p<0.001$ (permutation test)"
 
 
 # -------------------------------------------------------------------- figures
@@ -186,24 +197,48 @@ def likert_facets() -> None:
 # --------------------------------------------------------------------- tables
 
 def moral_bias_table(e1: pd.DataFrame) -> None:
-    mb = e1[e1["family"] == "moral_bias"]
+    mb = e1[e1["family"] == "moral_bias"].set_index(["model", "em"])
     lines = [
-        r"\begin{tabular}{lrrrl rrrl}", r"\toprule",
+        r"\begin{tabular}{l c c c c c c c c}", r"\toprule",
         r" & \multicolumn{4}{c}{Political} & \multicolumn{4}{c}{Personal-Situational} \\",
-        r" & $\bar{s}_M$ & $\bar{s}_{\neg M}$ & $\Delta\bar{s}$ & JSD"
-        r" & $\bar{s}_M$ & $\bar{s}_{\neg M}$ & $\Delta\bar{s}$ & JSD \\",
+        r"\cmidrule(lr){2-5} \cmidrule(lr){6-9}",
+        r" & $\bar{s}_{M}$ & $\bar{s}_{\neg M}$ & $\Delta\bar{s}$ & JSD"
+        r" & $\bar{s}_{M}$ & $\bar{s}_{\neg M}$ & $\Delta\bar{s}$ & JSD \\",
         r"\midrule",
     ]
-    for model, group in mb.groupby("model"):
+    for model in MODEL_ORDER:
         cells = []
         for em in ("political", "personal"):
-            r = group[group["em"] == em].iloc[0]
+            r = mb.loc[(model, em)]
             cells += [f"{r.mean_a:.2f}", f"{r.mean_b:.2f}",
-                      f"{r.mean_a - r.mean_b:+.2f}", f".{f'{r.jsd:.3f}'[2:]}{stars(r.p_bonferroni)}"]
-        lines.append(f"{model} & " + " & ".join(cells) + r" \\")
-    lines += [r"\bottomrule", r"\end{tabular}"]
+                      f"${r.mean_a - r.mean_b:+.2f}$",
+                      f".{f'{r.jsd:.3f}'[2:]}{stars(r.p_bonferroni)}"]
+        lines.append(f"{MODEL_DISPLAY[model]} & " + " & ".join(cells) + r" \\")
+    lines += [r"\bottomrule",
+              r"\multicolumn{9}{l}{\footnotesize " + STARS_NOTE + r"} \\",
+              r"\end{tabular}"]
     (TABLES_DIR / "moral_bias.tex").write_text("\n".join(lines) + "\n")
     print("moral_bias.tex")
+
+
+def sanctity_table() -> None:
+    """Appendix sanctity table: absolute stance bin counts per model on the
+    personal-situational items tagged sanctity-degradation. The refusal column
+    folds in every non-numeric label, as in stance_bin_counts_table."""
+    bins = [str(b) for b in range(1, 6)]
+    lines = [r"\begin{tabular}{l r r r r r r r}", r"\toprule",
+             r"Model & 1 & 2 & 3 & 4 & 5 & refusal & $n$ \\", r"\midrule"]
+    responses = load_responses("e1")
+    for model in MODEL_ORDER:
+        df = responses[model]
+        sub = df[(df["domain"] == "personal") & (df["morally_relevant"] == True)  # noqa: E712
+                 & df["mf"].map(lambda raw: any("sanctity" in f for f in json.loads(raw)))]
+        numeric = [int((sub["label"] == b).sum()) for b in bins]
+        cells = numeric + [len(sub) - sum(numeric), len(sub)]
+        lines.append(f"{MODEL_DISPLAY[model]} & " + " & ".join(map(str, cells)) + r" \\")
+    lines += [r"\bottomrule", r"\end{tabular}"]
+    (TABLES_DIR / "sanctity_stance_distribution.tex").write_text("\n".join(lines) + "\n")
+    print("sanctity_stance_distribution.tex")
 
 
 def stance_bin_counts_table() -> None:
@@ -261,47 +296,57 @@ def perturbation_table(e2: pd.DataFrame) -> None:
     print("perturbation_biases.tex")
 
 
-def rho_cell(r) -> str:
-    return f"{r.rho:+.3f} [{r.ci_lo:+.3f}, {r.ci_hi:+.3f}]"
-
-
 def correlation_tables(corr: pd.DataFrame) -> None:
-    # Table 5.2: cross-model matrix per EM
-    lines = [r"\begin{tabular}{l" + "r" * 4 + "}", r"\toprule"]
-    for em, group in corr[corr["comparison"] == "cross_model"].groupby("em"):
-        models = sorted(set(group["unit_a"]) | set(group["unit_b"]))
-        lines += [r"\midrule", rf"\multicolumn{{5}}{{l}}{{\textit{{{em}}}}} \\",
-                  " & " + " & ".join(models[:-1]) + r" \\"]
+    # Table 5.2: cross-model matrix per EM, political block first as in §5.2
+    cm = corr[corr["comparison"] == "cross_model"]
+    models = sorted(set(cm["unit_a"]) | set(cm["unit_b"]))
+    lines = [r"\begin{tabular}{l r r r r}", r"\toprule",
+             " & " + " & ".join(models[:-1]) + r" \\", r"\midrule"]
+    for bi, (em, title) in enumerate((("political", "Political"),
+                                      ("personal", "Personal-Situational"))):
+        if bi:
+            lines.append(r"\addlinespace")
+        lines.append(rf"\multicolumn{{5}}{{l}}{{\textit{{{title}}}}} \\")
+        group = cm[cm["em"] == em]
         for m2 in models[1:]:
             cells = []
             for m1 in models[:-1]:
                 hit = group[(group["unit_a"] == m1) & (group["unit_b"] == m2)]
-                cells.append(f"{hit.iloc[0].rho:+.3f}" if len(hit) else "")
+                cells.append(f"${hit.iloc[0].rho:+.3f}$" if len(hit) else "")
             lines.append(f"{m2} & " + " & ".join(cells) + r" \\")
     pooled = corr[corr["comparison"] == "cross_model_pooled"].iloc[0]
     lines += [r"\midrule",
-              rf"\multicolumn{{5}}{{l}}{{Pooled mean $\rho$ = {pooled.rho:+.3f}}} \\",
+              rf"\multicolumn{{5}}{{l}}{{\footnotesize Aggregated (mean) $\rho = {pooled.rho:+.3f}$.}} \\",
               r"\bottomrule", r"\end{tabular}"]
     (TABLES_DIR / "cross_model_rho.tex").write_text("\n".join(lines) + "\n")
 
     # Table 5.3: cross-domain per model
-    lines = [r"\begin{tabular}{lr}", r"\toprule", r"Model & $\rho$ \\", r"\midrule"]
+    lines = [r"\begin{tabular}{l r}", r"\toprule", r"Model & $\rho$ \\", r"\midrule"]
     for r in corr[corr["comparison"] == "cross_domain"].itertuples():
-        lines.append(f"{r.unit_a} & {r.rho:+.3f} \\\\")
+        lines.append(rf"{r.unit_a} & ${r.rho:+.3f}$ \\")
     pooled = corr[corr["comparison"] == "cross_domain_pooled"].iloc[0]
-    lines += [r"\midrule", rf"Pooled & {rho_cell(pooled)} \\\\", r"\bottomrule", r"\end{tabular}"]
+    lines += [r"\midrule",
+              rf"Pooled & ${pooled.rho:+.3f}$, 95\% CI $[{pooled.ci_lo:+.3f}, {pooled.ci_hi:+.3f}]$ \\",
+              r"\bottomrule", r"\end{tabular}"]
     (TABLES_DIR / "cross_domain_rho.tex").write_text("\n".join(lines) + "\n")
 
-    # Table 5.4: cross-EM pairs
-    lines = [r"\begin{tabular}{lrl}", r"\toprule",
+    # Table 5.4: cross-EM pairs, E1 domains before the questionnaires
+    pair_order = [("political", "personal"), ("political", "mfq30"),
+                  ("political", "mfq2"), ("personal", "mfq30"),
+                  ("personal", "mfq2"), ("mfq30", "mfq2")]
+    ce = corr[corr["comparison"] == "cross_em"]
+    lines = [r"\begin{tabular}{l r c}", r"\toprule",
              r"Elicitation Method pair & $\rho$ & 95\% CI \\", r"\midrule"]
-    for r in corr[corr["comparison"] == "cross_em"].itertuples():
-        dagger = r"$^\dagger$" if r.ci_lo * r.ci_hi > 0 else ""
+    for a, b in pair_order:
+        hit = ce[ce["unit_a"].isin((a, b)) & ce["unit_b"].isin((a, b))].iloc[0]
+        dagger = r"\textsuperscript{$\dagger$}" if hit.ci_lo * hit.ci_hi > 0 else ""
         lines.append(
-            rf"{r.unit_a} $\leftrightarrow$ {r.unit_b}{dagger} & {r.rho:+.3f}"
-            rf" & [{r.ci_lo:+.3f}, {r.ci_hi:+.3f}] \\"
+            rf"{EM_DISPLAY[a]} $\leftrightarrow$ {EM_DISPLAY[b]}{dagger}"
+            rf" & ${hit.rho:+.3f}$ & $[{hit.ci_lo:+.3f}, {hit.ci_hi:+.3f}]$ \\"
         )
-    lines += [r"\bottomrule", r"\end{tabular}"]
+    lines += [r"\bottomrule",
+              r"\multicolumn{3}{l}{\footnotesize $\dagger$ CI excludes zero.} \\",
+              r"\end{tabular}"]
     (TABLES_DIR / "cross_em_rho.tex").write_text("\n".join(lines) + "\n")
     print("cross_model_rho.tex, cross_domain_rho.tex, cross_em_rho.tex")
 
@@ -414,6 +459,7 @@ if __name__ == "__main__":
     if "e1" in only:
         moral_bias_table(pd.read_csv(SIGNATURES_DIR / "e1.csv"))
         stance_bin_counts_table()
+        sanctity_table()
     if "e3" in only:
         likert_facets()
     if "e2" in only:
