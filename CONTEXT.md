@@ -30,14 +30,14 @@ A subset of a prompt template set selected by a σ-condition over its columns (e
 _Avoid_: treatment, condition, group
 
 **Annotation**:
-A judgment-based claim about a component's feature, recorded in the sidecar with its source (`llm:<model>` or `human:<annotator>`). Distinct from mechanically inherited features, which assembly derives from raw data without judgment.
+A judgment-based claim about a component's feature, recorded in the annotation store with its source (`llm:<model>` or `human:<annotator>`). Distinct from mechanically inherited features, which assembly derives from raw data without judgment.
 _Avoid_: label (reserved for elicitor outputs)
 
 **Proposal**:
 An LLM-generated annotation awaiting (optional) human validation.
 
 **Reification**:
-The evaluate step that consolidates sidecar annotations into component features: humans win where present (majority vote among humans), otherwise the LLM proposal stands.
+The evaluate step that consolidates the annotation store into component features: humans win where present (majority vote among humans), otherwise the LLM proposal stands.
 _Avoid_: aggregation, merging
 
 **Control**:
