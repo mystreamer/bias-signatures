@@ -48,7 +48,7 @@ def bust_cache(df: pd.DataFrame, model: str, temperature: float,
 
 def run(template_set: Path, model: str, temperature: float, n: int,
         workers: int, limit: int | None, max_tokens: int, bust: bool = False,
-        structured: bool = False) -> None:
+        structured: bool = False, out: Path | None = None) -> None:
     rf_for = response_format_for if structured else (lambda row: None)
     df = pd.read_csv(template_set)
     if limit:
@@ -56,7 +56,7 @@ def run(template_set: Path, model: str, temperature: float, n: int,
     if bust:
         bust_cache(df, model, temperature, rf_for)
     experiment = template_set.stem
-    out = RESPONSES_DIR / experiment / f"{model}.csv"
+    out = out or RESPONSES_DIR / experiment / f"{model}.csv"
     out.parent.mkdir(parents=True, exist_ok=True)
 
     failures = []
@@ -100,6 +100,10 @@ if __name__ == "__main__":
                         help="delete this model's cached responses for these prompts before sampling")
     parser.add_argument("--structured", action="store_true",
                         help='force {"label": <letter>} json_schema output on option_map rows (e3)')
+    parser.add_argument("--out", type=Path,
+                        help="override the output CSV path "
+                             "(default: data/responses/{template-set stem}/{model}.csv)")
     args = parser.parse_args()
     run(args.template_set, args.model, args.temperature, args.n,
-        args.workers, args.limit, args.max_tokens, args.bust_cache, args.structured)
+        args.workers, args.limit, args.max_tokens, args.bust_cache, args.structured,
+        args.out)

@@ -59,7 +59,7 @@ MODEL_DISPLAY = {"llama-3.3-70b": "Llama-3.3-70B", "kimi-k2.5": "Kimi-K2.5",
                  "llama-3.1-8b": "Llama-3.1-8B", "qwen-2.5-72b": "Qwen-72B",
                  "deepseek-r1": "DeepSeek-R1"}
 MODEL_ORDER = list(MODEL_DISPLAY)
-EM_DISPLAY = {"political": "E1 political", "personal": "E1 personal",
+EM_DISPLAY = {"political": "Task political", "personal": "Task personal",
               "mfq30": "MFQ-30", "mfq2": "MFQ-2"}
 STARS_NOTE = r"$*\,p<0.05$, $**\,p<0.01$, $***\,p<0.001$ (permutation test)"
 
@@ -330,7 +330,7 @@ def correlation_tables(corr: pd.DataFrame) -> None:
               r"\bottomrule", r"\end{tabular}"]
     (TABLES_DIR / "cross_domain_rho.tex").write_text("\n".join(lines) + "\n")
 
-    # Table 5.4: cross-EM pairs, E1 domains before the questionnaires
+    # Table 5.4: cross-EM pairs, task domains before the questionnaires
     pair_order = [("political", "personal"), ("political", "mfq30"),
                   ("political", "mfq2"), ("personal", "mfq30"),
                   ("personal", "mfq2"), ("mfq30", "mfq2")]

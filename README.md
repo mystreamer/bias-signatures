@@ -36,7 +36,7 @@ for m in llama-3.1-8b llama-3.3-70b qwen-2.5-72b deepseek-r1 kimi-k2.5; do
 done                                           # -> data/responses/e1/{model}.csv (cached, resumable)
 
 uv run python response_distribution.py data/responses/e1/llama-3.3-70b.csv --elicitor stance
-uv run python response_distribution.py data/responses/e3/llama-3.3-70b.csv --elicitor likert
+uv run python response_distribution.py data/responses/e3/llama-3.3-70b.csv --elicitor likert-llm
 
 uv run python make_signatures.py               # -> data/signatures/{e1,e2,e3}.csv
 uv run python make_correlation.py              # -> data/signatures/correlations.csv
@@ -64,4 +64,4 @@ exactly n samples, top-up on miss — so interrupted runs resume for free.
 |---|---|---|---|
 | E1 (§5.2) | 8SA instruction × all issues, neutral framing | stance | moral bias + MVB per model × domain |
 | E2 (§5.3) | argumentative instructions × 10 controversial topics × 6 perturbation cells | stance | per-topic perturbation biases (descriptive) |
-| E3 (§5.4) | MFQ statements × option rotations | likert | MVB per model × questionnaire |
+| E3 (§5.4) | MFQ statements × option rotations | likert-llm | MVB per model × questionnaire |
