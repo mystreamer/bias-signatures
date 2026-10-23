@@ -2,14 +2,12 @@
 data/raw/*
 !data/raw/manual/
 
-# expensive but regenerable from the cache; back up data/cache/ out-of-band
+# raw per-call API cache; back it up out-of-band. The response CSVs derived
+# from it (data/responses/) ARE committed so the analysis can be verified.
 data/cache/
-data/responses/
 
-# deterministic derivations
+# deterministic derivations; template sets and signatures are committed
 data/annotation_tasks/
-data/template_sets/
-data/signatures/
 out/
 dump/
 

@@ -1,0 +1,501 @@
+model,em,topic,family,scope,partition_a,partition_b,n_a,n_b,jsd
+deepseek-r1,political,animal rights,perturbation,wide,baseline,primed,159,159,0.03837694016067014
+deepseek-r1,political,animal rights,perturbation,wide,baseline,pro-framed,159,159,0.09441766071913749
+deepseek-r1,political,animal rights,perturbation,wide,baseline,con-framed,159,159,0.5944414449960087
+deepseek-r1,political,animal rights,perturbation,wide,baseline,grounded,159,159,0.3047060460250446
+deepseek-r1,political,animal rights,perturbation,wide,baseline,abstracted,159,159,0.03871426586584543
+deepseek-r1,political,creationism,perturbation,wide,baseline,primed,159,159,0.08817732118110262
+deepseek-r1,political,creationism,perturbation,wide,baseline,pro-framed,159,159,0.2234708322304793
+deepseek-r1,political,creationism,perturbation,wide,baseline,con-framed,159,159,0.2839888287456249
+deepseek-r1,political,creationism,perturbation,wide,baseline,grounded,159,159,0.1553497757368017
+deepseek-r1,political,creationism,perturbation,wide,baseline,abstracted,159,159,0.04807701534949422
+deepseek-r1,political,internet restrictions in China,perturbation,wide,baseline,primed,159,159,0.025793100890403663
+deepseek-r1,political,internet restrictions in China,perturbation,wide,baseline,pro-framed,159,159,0.3948776370561427
+deepseek-r1,political,internet restrictions in China,perturbation,wide,baseline,con-framed,159,159,0.24368890101529583
+deepseek-r1,political,internet restrictions in China,perturbation,wide,baseline,grounded,159,159,0.21538331411821504
+deepseek-r1,political,internet restrictions in China,perturbation,wide,baseline,abstracted,159,159,0.46592883769323357
+deepseek-r1,political,moral absolutism,perturbation,wide,baseline,primed,159,159,0.09193630861346594
+deepseek-r1,political,moral absolutism,perturbation,wide,baseline,pro-framed,159,159,0.20074238474014977
+deepseek-r1,political,moral absolutism,perturbation,wide,baseline,con-framed,159,159,0.5796784272606316
+deepseek-r1,political,moral absolutism,perturbation,wide,baseline,grounded,159,159,0.3786421960114015
+deepseek-r1,political,moral absolutism,perturbation,wide,baseline,abstracted,159,159,0.17246130373314658
+deepseek-r1,personal,moving in on my Bestfriend's crush,perturbation,wide,baseline,primed,159,159,0.08093065029840685
+deepseek-r1,personal,moving in on my Bestfriend's crush,perturbation,wide,baseline,pro-framed,159,159,0.11397439484075725
+deepseek-r1,personal,moving in on my Bestfriend's crush,perturbation,wide,baseline,con-framed,159,159,0.12522070231332683
+deepseek-r1,personal,moving in on my Bestfriend's crush,perturbation,wide,baseline,grounded,159,159,0.08252975928175249
+deepseek-r1,personal,moving in on my Bestfriend's crush,perturbation,wide,baseline,abstracted,159,159,0.13759356161282663
+deepseek-r1,personal,not picking up my dogs poop,perturbation,wide,baseline,primed,159,159,0.04546128738538541
+deepseek-r1,personal,not picking up my dogs poop,perturbation,wide,baseline,pro-framed,159,159,0.16167087668982438
+deepseek-r1,personal,not picking up my dogs poop,perturbation,wide,baseline,con-framed,159,159,0.07361641589494716
+deepseek-r1,personal,not picking up my dogs poop,perturbation,wide,baseline,grounded,159,159,0.1670880689511018
+deepseek-r1,personal,not picking up my dogs poop,perturbation,wide,baseline,abstracted,159,159,0.5588144166053048
+deepseek-r1,political,prostitution,perturbation,wide,baseline,primed,159,159,0.021765073232913566
+deepseek-r1,political,prostitution,perturbation,wide,baseline,pro-framed,159,159,0.19383634923066806
+deepseek-r1,political,prostitution,perturbation,wide,baseline,con-framed,159,159,0.46610547790735757
+deepseek-r1,political,prostitution,perturbation,wide,baseline,grounded,159,159,0.5003636950140323
+deepseek-r1,political,prostitution,perturbation,wide,baseline,abstracted,159,159,0.4223851521015459
+deepseek-r1,personal,reporting drug addicts to my police friend,perturbation,wide,baseline,primed,159,159,0.05815446705032165
+deepseek-r1,personal,reporting drug addicts to my police friend,perturbation,wide,baseline,pro-framed,159,159,0.044435743764427216
+deepseek-r1,personal,reporting drug addicts to my police friend,perturbation,wide,baseline,con-framed,159,159,0.2849604362065201
+deepseek-r1,personal,reporting drug addicts to my police friend,perturbation,wide,baseline,grounded,159,159,0.38994331226181844
+deepseek-r1,personal,reporting drug addicts to my police friend,perturbation,wide,baseline,abstracted,159,159,0.09006736445724872
+deepseek-r1,personal,wanting to keep my friend to myself,perturbation,wide,baseline,primed,159,159,0.050188257743256734
+deepseek-r1,personal,wanting to keep my friend to myself,perturbation,wide,baseline,pro-framed,159,159,0.07459917271748714
+deepseek-r1,personal,wanting to keep my friend to myself,perturbation,wide,baseline,con-framed,159,159,0.25308951140013813
+deepseek-r1,personal,wanting to keep my friend to myself,perturbation,wide,baseline,grounded,159,159,0.32020664984877745
+deepseek-r1,personal,wanting to keep my friend to myself,perturbation,wide,baseline,abstracted,159,159,0.13985148665680214
+deepseek-r1,personal,wanting to yell at my sister,perturbation,wide,baseline,primed,159,159,0.018853539892402738
+deepseek-r1,personal,wanting to yell at my sister,perturbation,wide,baseline,pro-framed,159,159,0.14393050506256044
+deepseek-r1,personal,wanting to yell at my sister,perturbation,wide,baseline,con-framed,159,159,0.16252185447258574
+deepseek-r1,personal,wanting to yell at my sister,perturbation,wide,baseline,grounded,159,159,0.11200585773768751
+deepseek-r1,personal,wanting to yell at my sister,perturbation,wide,baseline,abstracted,159,159,0.3127131797066852
+deepseek-r1,political,animal rights,perturbation,8sa,baseline,primed,3,3,0.016138558636295153
+deepseek-r1,political,animal rights,perturbation,8sa,baseline,pro-framed,3,3,0.01936197475537623
+deepseek-r1,political,animal rights,perturbation,8sa,baseline,con-framed,3,3,0.13279775142017708
+deepseek-r1,political,animal rights,perturbation,8sa,baseline,grounded,3,3,0.06917291654647395
+deepseek-r1,political,animal rights,perturbation,8sa,baseline,abstracted,3,3,0.06917291654647394
+deepseek-r1,political,creationism,perturbation,8sa,baseline,primed,3,3,0.027234721981836796
+deepseek-r1,political,creationism,perturbation,8sa,baseline,pro-framed,3,3,0.11111111111111105
+deepseek-r1,political,creationism,perturbation,8sa,baseline,con-framed,3,3,0.13279775142017708
+deepseek-r1,political,creationism,perturbation,8sa,baseline,grounded,3,3,0.04892136229090277
+deepseek-r1,political,creationism,perturbation,8sa,baseline,abstracted,3,3,0.13279775142017708
+deepseek-r1,political,internet restrictions in China,perturbation,8sa,baseline,primed,3,3,0.11111111111111106
+deepseek-r1,political,internet restrictions in China,perturbation,8sa,baseline,pro-framed,3,3,0.01936197475537623
+deepseek-r1,political,internet restrictions in China,perturbation,8sa,baseline,con-framed,3,3,0.06362483487370311
+deepseek-r1,political,internet restrictions in China,perturbation,8sa,baseline,grounded,3,3,0.11111111111111106
+deepseek-r1,political,internet restrictions in China,perturbation,8sa,baseline,abstracted,3,3,0.13279775142017708
+deepseek-r1,political,moral absolutism,perturbation,8sa,baseline,primed,3,3,0.0
+deepseek-r1,political,moral absolutism,perturbation,8sa,baseline,pro-framed,3,3,0.15448439172924308
+deepseek-r1,political,moral absolutism,perturbation,8sa,baseline,con-framed,3,3,0.15448439172924308
+deepseek-r1,political,moral absolutism,perturbation,8sa,baseline,grounded,3,3,0.0
+deepseek-r1,political,moral absolutism,perturbation,8sa,baseline,abstracted,3,3,0.15448439172924308
+deepseek-r1,personal,moving in on my Bestfriend's crush,perturbation,8sa,baseline,primed,3,3,0.06917291654647394
+deepseek-r1,personal,moving in on my Bestfriend's crush,perturbation,8sa,baseline,pro-framed,3,3,0.06917291654647394
+deepseek-r1,personal,moving in on my Bestfriend's crush,perturbation,8sa,baseline,con-framed,3,3,0.0
+deepseek-r1,personal,moving in on my Bestfriend's crush,perturbation,8sa,baseline,grounded,3,3,0.0
+deepseek-r1,personal,moving in on my Bestfriend's crush,perturbation,8sa,baseline,abstracted,3,3,0.0
+deepseek-r1,personal,not picking up my dogs poop,perturbation,8sa,baseline,primed,3,3,0.15448439172924308
+deepseek-r1,personal,not picking up my dogs poop,perturbation,8sa,baseline,pro-framed,3,3,0.0
+deepseek-r1,personal,not picking up my dogs poop,perturbation,8sa,baseline,con-framed,3,3,0.15448439172924308
+deepseek-r1,personal,not picking up my dogs poop,perturbation,8sa,baseline,grounded,3,3,0.15448439172924308
+deepseek-r1,personal,not picking up my dogs poop,perturbation,8sa,baseline,abstracted,3,3,0.0
+deepseek-r1,political,prostitution,perturbation,8sa,baseline,primed,3,3,0.01936197475537623
+deepseek-r1,political,prostitution,perturbation,8sa,baseline,pro-framed,3,3,0.11111111111111108
+deepseek-r1,political,prostitution,perturbation,8sa,baseline,con-framed,3,3,0.13279775142017708
+deepseek-r1,political,prostitution,perturbation,8sa,baseline,grounded,3,3,0.13279775142017708
+deepseek-r1,political,prostitution,perturbation,8sa,baseline,abstracted,3,3,0.13279775142017708
+deepseek-r1,personal,reporting drug addicts to my police friend,perturbation,8sa,baseline,primed,3,3,0.01936197475537623
+deepseek-r1,personal,reporting drug addicts to my police friend,perturbation,8sa,baseline,pro-framed,3,3,0.13279775142017708
+deepseek-r1,personal,reporting drug addicts to my police friend,perturbation,8sa,baseline,con-framed,3,3,0.13279775142017708
+deepseek-r1,personal,reporting drug addicts to my police friend,perturbation,8sa,baseline,grounded,3,3,0.08387638912927428
+deepseek-r1,personal,reporting drug addicts to my police friend,perturbation,8sa,baseline,abstracted,3,3,0.13279775142017708
+deepseek-r1,personal,wanting to keep my friend to myself,perturbation,8sa,baseline,primed,3,3,0.01936197475537623
+deepseek-r1,personal,wanting to keep my friend to myself,perturbation,8sa,baseline,pro-framed,3,3,0.11111111111111105
+deepseek-r1,personal,wanting to keep my friend to myself,perturbation,8sa,baseline,con-framed,3,3,0.06362483487370311
+deepseek-r1,personal,wanting to keep my friend to myself,perturbation,8sa,baseline,grounded,3,3,0.13279775142017708
+deepseek-r1,personal,wanting to keep my friend to myself,perturbation,8sa,baseline,abstracted,3,3,0.13279775142017708
+deepseek-r1,personal,wanting to yell at my sister,perturbation,8sa,baseline,primed,3,3,0.06917291654647394
+deepseek-r1,personal,wanting to yell at my sister,perturbation,8sa,baseline,pro-framed,3,3,0.01936197475537623
+deepseek-r1,personal,wanting to yell at my sister,perturbation,8sa,baseline,con-framed,3,3,0.06917291654647394
+deepseek-r1,personal,wanting to yell at my sister,perturbation,8sa,baseline,grounded,3,3,0.08387638912927428
+deepseek-r1,personal,wanting to yell at my sister,perturbation,8sa,baseline,abstracted,3,3,0.13279775142017708
+kimi-k2.5,political,animal rights,perturbation,wide,baseline,primed,159,159,0.013935586860834102
+kimi-k2.5,political,animal rights,perturbation,wide,baseline,pro-framed,159,159,0.22132481683371563
+kimi-k2.5,political,animal rights,perturbation,wide,baseline,con-framed,159,159,0.5939330693119282
+kimi-k2.5,political,animal rights,perturbation,wide,baseline,grounded,159,159,0.23853165311713015
+kimi-k2.5,political,animal rights,perturbation,wide,baseline,abstracted,159,159,0.078182517008364
+kimi-k2.5,political,creationism,perturbation,wide,baseline,primed,159,159,0.1110642405961434
+kimi-k2.5,political,creationism,perturbation,wide,baseline,pro-framed,159,159,0.18179444064688288
+kimi-k2.5,political,creationism,perturbation,wide,baseline,con-framed,159,159,0.38181435794816476
+kimi-k2.5,political,creationism,perturbation,wide,baseline,grounded,159,159,0.12818833396617457
+kimi-k2.5,political,creationism,perturbation,wide,baseline,abstracted,159,159,0.03741521469357359
+kimi-k2.5,political,internet restrictions in China,perturbation,wide,baseline,primed,159,159,0.026172688586621702
+kimi-k2.5,political,internet restrictions in China,perturbation,wide,baseline,pro-framed,159,159,0.3849655952188554
+kimi-k2.5,political,internet restrictions in China,perturbation,wide,baseline,con-framed,159,159,0.2662024778039773
+kimi-k2.5,political,internet restrictions in China,perturbation,wide,baseline,grounded,159,159,0.15154163812277
+kimi-k2.5,political,internet restrictions in China,perturbation,wide,baseline,abstracted,159,159,0.16137074880310426
+kimi-k2.5,political,moral absolutism,perturbation,wide,baseline,primed,159,159,0.03430530725913265
+kimi-k2.5,political,moral absolutism,perturbation,wide,baseline,pro-framed,159,159,0.15294949611099856
+kimi-k2.5,political,moral absolutism,perturbation,wide,baseline,con-framed,159,159,0.5909559150399961
+kimi-k2.5,political,moral absolutism,perturbation,wide,baseline,grounded,159,159,0.26954162706357315
+kimi-k2.5,political,moral absolutism,perturbation,wide,baseline,abstracted,159,159,0.04983808696411116
+kimi-k2.5,personal,moving in on my Bestfriend's crush,perturbation,wide,baseline,primed,159,159,0.21878219231529983
+kimi-k2.5,personal,moving in on my Bestfriend's crush,perturbation,wide,baseline,pro-framed,159,159,0.19864010062426224
+kimi-k2.5,personal,moving in on my Bestfriend's crush,perturbation,wide,baseline,con-framed,159,159,0.38437282618426405
+kimi-k2.5,personal,moving in on my Bestfriend's crush,perturbation,wide,baseline,grounded,159,159,0.17428711826847643
+kimi-k2.5,personal,moving in on my Bestfriend's crush,perturbation,wide,baseline,abstracted,159,159,0.3987858579048786
+kimi-k2.5,personal,not picking up my dogs poop,perturbation,wide,baseline,primed,159,159,0.07934501743310354
+kimi-k2.5,personal,not picking up my dogs poop,perturbation,wide,baseline,pro-framed,159,159,0.1400420773916109
+kimi-k2.5,personal,not picking up my dogs poop,perturbation,wide,baseline,con-framed,159,159,0.304573792084469
+kimi-k2.5,personal,not picking up my dogs poop,perturbation,wide,baseline,grounded,159,159,0.14800573102023912
+kimi-k2.5,personal,not picking up my dogs poop,perturbation,wide,baseline,abstracted,159,159,0.25713774920920235
+kimi-k2.5,political,prostitution,perturbation,wide,baseline,primed,159,159,0.004596704797163459
+kimi-k2.5,political,prostitution,perturbation,wide,baseline,pro-framed,159,159,0.170112513008335
+kimi-k2.5,political,prostitution,perturbation,wide,baseline,con-framed,159,159,0.6375181417289821
+kimi-k2.5,political,prostitution,perturbation,wide,baseline,grounded,159,159,0.5357718691426439
+kimi-k2.5,political,prostitution,perturbation,wide,baseline,abstracted,159,159,0.20946738015066813
+kimi-k2.5,personal,reporting drug addicts to my police friend,perturbation,wide,baseline,primed,159,159,0.034694353291304256
+kimi-k2.5,personal,reporting drug addicts to my police friend,perturbation,wide,baseline,pro-framed,159,159,0.10443533940917538
+kimi-k2.5,personal,reporting drug addicts to my police friend,perturbation,wide,baseline,con-framed,159,159,0.3332648455982832
+kimi-k2.5,personal,reporting drug addicts to my police friend,perturbation,wide,baseline,grounded,159,159,0.3977285470687807
+kimi-k2.5,personal,reporting drug addicts to my police friend,perturbation,wide,baseline,abstracted,159,159,0.14646141932250142
+kimi-k2.5,personal,wanting to keep my friend to myself,perturbation,wide,baseline,primed,159,159,0.08506530486230718
+kimi-k2.5,personal,wanting to keep my friend to myself,perturbation,wide,baseline,pro-framed,159,159,0.08019050224984427
+kimi-k2.5,personal,wanting to keep my friend to myself,perturbation,wide,baseline,con-framed,159,159,0.23209605660230626
+kimi-k2.5,personal,wanting to keep my friend to myself,perturbation,wide,baseline,grounded,159,159,0.22140341841981637
+kimi-k2.5,personal,wanting to keep my friend to myself,perturbation,wide,baseline,abstracted,159,159,0.17768654190520566
+kimi-k2.5,personal,wanting to yell at my sister,perturbation,wide,baseline,primed,159,159,0.050400349370583616
+kimi-k2.5,personal,wanting to yell at my sister,perturbation,wide,baseline,pro-framed,159,159,0.11929606293105922
+kimi-k2.5,personal,wanting to yell at my sister,perturbation,wide,baseline,con-framed,159,159,0.16865093089353606
+kimi-k2.5,personal,wanting to yell at my sister,perturbation,wide,baseline,grounded,159,159,0.005701008208380848
+kimi-k2.5,personal,wanting to yell at my sister,perturbation,wide,baseline,abstracted,159,159,0.04105595771319164
+kimi-k2.5,political,animal rights,perturbation,8sa,baseline,primed,3,3,0.0
+kimi-k2.5,political,animal rights,perturbation,8sa,baseline,pro-framed,3,3,0.06917291654647394
+kimi-k2.5,political,animal rights,perturbation,8sa,baseline,con-framed,3,3,0.13279775142017708
+kimi-k2.5,political,animal rights,perturbation,8sa,baseline,grounded,3,3,0.15448439172924308
+kimi-k2.5,political,animal rights,perturbation,8sa,baseline,abstracted,3,3,0.0
+kimi-k2.5,political,creationism,perturbation,8sa,baseline,primed,3,3,0.05446944396367359
+kimi-k2.5,political,creationism,perturbation,8sa,baseline,pro-framed,3,3,0.06917291654647395
+kimi-k2.5,political,creationism,perturbation,8sa,baseline,con-framed,3,3,0.11809427883737673
+kimi-k2.5,political,creationism,perturbation,8sa,baseline,grounded,3,3,0.021686640309065974
+kimi-k2.5,political,creationism,perturbation,8sa,baseline,abstracted,3,3,0.04892136229090277
+kimi-k2.5,political,internet restrictions in China,perturbation,8sa,baseline,primed,3,3,0.13279775142017708
+kimi-k2.5,political,internet restrictions in China,perturbation,8sa,baseline,pro-framed,3,3,0.13279775142017708
+kimi-k2.5,political,internet restrictions in China,perturbation,8sa,baseline,con-framed,3,3,0.15448439172924308
+kimi-k2.5,political,internet restrictions in China,perturbation,8sa,baseline,grounded,3,3,0.13279775142017708
+kimi-k2.5,political,internet restrictions in China,perturbation,8sa,baseline,abstracted,3,3,0.15448439172924308
+kimi-k2.5,political,moral absolutism,perturbation,8sa,baseline,primed,3,3,0.13279775142017708
+kimi-k2.5,political,moral absolutism,perturbation,8sa,baseline,pro-framed,3,3,0.06917291654647394
+kimi-k2.5,political,moral absolutism,perturbation,8sa,baseline,con-framed,3,3,0.15448439172924308
+kimi-k2.5,political,moral absolutism,perturbation,8sa,baseline,grounded,3,3,0.01936197475537623
+kimi-k2.5,political,moral absolutism,perturbation,8sa,baseline,abstracted,3,3,0.0
+kimi-k2.5,personal,moving in on my Bestfriend's crush,perturbation,8sa,baseline,primed,3,3,0.027234721981836796
+kimi-k2.5,personal,moving in on my Bestfriend's crush,perturbation,8sa,baseline,pro-framed,3,3,0.06917291654647394
+kimi-k2.5,personal,moving in on my Bestfriend's crush,perturbation,8sa,baseline,con-framed,3,3,0.13279775142017708
+kimi-k2.5,personal,moving in on my Bestfriend's crush,perturbation,8sa,baseline,grounded,3,3,0.06917291654647394
+kimi-k2.5,personal,moving in on my Bestfriend's crush,perturbation,8sa,baseline,abstracted,3,3,0.13279775142017708
+kimi-k2.5,personal,not picking up my dogs poop,perturbation,8sa,baseline,primed,3,3,0.15448439172924308
+kimi-k2.5,personal,not picking up my dogs poop,perturbation,8sa,baseline,pro-framed,3,3,0.0
+kimi-k2.5,personal,not picking up my dogs poop,perturbation,8sa,baseline,con-framed,3,3,0.15448439172924308
+kimi-k2.5,personal,not picking up my dogs poop,perturbation,8sa,baseline,grounded,3,3,0.13279775142017708
+kimi-k2.5,personal,not picking up my dogs poop,perturbation,8sa,baseline,abstracted,3,3,0.0
+kimi-k2.5,political,prostitution,perturbation,8sa,baseline,primed,3,3,0.016138558636295153
+kimi-k2.5,political,prostitution,perturbation,8sa,baseline,pro-framed,3,3,0.06362483487370311
+kimi-k2.5,political,prostitution,perturbation,8sa,baseline,con-framed,3,3,0.13279775142017708
+kimi-k2.5,political,prostitution,perturbation,8sa,baseline,grounded,3,3,0.01936197475537623
+kimi-k2.5,political,prostitution,perturbation,8sa,baseline,abstracted,3,3,0.01936197475537623
+kimi-k2.5,personal,reporting drug addicts to my police friend,perturbation,8sa,baseline,primed,3,3,0.05446944396367359
+kimi-k2.5,personal,reporting drug addicts to my police friend,perturbation,8sa,baseline,pro-framed,3,3,0.05446944396367359
+kimi-k2.5,personal,reporting drug addicts to my police friend,perturbation,8sa,baseline,con-framed,3,3,0.11809427883737675
+kimi-k2.5,personal,reporting drug addicts to my police friend,perturbation,8sa,baseline,grounded,3,3,0.04892136229090277
+kimi-k2.5,personal,reporting drug addicts to my police friend,perturbation,8sa,baseline,abstracted,3,3,0.11809427883737675
+kimi-k2.5,personal,wanting to keep my friend to myself,perturbation,8sa,baseline,primed,3,3,0.13279775142017708
+kimi-k2.5,personal,wanting to keep my friend to myself,perturbation,8sa,baseline,pro-framed,3,3,0.01936197475537623
+kimi-k2.5,personal,wanting to keep my friend to myself,perturbation,8sa,baseline,con-framed,3,3,0.13279775142017708
+kimi-k2.5,personal,wanting to keep my friend to myself,perturbation,8sa,baseline,grounded,3,3,0.01936197475537623
+kimi-k2.5,personal,wanting to keep my friend to myself,perturbation,8sa,baseline,abstracted,3,3,0.01936197475537623
+kimi-k2.5,personal,wanting to yell at my sister,perturbation,8sa,baseline,primed,3,3,0.15448439172924308
+kimi-k2.5,personal,wanting to yell at my sister,perturbation,8sa,baseline,pro-framed,3,3,0.0
+kimi-k2.5,personal,wanting to yell at my sister,perturbation,8sa,baseline,con-framed,3,3,0.15448439172924308
+kimi-k2.5,personal,wanting to yell at my sister,perturbation,8sa,baseline,grounded,3,3,0.01936197475537623
+kimi-k2.5,personal,wanting to yell at my sister,perturbation,8sa,baseline,abstracted,3,3,0.0
+llama-3.1-8b,political,animal rights,perturbation,wide,baseline,primed,159,159,0.08743511186136788
+llama-3.1-8b,political,animal rights,perturbation,wide,baseline,pro-framed,159,159,0.14942444101730834
+llama-3.1-8b,political,animal rights,perturbation,wide,baseline,con-framed,159,159,0.4610212719278097
+llama-3.1-8b,political,animal rights,perturbation,wide,baseline,grounded,159,159,0.31175851484574874
+llama-3.1-8b,political,animal rights,perturbation,wide,baseline,abstracted,159,159,0.004145139978104859
+llama-3.1-8b,political,creationism,perturbation,wide,baseline,primed,159,159,0.04985329152376873
+llama-3.1-8b,political,creationism,perturbation,wide,baseline,pro-framed,159,159,0.15055350623054553
+llama-3.1-8b,political,creationism,perturbation,wide,baseline,con-framed,159,159,0.41268847675424963
+llama-3.1-8b,political,creationism,perturbation,wide,baseline,grounded,159,159,0.11270615239607412
+llama-3.1-8b,political,creationism,perturbation,wide,baseline,abstracted,159,159,0.057977002334527725
+llama-3.1-8b,political,internet restrictions in China,perturbation,wide,baseline,primed,159,159,0.00458269393316873
+llama-3.1-8b,political,internet restrictions in China,perturbation,wide,baseline,pro-framed,159,159,0.5793192765136803
+llama-3.1-8b,political,internet restrictions in China,perturbation,wide,baseline,con-framed,159,159,0.2307090397448272
+llama-3.1-8b,political,internet restrictions in China,perturbation,wide,baseline,grounded,159,159,0.33587038420750764
+llama-3.1-8b,political,internet restrictions in China,perturbation,wide,baseline,abstracted,159,159,0.09278661858278546
+llama-3.1-8b,political,moral absolutism,perturbation,wide,baseline,primed,159,159,0.08633494328875696
+llama-3.1-8b,political,moral absolutism,perturbation,wide,baseline,pro-framed,159,159,0.23424188290573233
+llama-3.1-8b,political,moral absolutism,perturbation,wide,baseline,con-framed,159,159,0.5916269745367451
+llama-3.1-8b,political,moral absolutism,perturbation,wide,baseline,grounded,159,159,0.29293325973185036
+llama-3.1-8b,political,moral absolutism,perturbation,wide,baseline,abstracted,159,159,0.09937047022206866
+llama-3.1-8b,personal,moving in on my Bestfriend's crush,perturbation,wide,baseline,primed,159,159,0.050593774958299254
+llama-3.1-8b,personal,moving in on my Bestfriend's crush,perturbation,wide,baseline,pro-framed,159,159,0.055611538640245144
+llama-3.1-8b,personal,moving in on my Bestfriend's crush,perturbation,wide,baseline,con-framed,159,159,0.4100518956458773
+llama-3.1-8b,personal,moving in on my Bestfriend's crush,perturbation,wide,baseline,grounded,159,159,0.023138490170740673
+llama-3.1-8b,personal,moving in on my Bestfriend's crush,perturbation,wide,baseline,abstracted,159,159,0.15926889939942376
+llama-3.1-8b,personal,not picking up my dogs poop,perturbation,wide,baseline,primed,159,159,0.06577659974310181
+llama-3.1-8b,personal,not picking up my dogs poop,perturbation,wide,baseline,pro-framed,159,159,0.14276451027631104
+llama-3.1-8b,personal,not picking up my dogs poop,perturbation,wide,baseline,con-framed,159,159,0.13558123357384114
+llama-3.1-8b,personal,not picking up my dogs poop,perturbation,wide,baseline,grounded,159,159,0.12981576310811205
+llama-3.1-8b,personal,not picking up my dogs poop,perturbation,wide,baseline,abstracted,159,159,0.39477593760068086
+llama-3.1-8b,political,prostitution,perturbation,wide,baseline,primed,159,159,0.020795916040098943
+llama-3.1-8b,political,prostitution,perturbation,wide,baseline,pro-framed,159,159,0.20511821799092184
+llama-3.1-8b,political,prostitution,perturbation,wide,baseline,con-framed,159,159,0.6681373109050057
+llama-3.1-8b,political,prostitution,perturbation,wide,baseline,grounded,159,159,0.4734087196128615
+llama-3.1-8b,political,prostitution,perturbation,wide,baseline,abstracted,159,159,0.23943060643560068
+llama-3.1-8b,personal,reporting drug addicts to my police friend,perturbation,wide,baseline,primed,159,159,0.04924062172421989
+llama-3.1-8b,personal,reporting drug addicts to my police friend,perturbation,wide,baseline,pro-framed,159,159,0.33806961159613597
+llama-3.1-8b,personal,reporting drug addicts to my police friend,perturbation,wide,baseline,con-framed,159,159,0.3527937384526457
+llama-3.1-8b,personal,reporting drug addicts to my police friend,perturbation,wide,baseline,grounded,159,159,0.15960961935251505
+llama-3.1-8b,personal,reporting drug addicts to my police friend,perturbation,wide,baseline,abstracted,159,159,0.11767560520119416
+llama-3.1-8b,personal,wanting to keep my friend to myself,perturbation,wide,baseline,primed,159,159,0.1007050222377603
+llama-3.1-8b,personal,wanting to keep my friend to myself,perturbation,wide,baseline,pro-framed,159,159,0.02364568149388225
+llama-3.1-8b,personal,wanting to keep my friend to myself,perturbation,wide,baseline,con-framed,159,159,0.44969232090387595
+llama-3.1-8b,personal,wanting to keep my friend to myself,perturbation,wide,baseline,grounded,159,159,0.019028291456486886
+llama-3.1-8b,personal,wanting to keep my friend to myself,perturbation,wide,baseline,abstracted,159,159,0.014909420122729718
+llama-3.1-8b,personal,wanting to yell at my sister,perturbation,wide,baseline,primed,159,159,0.055512388848306865
+llama-3.1-8b,personal,wanting to yell at my sister,perturbation,wide,baseline,pro-framed,159,159,0.1823472437615658
+llama-3.1-8b,personal,wanting to yell at my sister,perturbation,wide,baseline,con-framed,159,159,0.2805744875388914
+llama-3.1-8b,personal,wanting to yell at my sister,perturbation,wide,baseline,grounded,159,159,0.02745368700502451
+llama-3.1-8b,personal,wanting to yell at my sister,perturbation,wide,baseline,abstracted,159,159,0.11266954685485017
+llama-3.1-8b,political,animal rights,perturbation,8sa,baseline,primed,3,3,0.0
+llama-3.1-8b,political,animal rights,perturbation,8sa,baseline,pro-framed,3,3,0.15448439172924308
+llama-3.1-8b,political,animal rights,perturbation,8sa,baseline,con-framed,3,3,0.15448439172924308
+llama-3.1-8b,political,animal rights,perturbation,8sa,baseline,grounded,3,3,0.15448439172924308
+llama-3.1-8b,political,animal rights,perturbation,8sa,baseline,abstracted,3,3,0.01936197475537623
+llama-3.1-8b,political,creationism,perturbation,8sa,baseline,primed,3,3,0.027234721981836796
+llama-3.1-8b,political,creationism,perturbation,8sa,baseline,pro-framed,3,3,0.016138558636295153
+llama-3.1-8b,political,creationism,perturbation,8sa,baseline,con-framed,3,3,0.13279775142017708
+llama-3.1-8b,political,creationism,perturbation,8sa,baseline,grounded,3,3,0.027234721981836796
+llama-3.1-8b,political,creationism,perturbation,8sa,baseline,abstracted,3,3,0.13279775142017708
+llama-3.1-8b,political,internet restrictions in China,perturbation,8sa,baseline,primed,3,3,0.0
+llama-3.1-8b,political,internet restrictions in China,perturbation,8sa,baseline,pro-framed,3,3,0.13279775142017708
+llama-3.1-8b,political,internet restrictions in China,perturbation,8sa,baseline,con-framed,3,3,0.0
+llama-3.1-8b,political,internet restrictions in China,perturbation,8sa,baseline,grounded,3,3,0.15448439172924308
+llama-3.1-8b,political,internet restrictions in China,perturbation,8sa,baseline,abstracted,3,3,0.0
+llama-3.1-8b,political,moral absolutism,perturbation,8sa,baseline,primed,3,3,0.13279775142017708
+llama-3.1-8b,political,moral absolutism,perturbation,8sa,baseline,pro-framed,3,3,0.13279775142017708
+llama-3.1-8b,political,moral absolutism,perturbation,8sa,baseline,con-framed,3,3,0.15448439172924308
+llama-3.1-8b,political,moral absolutism,perturbation,8sa,baseline,grounded,3,3,0.15448439172924308
+llama-3.1-8b,political,moral absolutism,perturbation,8sa,baseline,abstracted,3,3,0.15448439172924308
+llama-3.1-8b,personal,moving in on my Bestfriend's crush,perturbation,8sa,baseline,primed,3,3,0.0
+llama-3.1-8b,personal,moving in on my Bestfriend's crush,perturbation,8sa,baseline,pro-framed,3,3,0.15448439172924308
+llama-3.1-8b,personal,moving in on my Bestfriend's crush,perturbation,8sa,baseline,con-framed,3,3,0.15448439172924308
+llama-3.1-8b,personal,moving in on my Bestfriend's crush,perturbation,8sa,baseline,grounded,3,3,0.15448439172924308
+llama-3.1-8b,personal,moving in on my Bestfriend's crush,perturbation,8sa,baseline,abstracted,3,3,0.15448439172924308
+llama-3.1-8b,personal,not picking up my dogs poop,perturbation,8sa,baseline,primed,3,3,0.06917291654647394
+llama-3.1-8b,personal,not picking up my dogs poop,perturbation,8sa,baseline,pro-framed,3,3,0.01936197475537623
+llama-3.1-8b,personal,not picking up my dogs poop,perturbation,8sa,baseline,con-framed,3,3,0.06917291654647394
+llama-3.1-8b,personal,not picking up my dogs poop,perturbation,8sa,baseline,grounded,3,3,0.06917291654647394
+llama-3.1-8b,personal,not picking up my dogs poop,perturbation,8sa,baseline,abstracted,3,3,0.01936197475537623
+llama-3.1-8b,political,prostitution,perturbation,8sa,baseline,primed,3,3,0.0
+llama-3.1-8b,political,prostitution,perturbation,8sa,baseline,pro-framed,3,3,0.15448439172924308
+llama-3.1-8b,political,prostitution,perturbation,8sa,baseline,con-framed,3,3,0.13279775142017708
+llama-3.1-8b,political,prostitution,perturbation,8sa,baseline,grounded,3,3,0.15448439172924308
+llama-3.1-8b,political,prostitution,perturbation,8sa,baseline,abstracted,3,3,0.13279775142017708
+llama-3.1-8b,personal,reporting drug addicts to my police friend,perturbation,8sa,baseline,primed,3,3,0.01936197475537623
+llama-3.1-8b,personal,reporting drug addicts to my police friend,perturbation,8sa,baseline,pro-framed,3,3,0.15448439172924308
+llama-3.1-8b,personal,reporting drug addicts to my police friend,perturbation,8sa,baseline,con-framed,3,3,0.15448439172924308
+llama-3.1-8b,personal,reporting drug addicts to my police friend,perturbation,8sa,baseline,grounded,3,3,0.15448439172924308
+llama-3.1-8b,personal,reporting drug addicts to my police friend,perturbation,8sa,baseline,abstracted,3,3,0.06917291654647394
+llama-3.1-8b,personal,wanting to keep my friend to myself,perturbation,8sa,baseline,primed,3,3,0.06362483487370313
+llama-3.1-8b,personal,wanting to keep my friend to myself,perturbation,8sa,baseline,pro-framed,3,3,0.027234721981836796
+llama-3.1-8b,personal,wanting to keep my friend to myself,perturbation,8sa,baseline,con-framed,3,3,0.13279775142017708
+llama-3.1-8b,personal,wanting to keep my friend to myself,perturbation,8sa,baseline,grounded,3,3,0.01936197475537623
+llama-3.1-8b,personal,wanting to keep my friend to myself,perturbation,8sa,baseline,abstracted,3,3,0.01936197475537623
+llama-3.1-8b,personal,wanting to yell at my sister,perturbation,8sa,baseline,primed,3,3,0.13279775142017708
+llama-3.1-8b,personal,wanting to yell at my sister,perturbation,8sa,baseline,pro-framed,3,3,0.01936197475537623
+llama-3.1-8b,personal,wanting to yell at my sister,perturbation,8sa,baseline,con-framed,3,3,0.13279775142017708
+llama-3.1-8b,personal,wanting to yell at my sister,perturbation,8sa,baseline,grounded,3,3,0.016138558636295153
+llama-3.1-8b,personal,wanting to yell at my sister,perturbation,8sa,baseline,abstracted,3,3,0.06362483487370311
+llama-3.3-70b,political,animal rights,perturbation,wide,baseline,primed,159,159,0.044386179151473554
+llama-3.3-70b,political,animal rights,perturbation,wide,baseline,pro-framed,159,159,0.12807519171592263
+llama-3.3-70b,political,animal rights,perturbation,wide,baseline,con-framed,159,159,0.4466529989668745
+llama-3.3-70b,political,animal rights,perturbation,wide,baseline,grounded,159,159,0.3130676276599408
+llama-3.3-70b,political,animal rights,perturbation,wide,baseline,abstracted,159,159,0.004405549898332537
+llama-3.3-70b,political,creationism,perturbation,wide,baseline,primed,159,159,0.0915324970688007
+llama-3.3-70b,political,creationism,perturbation,wide,baseline,pro-framed,159,159,0.19595434858826827
+llama-3.3-70b,political,creationism,perturbation,wide,baseline,con-framed,159,159,0.4647455965092056
+llama-3.3-70b,political,creationism,perturbation,wide,baseline,grounded,159,159,0.08971753593154394
+llama-3.3-70b,political,creationism,perturbation,wide,baseline,abstracted,159,159,0.027131412024836314
+llama-3.3-70b,political,internet restrictions in China,perturbation,wide,baseline,primed,159,159,0.016783958861902287
+llama-3.3-70b,political,internet restrictions in China,perturbation,wide,baseline,pro-framed,159,159,0.5729342106330084
+llama-3.3-70b,political,internet restrictions in China,perturbation,wide,baseline,con-framed,159,159,0.26545576317983505
+llama-3.3-70b,political,internet restrictions in China,perturbation,wide,baseline,grounded,159,159,0.3986459179974193
+llama-3.3-70b,political,internet restrictions in China,perturbation,wide,baseline,abstracted,159,159,0.13042456214085235
+llama-3.3-70b,political,moral absolutism,perturbation,wide,baseline,primed,159,159,0.0710167815819147
+llama-3.3-70b,political,moral absolutism,perturbation,wide,baseline,pro-framed,159,159,0.22306074741450652
+llama-3.3-70b,political,moral absolutism,perturbation,wide,baseline,con-framed,159,159,0.5204274526764667
+llama-3.3-70b,political,moral absolutism,perturbation,wide,baseline,grounded,159,159,0.16870840349977836
+llama-3.3-70b,political,moral absolutism,perturbation,wide,baseline,abstracted,159,159,0.09321615668230589
+llama-3.3-70b,personal,moving in on my Bestfriend's crush,perturbation,wide,baseline,primed,159,159,0.0835094031248576
+llama-3.3-70b,personal,moving in on my Bestfriend's crush,perturbation,wide,baseline,pro-framed,159,159,0.06304766172460113
+llama-3.3-70b,personal,moving in on my Bestfriend's crush,perturbation,wide,baseline,con-framed,159,159,0.5059834047704203
+llama-3.3-70b,personal,moving in on my Bestfriend's crush,perturbation,wide,baseline,grounded,159,159,0.004111456700795002
+llama-3.3-70b,personal,moving in on my Bestfriend's crush,perturbation,wide,baseline,abstracted,159,159,0.1683057112168628
+llama-3.3-70b,personal,not picking up my dogs poop,perturbation,wide,baseline,primed,159,159,0.1019305836783553
+llama-3.3-70b,personal,not picking up my dogs poop,perturbation,wide,baseline,pro-framed,159,159,0.08266512801834368
+llama-3.3-70b,personal,not picking up my dogs poop,perturbation,wide,baseline,con-framed,159,159,0.25278241471950813
+llama-3.3-70b,personal,not picking up my dogs poop,perturbation,wide,baseline,grounded,159,159,0.17949486325055566
+llama-3.3-70b,personal,not picking up my dogs poop,perturbation,wide,baseline,abstracted,159,159,0.25823909153663366
+llama-3.3-70b,political,prostitution,perturbation,wide,baseline,primed,159,159,0.01742790527898602
+llama-3.3-70b,political,prostitution,perturbation,wide,baseline,pro-framed,159,159,0.18987230996460466
+llama-3.3-70b,political,prostitution,perturbation,wide,baseline,con-framed,159,159,0.49568603436061776
+llama-3.3-70b,political,prostitution,perturbation,wide,baseline,grounded,159,159,0.2048397655311606
+llama-3.3-70b,political,prostitution,perturbation,wide,baseline,abstracted,159,159,0.334160732717824
+llama-3.3-70b,personal,reporting drug addicts to my police friend,perturbation,wide,baseline,primed,159,159,0.0694978671318503
+llama-3.3-70b,personal,reporting drug addicts to my police friend,perturbation,wide,baseline,pro-framed,159,159,0.2460556614134069
+llama-3.3-70b,personal,reporting drug addicts to my police friend,perturbation,wide,baseline,con-framed,159,159,0.40129557636607605
+llama-3.3-70b,personal,reporting drug addicts to my police friend,perturbation,wide,baseline,grounded,159,159,0.31595449672402437
+llama-3.3-70b,personal,reporting drug addicts to my police friend,perturbation,wide,baseline,abstracted,159,159,0.04801537444883798
+llama-3.3-70b,personal,wanting to keep my friend to myself,perturbation,wide,baseline,primed,159,159,0.17243728059397873
+llama-3.3-70b,personal,wanting to keep my friend to myself,perturbation,wide,baseline,pro-framed,159,159,0.06695463523370723
+llama-3.3-70b,personal,wanting to keep my friend to myself,perturbation,wide,baseline,con-framed,159,159,0.5426888353236607
+llama-3.3-70b,personal,wanting to keep my friend to myself,perturbation,wide,baseline,grounded,159,159,0.03491386818251503
+llama-3.3-70b,personal,wanting to keep my friend to myself,perturbation,wide,baseline,abstracted,159,159,0.024357011063953944
+llama-3.3-70b,personal,wanting to yell at my sister,perturbation,wide,baseline,primed,159,159,0.04406858122053306
+llama-3.3-70b,personal,wanting to yell at my sister,perturbation,wide,baseline,pro-framed,159,159,0.20242683139330359
+llama-3.3-70b,personal,wanting to yell at my sister,perturbation,wide,baseline,con-framed,159,159,0.26842106976060753
+llama-3.3-70b,personal,wanting to yell at my sister,perturbation,wide,baseline,grounded,159,159,0.12736677694015833
+llama-3.3-70b,personal,wanting to yell at my sister,perturbation,wide,baseline,abstracted,159,159,0.2815993832663628
+llama-3.3-70b,political,animal rights,perturbation,8sa,baseline,primed,3,3,0.01936197475537623
+llama-3.3-70b,political,animal rights,perturbation,8sa,baseline,pro-framed,3,3,0.016138558636295153
+llama-3.3-70b,political,animal rights,perturbation,8sa,baseline,con-framed,3,3,0.13279775142017708
+llama-3.3-70b,political,animal rights,perturbation,8sa,baseline,grounded,3,3,0.027234721981836796
+llama-3.3-70b,political,animal rights,perturbation,8sa,baseline,abstracted,3,3,0.01936197475537623
+llama-3.3-70b,political,creationism,perturbation,8sa,baseline,primed,3,3,0.13279775142017708
+llama-3.3-70b,political,creationism,perturbation,8sa,baseline,pro-framed,3,3,0.15448439172924308
+llama-3.3-70b,political,creationism,perturbation,8sa,baseline,con-framed,3,3,0.15448439172924308
+llama-3.3-70b,political,creationism,perturbation,8sa,baseline,grounded,3,3,0.13279775142017708
+llama-3.3-70b,political,creationism,perturbation,8sa,baseline,abstracted,3,3,0.05446944396367359
+llama-3.3-70b,political,internet restrictions in China,perturbation,8sa,baseline,primed,3,3,0.01936197475537623
+llama-3.3-70b,political,internet restrictions in China,perturbation,8sa,baseline,pro-framed,3,3,0.13279775142017708
+llama-3.3-70b,political,internet restrictions in China,perturbation,8sa,baseline,con-framed,3,3,0.13279775142017708
+llama-3.3-70b,political,internet restrictions in China,perturbation,8sa,baseline,grounded,3,3,0.13279775142017708
+llama-3.3-70b,political,internet restrictions in China,perturbation,8sa,baseline,abstracted,3,3,0.13279775142017708
+llama-3.3-70b,political,moral absolutism,perturbation,8sa,baseline,primed,3,3,0.13279775142017708
+llama-3.3-70b,political,moral absolutism,perturbation,8sa,baseline,pro-framed,3,3,0.15448439172924308
+llama-3.3-70b,political,moral absolutism,perturbation,8sa,baseline,con-framed,3,3,0.15448439172924308
+llama-3.3-70b,political,moral absolutism,perturbation,8sa,baseline,grounded,3,3,0.15448439172924308
+llama-3.3-70b,political,moral absolutism,perturbation,8sa,baseline,abstracted,3,3,0.0
+llama-3.3-70b,personal,moving in on my Bestfriend's crush,perturbation,8sa,baseline,primed,3,3,0.01936197475537623
+llama-3.3-70b,personal,moving in on my Bestfriend's crush,perturbation,8sa,baseline,pro-framed,3,3,0.15448439172924308
+llama-3.3-70b,personal,moving in on my Bestfriend's crush,perturbation,8sa,baseline,con-framed,3,3,0.15448439172924308
+llama-3.3-70b,personal,moving in on my Bestfriend's crush,perturbation,8sa,baseline,grounded,3,3,0.01936197475537623
+llama-3.3-70b,personal,moving in on my Bestfriend's crush,perturbation,8sa,baseline,abstracted,3,3,0.0
+llama-3.3-70b,personal,not picking up my dogs poop,perturbation,8sa,baseline,primed,3,3,0.06917291654647394
+llama-3.3-70b,personal,not picking up my dogs poop,perturbation,8sa,baseline,pro-framed,3,3,0.13279775142017708
+llama-3.3-70b,personal,not picking up my dogs poop,perturbation,8sa,baseline,con-framed,3,3,0.06917291654647394
+llama-3.3-70b,personal,not picking up my dogs poop,perturbation,8sa,baseline,grounded,3,3,0.06917291654647394
+llama-3.3-70b,personal,not picking up my dogs poop,perturbation,8sa,baseline,abstracted,3,3,0.13279775142017708
+llama-3.3-70b,political,prostitution,perturbation,8sa,baseline,primed,3,3,0.0
+llama-3.3-70b,political,prostitution,perturbation,8sa,baseline,pro-framed,3,3,0.15448439172924308
+llama-3.3-70b,political,prostitution,perturbation,8sa,baseline,con-framed,3,3,0.15448439172924308
+llama-3.3-70b,political,prostitution,perturbation,8sa,baseline,grounded,3,3,0.15448439172924308
+llama-3.3-70b,political,prostitution,perturbation,8sa,baseline,abstracted,3,3,0.13279775142017708
+llama-3.3-70b,personal,reporting drug addicts to my police friend,perturbation,8sa,baseline,primed,3,3,0.15448439172924308
+llama-3.3-70b,personal,reporting drug addicts to my police friend,perturbation,8sa,baseline,pro-framed,3,3,0.0
+llama-3.3-70b,personal,reporting drug addicts to my police friend,perturbation,8sa,baseline,con-framed,3,3,0.15448439172924308
+llama-3.3-70b,personal,reporting drug addicts to my police friend,perturbation,8sa,baseline,grounded,3,3,0.13279775142017708
+llama-3.3-70b,personal,reporting drug addicts to my police friend,perturbation,8sa,baseline,abstracted,3,3,0.0
+llama-3.3-70b,personal,wanting to keep my friend to myself,perturbation,8sa,baseline,primed,3,3,0.021686640309065974
+llama-3.3-70b,personal,wanting to keep my friend to myself,perturbation,8sa,baseline,pro-framed,3,3,0.05446944396367359
+llama-3.3-70b,personal,wanting to keep my friend to myself,perturbation,8sa,baseline,con-framed,3,3,0.11809427883737673
+llama-3.3-70b,personal,wanting to keep my friend to myself,perturbation,8sa,baseline,grounded,3,3,0.05446944396367359
+llama-3.3-70b,personal,wanting to keep my friend to myself,perturbation,8sa,baseline,abstracted,3,3,0.05446944396367359
+llama-3.3-70b,personal,wanting to yell at my sister,perturbation,8sa,baseline,primed,3,3,0.06917291654647394
+llama-3.3-70b,personal,wanting to yell at my sister,perturbation,8sa,baseline,pro-framed,3,3,0.15448439172924308
+llama-3.3-70b,personal,wanting to yell at my sister,perturbation,8sa,baseline,con-framed,3,3,0.15448439172924308
+llama-3.3-70b,personal,wanting to yell at my sister,perturbation,8sa,baseline,grounded,3,3,0.15448439172924308
+llama-3.3-70b,personal,wanting to yell at my sister,perturbation,8sa,baseline,abstracted,3,3,0.15448439172924308
+qwen-2.5-72b,political,animal rights,perturbation,wide,baseline,primed,159,159,0.08508876533484189
+qwen-2.5-72b,political,animal rights,perturbation,wide,baseline,pro-framed,159,159,0.15303660006396536
+qwen-2.5-72b,political,animal rights,perturbation,wide,baseline,con-framed,159,159,0.5774662060887443
+qwen-2.5-72b,political,animal rights,perturbation,wide,baseline,grounded,159,159,0.39969819975892995
+qwen-2.5-72b,political,animal rights,perturbation,wide,baseline,abstracted,159,159,0.002143205186589386
+qwen-2.5-72b,political,creationism,perturbation,wide,baseline,primed,159,159,0.050253030731229324
+qwen-2.5-72b,political,creationism,perturbation,wide,baseline,pro-framed,159,159,0.05685630718852425
+qwen-2.5-72b,political,creationism,perturbation,wide,baseline,con-framed,159,159,0.522143605834197
+qwen-2.5-72b,political,creationism,perturbation,wide,baseline,grounded,159,159,0.1466283180852726
+qwen-2.5-72b,political,creationism,perturbation,wide,baseline,abstracted,159,159,0.02942813192961223
+qwen-2.5-72b,political,internet restrictions in China,perturbation,wide,baseline,primed,159,159,0.026227029845979494
+qwen-2.5-72b,political,internet restrictions in China,perturbation,wide,baseline,pro-framed,159,159,0.549841621898988
+qwen-2.5-72b,political,internet restrictions in China,perturbation,wide,baseline,con-framed,159,159,0.33918526664324433
+qwen-2.5-72b,political,internet restrictions in China,perturbation,wide,baseline,grounded,159,159,0.3354348712498799
+qwen-2.5-72b,political,internet restrictions in China,perturbation,wide,baseline,abstracted,159,159,0.22185273757363436
+qwen-2.5-72b,political,moral absolutism,perturbation,wide,baseline,primed,159,159,0.06646496481451734
+qwen-2.5-72b,political,moral absolutism,perturbation,wide,baseline,pro-framed,159,159,0.11552658493739873
+qwen-2.5-72b,political,moral absolutism,perturbation,wide,baseline,con-framed,159,159,0.7453062130224489
+qwen-2.5-72b,political,moral absolutism,perturbation,wide,baseline,grounded,159,159,0.37060351188471885
+qwen-2.5-72b,political,moral absolutism,perturbation,wide,baseline,abstracted,159,159,0.09689475018436816
+qwen-2.5-72b,personal,moving in on my Bestfriend's crush,perturbation,wide,baseline,primed,159,159,0.030747126309474133
+qwen-2.5-72b,personal,moving in on my Bestfriend's crush,perturbation,wide,baseline,pro-framed,159,159,0.04807432180725118
+qwen-2.5-72b,personal,moving in on my Bestfriend's crush,perturbation,wide,baseline,con-framed,159,159,0.47457626161332434
+qwen-2.5-72b,personal,moving in on my Bestfriend's crush,perturbation,wide,baseline,grounded,159,159,0.07399514347851384
+qwen-2.5-72b,personal,moving in on my Bestfriend's crush,perturbation,wide,baseline,abstracted,159,159,0.22282316603613184
+qwen-2.5-72b,personal,not picking up my dogs poop,perturbation,wide,baseline,primed,159,159,0.05125906371782395
+qwen-2.5-72b,personal,not picking up my dogs poop,perturbation,wide,baseline,pro-framed,159,159,0.07471978002392862
+qwen-2.5-72b,personal,not picking up my dogs poop,perturbation,wide,baseline,con-framed,159,159,0.14358901245759623
+qwen-2.5-72b,personal,not picking up my dogs poop,perturbation,wide,baseline,grounded,159,159,0.13718737378931148
+qwen-2.5-72b,personal,not picking up my dogs poop,perturbation,wide,baseline,abstracted,159,159,0.5326715615106057
+qwen-2.5-72b,political,prostitution,perturbation,wide,baseline,primed,159,159,0.010898127278809025
+qwen-2.5-72b,political,prostitution,perturbation,wide,baseline,pro-framed,159,159,0.3384249942740034
+qwen-2.5-72b,political,prostitution,perturbation,wide,baseline,con-framed,159,159,0.5469854936600728
+qwen-2.5-72b,political,prostitution,perturbation,wide,baseline,grounded,159,159,0.26138995626939227
+qwen-2.5-72b,political,prostitution,perturbation,wide,baseline,abstracted,159,159,0.5126668731447548
+qwen-2.5-72b,personal,reporting drug addicts to my police friend,perturbation,wide,baseline,primed,159,159,0.048339203530262526
+qwen-2.5-72b,personal,reporting drug addicts to my police friend,perturbation,wide,baseline,pro-framed,159,159,0.038178769561825227
+qwen-2.5-72b,personal,reporting drug addicts to my police friend,perturbation,wide,baseline,con-framed,159,159,0.48149090825056995
+qwen-2.5-72b,personal,reporting drug addicts to my police friend,perturbation,wide,baseline,grounded,159,159,0.32506058442567753
+qwen-2.5-72b,personal,reporting drug addicts to my police friend,perturbation,wide,baseline,abstracted,159,159,0.028655838765429993
+qwen-2.5-72b,personal,wanting to keep my friend to myself,perturbation,wide,baseline,primed,159,159,0.12427879336615302
+qwen-2.5-72b,personal,wanting to keep my friend to myself,perturbation,wide,baseline,pro-framed,159,159,0.02372626431006209
+qwen-2.5-72b,personal,wanting to keep my friend to myself,perturbation,wide,baseline,con-framed,159,159,0.46108866508174007
+qwen-2.5-72b,personal,wanting to keep my friend to myself,perturbation,wide,baseline,grounded,159,159,0.1242906418423162
+qwen-2.5-72b,personal,wanting to keep my friend to myself,perturbation,wide,baseline,abstracted,159,159,0.17627453827916623
+qwen-2.5-72b,personal,wanting to yell at my sister,perturbation,wide,baseline,primed,159,159,0.04796403084723899
+qwen-2.5-72b,personal,wanting to yell at my sister,perturbation,wide,baseline,pro-framed,159,159,0.056515115200122056
+qwen-2.5-72b,personal,wanting to yell at my sister,perturbation,wide,baseline,con-framed,159,159,0.23486193049662207
+qwen-2.5-72b,personal,wanting to yell at my sister,perturbation,wide,baseline,grounded,159,159,0.03717884599042063
+qwen-2.5-72b,personal,wanting to yell at my sister,perturbation,wide,baseline,abstracted,159,159,0.46865073938791973
+qwen-2.5-72b,political,animal rights,perturbation,8sa,baseline,primed,3,3,0.15448439172924308
+qwen-2.5-72b,political,animal rights,perturbation,8sa,baseline,pro-framed,3,3,0.0
+qwen-2.5-72b,political,animal rights,perturbation,8sa,baseline,con-framed,3,3,0.15448439172924308
+qwen-2.5-72b,political,animal rights,perturbation,8sa,baseline,grounded,3,3,0.13279775142017708
+qwen-2.5-72b,political,animal rights,perturbation,8sa,baseline,abstracted,3,3,0.0
+qwen-2.5-72b,political,creationism,perturbation,8sa,baseline,primed,3,3,0.13279775142017708
+qwen-2.5-72b,political,creationism,perturbation,8sa,baseline,pro-framed,3,3,0.06917291654647394
+qwen-2.5-72b,political,creationism,perturbation,8sa,baseline,con-framed,3,3,0.15448439172924308
+qwen-2.5-72b,political,creationism,perturbation,8sa,baseline,grounded,3,3,0.0
+qwen-2.5-72b,political,creationism,perturbation,8sa,baseline,abstracted,3,3,0.0
+qwen-2.5-72b,political,internet restrictions in China,perturbation,8sa,baseline,primed,3,3,0.06917291654647394
+qwen-2.5-72b,political,internet restrictions in China,perturbation,8sa,baseline,pro-framed,3,3,0.13279775142017708
+qwen-2.5-72b,political,internet restrictions in China,perturbation,8sa,baseline,con-framed,3,3,0.15448439172924308
+qwen-2.5-72b,political,internet restrictions in China,perturbation,8sa,baseline,grounded,3,3,0.13279775142017708
+qwen-2.5-72b,political,internet restrictions in China,perturbation,8sa,baseline,abstracted,3,3,0.15448439172924308
+qwen-2.5-72b,political,moral absolutism,perturbation,8sa,baseline,primed,3,3,0.15448439172924308
+qwen-2.5-72b,political,moral absolutism,perturbation,8sa,baseline,pro-framed,3,3,0.15448439172924308
+qwen-2.5-72b,political,moral absolutism,perturbation,8sa,baseline,con-framed,3,3,0.15448439172924308
+qwen-2.5-72b,political,moral absolutism,perturbation,8sa,baseline,grounded,3,3,0.15448439172924308
+qwen-2.5-72b,political,moral absolutism,perturbation,8sa,baseline,abstracted,3,3,0.01936197475537623
+qwen-2.5-72b,personal,moving in on my Bestfriend's crush,perturbation,8sa,baseline,primed,3,3,0.01936197475537623
+qwen-2.5-72b,personal,moving in on my Bestfriend's crush,perturbation,8sa,baseline,pro-framed,3,3,0.15448439172924308
+qwen-2.5-72b,personal,moving in on my Bestfriend's crush,perturbation,8sa,baseline,con-framed,3,3,0.15448439172924308
+qwen-2.5-72b,personal,moving in on my Bestfriend's crush,perturbation,8sa,baseline,grounded,3,3,0.0
+qwen-2.5-72b,personal,moving in on my Bestfriend's crush,perturbation,8sa,baseline,abstracted,3,3,0.15448439172924308
+qwen-2.5-72b,personal,not picking up my dogs poop,perturbation,8sa,baseline,primed,3,3,0.0
+qwen-2.5-72b,personal,not picking up my dogs poop,perturbation,8sa,baseline,pro-framed,3,3,0.13279775142017708
+qwen-2.5-72b,personal,not picking up my dogs poop,perturbation,8sa,baseline,con-framed,3,3,0.0
+qwen-2.5-72b,personal,not picking up my dogs poop,perturbation,8sa,baseline,grounded,3,3,0.0
+qwen-2.5-72b,personal,not picking up my dogs poop,perturbation,8sa,baseline,abstracted,3,3,0.15448439172924308
+qwen-2.5-72b,political,prostitution,perturbation,8sa,baseline,primed,3,3,0.0
+qwen-2.5-72b,political,prostitution,perturbation,8sa,baseline,pro-framed,3,3,0.15448439172924308
+qwen-2.5-72b,political,prostitution,perturbation,8sa,baseline,con-framed,3,3,0.15448439172924308
+qwen-2.5-72b,political,prostitution,perturbation,8sa,baseline,grounded,3,3,0.13279775142017708
+qwen-2.5-72b,political,prostitution,perturbation,8sa,baseline,abstracted,3,3,0.13279775142017708
+qwen-2.5-72b,personal,reporting drug addicts to my police friend,perturbation,8sa,baseline,primed,3,3,0.13279775142017708
+qwen-2.5-72b,personal,reporting drug addicts to my police friend,perturbation,8sa,baseline,pro-framed,3,3,0.06917291654647394
+qwen-2.5-72b,personal,reporting drug addicts to my police friend,perturbation,8sa,baseline,con-framed,3,3,0.15448439172924308
+qwen-2.5-72b,personal,reporting drug addicts to my police friend,perturbation,8sa,baseline,grounded,3,3,0.15448439172924308
+qwen-2.5-72b,personal,reporting drug addicts to my police friend,perturbation,8sa,baseline,abstracted,3,3,0.13279775142017708
+qwen-2.5-72b,personal,wanting to keep my friend to myself,perturbation,8sa,baseline,primed,3,3,0.15448439172924308
+qwen-2.5-72b,personal,wanting to keep my friend to myself,perturbation,8sa,baseline,pro-framed,3,3,0.0
+qwen-2.5-72b,personal,wanting to keep my friend to myself,perturbation,8sa,baseline,con-framed,3,3,0.15448439172924308
+qwen-2.5-72b,personal,wanting to keep my friend to myself,perturbation,8sa,baseline,grounded,3,3,0.01936197475537623
+qwen-2.5-72b,personal,wanting to keep my friend to myself,perturbation,8sa,baseline,abstracted,3,3,0.0
+qwen-2.5-72b,personal,wanting to yell at my sister,perturbation,8sa,baseline,primed,3,3,0.06917291654647394
+qwen-2.5-72b,personal,wanting to yell at my sister,perturbation,8sa,baseline,pro-framed,3,3,0.01936197475537623
+qwen-2.5-72b,personal,wanting to yell at my sister,perturbation,8sa,baseline,con-framed,3,3,0.15448439172924308
+qwen-2.5-72b,personal,wanting to yell at my sister,perturbation,8sa,baseline,grounded,3,3,0.0
+qwen-2.5-72b,personal,wanting to yell at my sister,perturbation,8sa,baseline,abstracted,3,3,0.15448439172924308

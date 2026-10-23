@@ -55,8 +55,29 @@ exactly n samples, top-up on miss — so interrupted runs resume for free.
   author's political-issue moral foundation annotations — manual artifacts
   that cannot be re-derived.
 - **Downloaded** (rest of `data/raw/`): IssueBench (HF), Social Chemistry 101.
+  Both are redistributed here only in derived form (components, template sets,
+  responses) and remain subject to their own licenses.
+- **Committed for verification**: `data/template_sets/` (the exact prompts),
+  `data/responses/` (the exact model responses and stance/Likert labels used in
+  the thesis, ~230 MB of CSV) and `data/signatures/` (the derived JSD tables
+  and correlations).
 - **`data/cache/`** is gitignored but precious (paid API responses) — back it
   up out-of-band.
+
+## Reproducing the thesis figures
+
+The committed responses are the ones behind the thesis, so the analysis can be
+re-run without any API access:
+
+```sh
+uv sync
+uv run python make_signatures.py               # data/responses -> data/signatures
+uv run python make_correlation.py              # -> data/signatures/correlations.csv
+uv run python make_figures.py                  # -> out/figures/*.pdf, out/tables/*.tex
+```
+
+Re-running `run_experiment.py` instead requires API credentials and will not
+yield byte-identical responses (sampling at t=0.3).
 
 ## Experiments
 
