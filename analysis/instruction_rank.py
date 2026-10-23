@@ -13,7 +13,9 @@ OTHER argumentative instructions, each measured on the same footing:
 
 Prints, per comparison, the pooled medians, the median percentile rank of
 8SA, how often it lies below the median of the other instructions, and a
-two-sided sign test of that count against 0.5.
+two-sided sign test of that count against 0.5. Then, pooled over all cells,
+the quartiles of 8SA's percentile rank and how often it falls inside the
+central 80% of instructions versus into the top or bottom decile.
 """
 
 # %%
@@ -83,3 +85,9 @@ print(summary.round(3).to_string())
 k, n = int(ranks["below_median"].sum()), len(ranks)
 print(f"\nall comparisons: 8SA below the other instructions' median in {k}/{n} cells, "
       f"sign test p = {binomtest(k, n).pvalue:.2g}")
+pct = ranks["pct_rank_8sa"]
+print(f"8SA percentile rank quartiles: {pct.quantile([.25, .5, .75]).round(2).tolist()}")
+print(f"cells with 8SA inside the central 80% of instructions (rank .10-.90): "
+      f"{int(((pct >= .1) & (pct <= .9)).sum())}/{n}")
+print(f"cells with 8SA in the top decile: {int((pct >= .9).sum())}, "
+      f"bottom decile: {int((pct <= .1).sum())}")
