@@ -49,7 +49,7 @@ One of the moral foundations constructs a component can pertain to. Raw source l
 
 **Canonical Foundations**:
 The five foundations all consistency comparisons run over: care, fairness, loyalty, authority, sanctity. Normalisation maps proportionality/equality → fairness, ingroup → loyalty, purity → sanctity; liberty-only items are excluded.
-_Avoid_: purity (as the canonical name — sanctity wins; the Background §2.2.2 paragraph in the thesis still says the opposite and needs flipping)
+_Avoid_: purity as the canonical name. The thesis introduces the foundation as purity in Background §2.2.2, following the original MFT terminology, and uses sanctity as the canonical label in the experiments (Chapter 6).
 
 **Elicitor**:
 A map from raw model responses to labels over an outcome space (the thesis's ϵ): the LLM-based stance elicitor (labels 1–5 plus refusal) or the rule-based Likert elicitor (scale points plus refusal/invalid). Refusal and invalid labels are excluded from Likert distributions but refusal is a first-class bin in stance distributions.

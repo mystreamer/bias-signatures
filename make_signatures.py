@@ -11,7 +11,7 @@ long-format file per experiment to data/signatures/:
   e3  mvb per model x questionnaire, permutation-tested
 
 `scheme` is raw (source labels) or canonical (pooled onto the canonical five
-per §5.2 — responses are pooled before distributions are re-estimated).
+per thesis §6.1 — responses are pooled before distributions are re-estimated).
 """
 
 from __future__ import annotations

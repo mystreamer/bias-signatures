@@ -48,7 +48,7 @@ def save_components(name: str, components: list[dict]) -> None:
 # -------------------------------------------------------------------- generate
 
 def generate() -> None:
-    """LLM proposals for instruction argumentativeness (thesis A.6.2)."""
+    """LLM proposals for instruction argumentativeness (thesis E.3)."""
     from concurrent.futures import ThreadPoolExecutor
 
     rows = load_store()
@@ -157,7 +157,7 @@ def evaluate() -> None:
                 comp["features"][feature] = value
                 touched += 1
             # political moral relevance derives from the MF labels; a topic no
-            # annotator assigned foundations to is morally irrelevant (§3.2.2.3)
+            # annotator assigned foundations to is morally irrelevant (thesis §4.2.2)
             if comp["features"].get("domain") == "political":
                 comp["features"].setdefault("mf", [])
                 if "mf" not in by_cid.get(comp["id"], {}):

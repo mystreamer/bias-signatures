@@ -3,9 +3,9 @@
 Consumes only data/signatures/{e1,e3}.csv (canonical scheme, so all EMs
 share the same 10 MF-pair support) and writes data/signatures/correlations.csv:
 
-  cross_model    within-EM model x model rho               (Table 5.2)
-  cross_domain   within-model political vs personal rho    (Table 5.3)
-  cross_em       EM x EM, stacked across models            (Table 5.4)
+  cross_model    within-EM model x model rho               (Table 6.2)
+  cross_domain   within-model political vs personal rho    (Table 6.3)
+  cross_em       EM x EM, stacked across models            (Table 6.4)
 
 Pooled rows: cross_model pools the coefficients (mean + bootstrap CI over
 them); cross_domain and cross_em stack the per-model vectors into one

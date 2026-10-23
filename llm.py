@@ -66,7 +66,7 @@ MODELS = {
 #: MODELS — lets a fallback provider top up an existing cache namespace.
 CACHE_SLUGS = {"deepseek-r1": "openai/deepseek-ai/DeepSeek-R1"}
 
-#: model used for synthetic augmentation and stance classification (§3.2.3, §4.2.1)
+#: model used for synthetic augmentation and stance classification (thesis §4.2, §5.2.1)
 WORKER_MODEL = "llama-3.3-70b"
 
 EXPERIMENT_TEMPERATURE = 0.3
@@ -100,7 +100,7 @@ def structured_lm(alias: str = WORKER_MODEL, temperature: float = 0.0) -> dspy.L
 
 # ------------------------------------------------------------------ signatures
 # Ported verbatim from the legacy pipeline; the rendered prompts are documented
-# in the thesis appendix (A.6.2-A.6.5).
+# in the thesis appendix (E.3-E.6).
 
 
 class ClassifyArgumentativeEssayInstruction(dspy.Signature):

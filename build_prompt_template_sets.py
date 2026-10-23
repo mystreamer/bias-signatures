@@ -1,11 +1,11 @@
 """Build the prompt template sets — the experiment semantics live here.
 
 Each builder mirrors its thesis definition:
-  e1  P = σ_8SA(instructions) × issues × neutral framing            (§5.2)
+  e1  P = σ_8SA(instructions) × issues × neutral framing            (§6.2)
   e2  σ_argumentative(instructions) × controversial topics ×
-      the six held-constant perturbation cells                      (§5.3)
+      the six held-constant perturbation cells                      (§6.3)
   e3  per questionnaire: statements × option rotations, with the
-      few-shot answer letter aligned to the rotation                (§5.4)
+      few-shot answer letter aligned to the rotation                (§6.4)
 
 Column contract: template_id, prompt, the component ids, the partition
 columns (domain, morally_relevant, mf, perturbation, framing, questionnaire,
@@ -39,7 +39,7 @@ E2_CELLS = [
     ("abstracted", "neutral", "rewrite_political"),
 ]
 
-# few-shot answers are semantically fixed per scale (§5.4)
+# few-shot answers are semantically fixed per scale (§6.4)
 FEW_SHOT_ANSWER = {
     ("mfq30", "relevance"): "irrelevant",
     ("mfq30", "agreement"): "slightly agree",
@@ -85,7 +85,7 @@ def _op_template(issue: dict, stance: str) -> str:
 
 
 def stance_columns(issue: dict, surface: str, framed: str) -> dict:
-    """The classifier variables (thesis A.6.1) for one template row: the
+    """The classifier variables (thesis E.1) for one template row: the
     surface the model was asked to write about, its neutral form, and its
     pro/con framings. Base surfaces use the exact stored framings; perturbed
     surfaces substitute into the issue's operator template."""

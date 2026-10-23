@@ -6,17 +6,17 @@ and out/tables/.
 --only restricts to a comma-separated subset of {e1, e2, e3, correlations, cleveland}.
 --export copies everything in out/ into thesis/figures/bias_signatures/.
 
-  mvb_{experiment}.pdf       MF x MF JSD heatmaps, models x EMs (Figs 5.3, 5.6, 5.7)
-  perturbation_boxplot.pdf   per-topic perturbation biases (Fig 5.4)
-  stance_cleveland_{political,personal}.pdf  per-model mean 8SA stance on the curated E2 topics
-  {mfq30,mfq2}_per_foundation_model_likert.pdf  E3 Likert counts (appendix)
-  moral_bias.tex             moral vs non-moral by domain (Table 5.1)
-  stance_bin_counts.tex      E1 stance bin counts by domain and issue type (Table A.1)
-  sanctity_stance_distribution.tex  E1 personal sanctity stance bin counts (appendix)
-  perturbation_biases.tex    per-(topic, model) perturbation JSDs (appendix)
-  cross_model_rho.tex        Table 5.2
-  cross_domain_rho.tex       Table 5.3
-  cross_em_rho.tex           Table 5.4
+  mvb_{experiment}.pdf       MF x MF JSD heatmaps, models x EMs (Figs 6.3, 6.6)
+  perturbation_boxplot.pdf   per-topic perturbation biases (Fig 6.4)
+  stance_cleveland_{political,personal}.pdf  per-model mean 8SA stance on the curated E2 topics (Figs C.1, C.2)
+  {mfq30,mfq2}_per_foundation_model_likert.pdf  E3 Likert counts (Figs D.1, D.2)
+  moral_bias.tex             moral vs non-moral by domain (Table 6.1)
+  stance_bin_counts.tex      E1 stance bin counts by domain and issue type (Table B.1)
+  sanctity_stance_distribution.tex  E1 personal sanctity stance bin counts (Table B.2)
+  perturbation_biases.tex    per-(topic, model) perturbation JSDs (not included in the final thesis)
+  cross_model_rho.tex        Table 6.2
+  cross_domain_rho.tex       Table 6.3
+  cross_em_rho.tex           Table 6.4
 """
 
 from __future__ import annotations
@@ -54,7 +54,7 @@ def stars(p: float) -> str:
     return "***" if p < 0.001 else "**" if p < 0.01 else "*" if p < 0.05 else ""
 
 
-# thesis display conventions: row order and names as hand-set in chapter 5
+# thesis display conventions: row order and names as hand-set in Chapter 6
 MODEL_DISPLAY = {"llama-3.3-70b": "Llama-3.3-70B", "kimi-k2.5": "Kimi-K2.5",
                  "llama-3.1-8b": "Llama-3.1-8B", "qwen-2.5-72b": "Qwen-72B",
                  "deepseek-r1": "DeepSeek-R1"}
@@ -242,7 +242,7 @@ def sanctity_table() -> None:
 
 
 def stance_bin_counts_table() -> None:
-    """Table A.1: absolute E1 stance bin counts per (domain, issue type,
+    """Table B.1: absolute E1 stance bin counts per (domain, issue type,
     model). The refusal column folds in every non-numeric label."""
     responses = load_responses("e1")
     bins = [str(b) for b in range(1, 6)]
@@ -297,7 +297,7 @@ def perturbation_table(e2: pd.DataFrame) -> None:
 
 
 def correlation_tables(corr: pd.DataFrame) -> None:
-    # Table 5.2: cross-model matrix per EM, political block first as in §5.2
+    # Table 6.2: cross-model matrix per EM, political block first as in §6.2
     cm = corr[corr["comparison"] == "cross_model"]
     models = sorted(set(cm["unit_a"]) | set(cm["unit_b"]))
     lines = [r"\begin{tabular}{l r r r r}", r"\toprule",
@@ -320,7 +320,7 @@ def correlation_tables(corr: pd.DataFrame) -> None:
               r"\bottomrule", r"\end{tabular}"]
     (TABLES_DIR / "cross_model_rho.tex").write_text("\n".join(lines) + "\n")
 
-    # Table 5.3: cross-domain per model
+    # Table 6.3: cross-domain per model
     lines = [r"\begin{tabular}{l r}", r"\toprule", r"Model & $\rho$ \\", r"\midrule"]
     for r in corr[corr["comparison"] == "cross_domain"].itertuples():
         lines.append(rf"{r.unit_a} & ${r.rho:+.3f}$ \\")
@@ -330,7 +330,7 @@ def correlation_tables(corr: pd.DataFrame) -> None:
               r"\bottomrule", r"\end{tabular}"]
     (TABLES_DIR / "cross_domain_rho.tex").write_text("\n".join(lines) + "\n")
 
-    # Table 5.4: cross-EM pairs, task domains before the questionnaires
+    # Table 6.4: cross-EM pairs, task domains before the questionnaires
     pair_order = [("political", "personal"), ("political", "mfq30"),
                   ("political", "mfq2"), ("personal", "mfq30"),
                   ("personal", "mfq2"), ("mfq30", "mfq2")]

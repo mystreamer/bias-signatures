@@ -10,7 +10,7 @@ return through annotate_components.py --import.
                      carry no marker — recoverable by id lookup
   issues.xml         Label Studio labeling config for issues.csv (choice
                      values = raw construct names parse_foundation accepts;
-                     empty submission = not morally relevant, §3.2.2.3)
+                     empty submission = not morally relevant, thesis §4.2.2)
   argumentative.csv  up to 50 positive + 50 negative LLM proposals, blind
   framings.csv       LLM-generated pro/con framings of the SC components
   rewrites.csv       cross-domain rewrites of the controversial topics

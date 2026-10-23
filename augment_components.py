@@ -8,7 +8,7 @@ Stages (--only to restrict):
   aita          confession situations -> AITA-style canonical text
   priming       variants.primed for every issue ("the ethics of X")
   framings      personal issues: generate deontic ops, fill framing variants
-  controversial mark the curated E2 topic itinerary (thesis Table A.5)
+  controversial mark the curated E2 topic itinerary (thesis Table C.1)
   rewrites      controversial issues: grounded/abstracted rewrite variants
 """
 
@@ -152,7 +152,7 @@ def stage_controversial(issues: list[dict]) -> None:
 
 
 def stage_rewrites(issues: list[dict]) -> None:
-    """Grounding/abstraction (§5.3): every controversial topic gets one rewrite
+    """Grounding/abstraction (thesis §6.3): every controversial topic gets one rewrite
     landing in each domain — a within-domain paraphrase for its own side and a
     cross-domain transformation for the other."""
     todo = [

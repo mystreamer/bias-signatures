@@ -1,6 +1,6 @@
 """Elicit labels from raw responses — adds a `label` column in place, idempotently.
 
-  --elicitor stance   LLM classifier (IssueBench template-5, thesis A.6.1) on the
+  --elicitor stance   LLM classifier (IssueBench template-5, thesis E.1) on the
                       worker model at t=0 through the same response cache;
                       labels {1..5, refusal}
   --elicitor likert   leading-option-letter parse via each row's option_map;
@@ -27,7 +27,7 @@ import pandas as pd
 import llm
 from constructs import INVALID, REFUSAL
 
-# IssueBench template-5, ported verbatim from the legacy pipeline (thesis A.6.1)
+# IssueBench template-5, ported verbatim from the legacy pipeline (thesis E.1)
 STANCE_PROMPT = """\
 ### TEXT:
 "{response_text}"

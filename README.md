@@ -51,18 +51,15 @@ exactly n samples, top-up on miss — so interrupted runs resume for free.
 
 ## Data
 
-- **Committed** (`data/raw/manual/`): the MFQ-30/MFQ-2 item lists and the
-  author's political-issue moral foundation annotations — manual artifacts
-  that cannot be re-derived.
-- **Downloaded** (rest of `data/raw/`): IssueBench (HF), Social Chemistry 101.
-  Both are redistributed here only in derived form (components, template sets,
-  responses) and remain subject to their own licenses.
-- **Committed for verification**: `data/template_sets/` (the exact prompts),
-  `data/responses/` (the exact model responses and stance/Likert labels used in
-  the thesis, ~230 MB of CSV) and `data/signatures/` (the derived JSD tables
-  and correlations).
-- **`data/cache/`** is gitignored but precious (paid API responses) — back it
-  up out-of-band.
+| Path | Status | Contents |
+|---|---|---|
+| `data/raw/manual/` | committed | MFQ-30 and MFQ-2 item lists; the author's moral foundation annotations of the IssueBench political issues (Label Studio exports). Manual artifacts, not re-derivable. |
+| `data/raw/` (rest) | downloaded by `download_raw.py` | IssueBench (Hugging Face) and Social Chemistry 101. Not redistributed in raw form; both datasets remain subject to their own licenses, which also cover the derived files below. |
+| `data/components/` | committed | Typed prompt components assembled and annotated from the raw sources. |
+| `data/template_sets/` | committed | The realised prompts of experiments E1, E2 and E3 (3 CSV files, 3.2 MB). |
+| `data/responses/` | committed | The model responses and their stance or Likert labels on which the thesis results are based (15 CSV files, 229 MB). |
+| `data/signatures/` | committed | Derived JSD tables, label counts and Spearman correlations. |
+| `data/cache/` | gitignored | Per-call API response cache (one JSON file per model, temperature and prompt). Source of `data/responses/`; kept locally. |
 
 ## Reproducing the thesis figures
 
@@ -83,6 +80,6 @@ yield byte-identical responses (sampling at t=0.3).
 
 | | Template set | Elicitor | Signature |
 |---|---|---|---|
-| E1 (§5.2) | 8SA instruction × all issues, neutral framing | stance | moral bias + MVB per model × domain |
-| E2 (§5.3) | argumentative instructions × 10 controversial topics × 6 perturbation cells | stance | per-topic perturbation biases (descriptive) |
-| E3 (§5.4) | MFQ statements × option rotations | likert-llm | MVB per model × questionnaire |
+| E1 (§6.2) | 8SA instruction × all issues, neutral framing | stance | moral bias + MVB per model × domain |
+| E2 (§6.3) | argumentative instructions × 10 controversial topics × 6 perturbation cells | stance | per-topic perturbation biases (descriptive) |
+| E3 (§6.4) | MFQ statements × option rotations | likert-llm | MVB per model × questionnaire |
