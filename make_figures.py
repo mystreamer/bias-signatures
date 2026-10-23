@@ -115,7 +115,6 @@ DOMAIN_MARKERS = {"political": "o", "personal": "^"}
 
 def perturbation_boxplot(e2: pd.DataFrame) -> None:
     wide = e2[e2["scope"] == "wide"]
-    narrow = e2[e2["scope"] == "8sa"]
     comparisons = list(dict.fromkeys(wide["partition_b"]))
     models = sorted(wide["model"].unique())
     fig, ax = plt.subplots(figsize=(TEXTWIDTH_IN, 4.6), layout="constrained")
@@ -133,8 +132,6 @@ def perturbation_boxplot(e2: pd.DataFrame) -> None:
                 v = cell[cell["em"] == domain]["jsd"]
                 ax.scatter(np.full(len(v), x), v, s=8, color=colors[mi],
                            marker=marker, zorder=3)
-        median_8sa = narrow[narrow["partition_b"] == comparison]["jsd"].median()
-        ax.hlines(median_8sa, ci - 0.42, ci + 0.42, colors="red", linestyles="dashed")
     ax.set_xticks(range(len(comparisons)), comparisons, fontsize=10)
     ax.set_ylabel("Perturbed vs. baseline (JSD)")
     handles = [plt.Line2D([], [], color=colors[i], lw=4, label=m)
@@ -267,10 +264,8 @@ def stance_bin_counts_table() -> None:
 
 
 def perturbation_table(e2: pd.DataFrame) -> None:
-    """Tabular companion to the perturbation boxplot: same wide-scope cells,
-    footer row = the pooled 8sa medians drawn as its dashed red lines."""
+    """Tabular companion to the perturbation boxplot: same wide-scope cells."""
     wide = e2[e2["scope"] == "wide"]
-    narrow = e2[e2["scope"] == "8sa"]
     comparisons = list(dict.fromkeys(wide["partition_b"]))
     models = sorted(wide["model"].unique())
     cells = wide.set_index(["topic", "model", "partition_b"])["jsd"]
@@ -288,10 +283,7 @@ def perturbation_table(e2: pd.DataFrame) -> None:
         for mi, model in enumerate(models):
             row = " & ".join(fmt(cells.get((topic, model, c), np.nan)) for c in comparisons)
             lines.append(f"{topic if mi == 0 else ''} & {model} & {row} \\\\")
-    medians = " & ".join(fmt(narrow[narrow["partition_b"] == c]["jsd"].median())
-                         for c in comparisons)
-    lines += [r"\midrule", r"\multicolumn{2}{l}{8SA-only median} & " + medians + r" \\",
-              r"\bottomrule", r"\end{tabular}"]
+    lines += [r"\bottomrule", r"\end{tabular}"]
     (TABLES_DIR / "perturbation_biases.tex").write_text("\n".join(lines) + "\n")
     print("perturbation_biases.tex")
 
