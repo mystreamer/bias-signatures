@@ -61,6 +61,12 @@ MODEL_DISPLAY = {"llama-3.3-70b": "Llama-3.3-70B", "kimi-k2.5": "Kimi-K2.5",
 MODEL_ORDER = list(MODEL_DISPLAY)
 EM_DISPLAY = {"political": "Task political", "personal": "Task personal",
               "mfq30": "MFQ-30", "mfq2": "MFQ-2"}
+# MFQ-2 keys its equality items as "fairness" (mfq.json); show the construct name
+FOUNDATION_DISPLAY = {"mfq2": {"fairness": "equality"}}
+
+
+def foundation_label(em: str, foundation: str) -> str:
+    return FOUNDATION_DISPLAY.get(em, {}).get(foundation, foundation)
 STARS_NOTE = r"$*\,p<0.05$, $**\,p<0.01$, $***\,p<0.001$ (permutation test)"
 
 
@@ -94,9 +100,10 @@ def mvb_heatmaps(mvb: pd.DataFrame, experiment: str) -> None:
                         f"{r.jsd:.3f}"[1:] + "\n" + stars(r.p_bonferroni),
                         ha="center", va="center", fontsize=7,
                         color="white" if r.jsd > 0.65 * vmax else "black")
-            ax.set_yticks(range(n - 1), foundations[1:], fontsize=8)
+            labels = [foundation_label(em, f) for f in foundations]
+            ax.set_yticks(range(n - 1), labels[1:], fontsize=8)
             if mi == len(models) - 1:
-                ax.set_xticks(range(n - 1), foundations[:-1],
+                ax.set_xticks(range(n - 1), labels[:-1],
                               rotation=45, ha="right", fontsize=8)
             else:
                 ax.set_xticks([])
@@ -174,7 +181,7 @@ def likert_facets() -> None:
                 ax.bar(x + (i - (len(support) - 1) / 2) * width, heights,
                        width, color=colors[i])
             ax.set_xticks(x, models, rotation=30, ha="right", fontsize=9)
-            ax.set_title(f, fontsize=11)
+            ax.set_title(foundation_label(questionnaire, f), fontsize=11)
             ax.tick_params(axis="y", labelsize=9)
             ax.grid(axis="y", lw=0.3, alpha=0.4)
             ax.set_axisbelow(True)
